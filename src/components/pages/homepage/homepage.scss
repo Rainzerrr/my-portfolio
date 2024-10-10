@@ -6,39 +6,3 @@
   gap: 30px;
   padding: 24px;
 }
-
-.homepage__featured-projects {
-  display: flex;
-  padding: 32px 0px;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  align-self: stretch;
-}
-
-.homepage__featured-projects__title {
-  font: var(--font-semibold-h3);
-  color: var(--background-neutral-high);
-}
-
-.homepage__featured-projects__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-self: stretch;
-}
-
-@media screen and (min-width: $breakpoint-small) {
-  .homepage__featured-projects__title {
-    font: var(--font-semibold-h2);
-  }
-}
-@media screen and (min-width: $breakpoint-medium) {
-  .homepage__featured-projects {
-    padding: 48px 0px;
-    gap: 32px;
-  }
-  .homepage__featured-projects__title {
-    font: var(--font-semibold-h1);
-  }
-}

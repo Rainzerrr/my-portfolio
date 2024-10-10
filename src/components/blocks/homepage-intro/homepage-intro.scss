@@ -1,0 +1,40 @@
+.homepage__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.homepage__intro__text {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+}
+
+.homepage__intro__title {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  font: var(--font-bold-h5);
+}
+
+.homepage__intro__desc {
+  text-align: center;
+  font: var(--font-medium-M);
+  color: var(--background-neutral-high);
+}
+
+.homepage__intro__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.homepage__intro__buttons-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}

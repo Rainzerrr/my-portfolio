@@ -1,0 +1,146 @@
+<svg
+  aria-hidden="true"
+  style="position: absolute; width: 0; height: 0; overflow: hidden"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <symbol id="icon-trash" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.7826"
+        d="M4.522 8.348h22.957M24.928 8.348v17.855c0 1.275-1.275 2.551-2.551 2.551h-12.754c-1.275 0-2.551-1.275-2.551-2.551v-17.855M10.899 8.348v-2.551c0-1.275 1.275-2.551 2.551-2.551h5.101c1.275 0 2.551 1.275 2.551 2.551v2.551M13.449 14.725v7.652M18.551 14.725v7.652"
+      ></path>
+    </symbol>
+    <symbol id="icon-cross" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.1429"
+        d="M24 8l-16 16M8 8l16 16"
+      ></path>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2727"
+        d="M5.333 16h21.333M5.333 8h21.333M5.333 24h21.333"
+      ></path>
+    </symbol>
+    <symbol id="icon-england" viewBox="0 0 32 32">
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"
+      ></path>
+      <path
+        fill="#d80027"
+        style="fill: var(--color2, #d80027)"
+        d="M31.865 13.913h-13.777v-13.778c-0.683-0.089-1.38-0.135-2.087-0.135s-1.404 0.046-2.087 0.135v13.778h-13.778c-0.089 0.683-0.135 1.38-0.135 2.087s0.046 1.404 0.135 2.087h13.778v13.778c0.683 0.089 1.38 0.135 2.087 0.135s1.404-0.046 2.087-0.135v-13.777h13.778c0.089-0.683 0.135-1.38 0.135-2.087s-0.047-1.404-0.135-2.087z"
+      ></path>
+    </symbol>
+    <symbol id="icon-french" viewBox="0 0 32 32">
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16s7.163 16 16 16z"
+      ></path>
+      <path
+        fill="#d80027"
+        style="fill: var(--color2, #d80027)"
+        d="M32 16c0-6.879-4.342-12.744-10.435-15.005v30.010c6.093-2.261 10.435-8.125 10.435-15.005z"
+      ></path>
+      <path
+        fill="#0052b4"
+        style="fill: var(--color3, #0052b4)"
+        d="M0 16c0 6.879 4.342 12.744 10.435 15.005v-30.010c-6.093 2.261-10.435 8.125-10.435 15.005z"
+      ></path>
+    </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.9091"
+        d="M8 12l8 8 8-8"
+      ></path>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.4"
+        d="M8.533 16h14.933M16 8.533v14.933"
+      ></path>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 32 32">
+      <path
+        fill="none"
+        stroke="#fff"
+        style="stroke: var(--color1, #fff)"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="3.2727"
+        d="M16 2.667v2.667M16 26.667v2.667M6.573 6.574l1.88 1.88M23.546 23.547l1.88 1.88M2.667 16h2.667M26.667 16h2.667M8.453 23.547l-1.88 1.88M25.426 6.574l-1.88 1.88M21.333 16c0 2.945-2.388 5.333-5.333 5.333s-5.333-2.388-5.333-5.333c0-2.946 2.388-5.333 5.333-5.333s5.333 2.388 5.333 5.333z"
+      ></path>
+    </symbol>
+    <symbol id="icon-moon-star" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.6667"
+        d="M25.333 4v5.333M28 6.667h-5.333M16 4c-1.591 1.591-2.485 3.75-2.485 6s0.894 4.409 2.485 6c1.591 1.591 3.75 2.485 6 2.485s4.409-0.894 6-2.485c0 2.373-0.704 4.693-2.022 6.667s-3.193 3.511-5.385 4.42c-2.193 0.908-4.606 1.146-6.933 0.683s-4.466-1.606-6.144-3.284c-1.678-1.678-2.821-3.817-3.284-6.144s-0.225-4.741 0.683-6.933c0.908-2.193 2.446-4.067 4.42-5.385s4.293-2.022 6.667-2.022z"
+      ></path>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.6667"
+        d="M6.667 16h18.667M25.333 16l-9.333-9.333M25.333 16l-9.333 9.333"
+      ></path>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 32 32">
+      <path
+        fill="#1275b1"
+        style="fill: var(--color4, #1275b1)"
+        d="M16 2c7.732 0 14 6.268 14 14s-6.268 14-14 14c-7.732 0-14-6.268-14-14s6.268-14 14-14z"
+      ></path>
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M12.619 9.692c0 0.935-0.81 1.692-1.809 1.692s-1.809-0.758-1.809-1.692c0-0.935 0.81-1.692 1.809-1.692s1.809 0.758 1.809 1.692z"
+      ></path>
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M9.247 12.628h3.093v9.372h-3.093v-9.372z"
+      ></path>
+      <path
+        fill="#fff"
+        style="fill: var(--color1, #fff)"
+        d="M17.32 12.628h-3.093v9.372h3.093c0 0 0-2.95 0-4.795 0-1.107 0.378-2.219 1.887-2.219 1.705 0 1.695 1.449 1.687 2.571-0.010 1.467 0.014 2.965 0.014 4.443h3.093v-4.946c-0.026-3.158-0.849-4.614-3.557-4.614-1.608 0-2.605 0.73-3.124 1.39v-1.202z"
+      ></path>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 32 32">
+      <path
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-miterlimit="4"
+        stroke-width="2.6667"
+        d="M20 29.333v-5.333c0.186-1.67-0.293-3.347-1.333-4.667 4 0 8-2.667 8-7.333 0.107-1.667-0.36-3.307-1.333-4.667 0.373-1.533 0.373-3.133 0-4.667 0 0-1.333 0-4 2-3.52-0.667-7.147-0.667-10.667 0-2.667-2-4-2-4-2-0.4 1.533-0.4 3.133 0 4.667-0.971 1.355-1.442 3.004-1.333 4.667 0 4.667 4 7.333 8 7.333-0.52 0.653-0.907 1.4-1.133 2.2s-0.293 1.64-0.2 2.467M12 24v5.333M12 24c-6.013 2.667-6.667-2.667-9.333-2.667"
+      ></path>
+    </symbol>
+  </defs>
+</svg>
+

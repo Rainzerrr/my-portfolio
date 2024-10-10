@@ -1,0 +1,57 @@
+@import "../../../app/breakpoints.scss";
+
+.chip {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+
+  &--blue {
+    background-color: var(--random-chips-blue);
+  }
+
+  &--red {
+    background-color: var(--random-chips-red);
+  }
+
+  &--green {
+    background-color: var(--random-chips-green);
+  }
+
+  &--yellow {
+    background-color: var(--random-chips-yellow);
+  }
+
+  &--purple {
+    background-color: var(--random-chips-violet);
+  }
+
+  &--orange {
+    background-color: var(--random-chips-orange);
+  }
+
+  &--black {
+    background-color: var(--random-chips-black);
+  }
+
+  &--gray {
+    background-color: var(--random-chips-gray);
+  }
+
+  &--white {
+    background-color: var(--random-chips-white);
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .chip {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .chip {
+    width: 6px;
+    height: 6px;
+  }
+}

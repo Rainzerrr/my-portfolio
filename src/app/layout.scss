@@ -1,0 +1,11 @@
+@import "./breakpoints.scss";
+
+.layout__children {
+  margin-top: 68px;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .layout__children {
+    margin-top: 96px;
+  }
+}

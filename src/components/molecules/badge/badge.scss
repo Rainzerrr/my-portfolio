@@ -1,0 +1,68 @@
+@import "../../../app/breakpoints.scss";
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-right: 8px;
+  border-radius: 1111px;
+  height: 18px;
+}
+
+.badge__label {
+  font: var(--font-medium-S);
+}
+
+.badge--primary {
+  .chip {
+    background-color: var(--badges-primary-text);
+  }
+
+  .badge__label {
+    color: var(--badges-primary-text);
+  }
+
+  &.badge--purple {
+    background-color: var(--badges-primary-background);
+  }
+
+  &.badge--red {
+    background-color: var(--badges-danger-background);
+  }
+
+  &.badge--green {
+    background-color: var(--badges-success-background);
+  }
+
+  &.badge--orange {
+    background-color: var(--badges-warning-background);
+  }
+}
+
+.badge--secondary {
+  border: 1px solid var(--badges-secondary-border);
+
+  .badge__label {
+    color: var(--badges-secondary-text);
+  }
+}
+
+.badge--tertiary {
+  .badge__label {
+    color: var(--badges-tertiary-text);
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .badge {
+    gap: 6px;
+    height: 22px;
+  }
+
+  .badge__label {
+    font: var(--font-medium-M);
+  }
+}

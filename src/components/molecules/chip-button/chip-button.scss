@@ -1,0 +1,70 @@
+.chip-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: fit-content;
+
+  border-radius: 11111px;
+  border: 1px solid var(--chips-button-default-border);
+  background-color: var(--chips-button-default-background);
+  color: var(--chips-button-default-text);
+  cursor: pointer;
+  transition: var(--transition-background-fast, --transition-text-fast);
+
+  &:hover {
+    background-color: var(--chips-button-hover-background);
+  }
+
+  .icon {
+    stroke: var(--chips-button-default-icon);
+  }
+}
+
+.chip-button--active {
+  background-color: var(--chips-button-active-background);
+
+  color: var(--chips-button-active-text);
+  .icon {
+    stroke: var(--chips-button-active-icon);
+  }
+
+  &:hover {
+    background-color: var(--chips-button-active-hover-background);
+    color: var(--chips-button-active-hover-text);
+    stroke: var(--chips-button-active-hover-icon);
+  }
+}
+
+.chip-button--S {
+  height: 28px;
+  padding: 4px 8px;
+  gap: 2px;
+  .chip-button__label {
+    font: var(--font-medium-M);
+  }
+}
+
+.chip-button--M {
+  height: 32px;
+  padding: 4px 12px;
+  gap: 4px;
+  .chip-button__label {
+    font: var(--font-medium-L);
+  }
+}
+
+.chip-button--L {
+  height: 40px;
+  padding: 4px 16px;
+  gap: 2px;
+  .chip-button__label {
+    font: var(--font-medium-XL);
+  }
+}
+
+.chip-button--active {
+}
+
+.chip-button__label {
+}

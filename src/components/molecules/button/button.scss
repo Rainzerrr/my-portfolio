@@ -1,0 +1,192 @@
+.button {
+  all: unset;
+  display: inline-flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  transition: var(--transition-background-fast, --transition-text-fast);
+}
+
+.button-primary {
+  background-color: var(--button-primary-default-background);
+  color: var(--button-primary-default-text);
+
+  .icon {
+    stroke: var(--button-primary-default-text);
+  }
+
+  &:hover {
+    background-color: var(--button-primary-hover-background);
+    color: var(--button-primary-hover-text);
+    .icon {
+      stroke: var(--button-primary-hover-text);
+    }
+  }
+
+  &:active {
+    background-color: var(--button-primary-press-background);
+    color: var(--button-primary-press-text);
+    .icon {
+      stroke: var(--button-primary-press-text);
+    }
+  }
+
+  &:focus-visible {
+    background-color: var(--button-primary-focus-background);
+    color: var(--button-primary-focus-text);
+    .icon {
+      stroke: var(--button-primary-focus-text);
+    }
+    outline: 1px solid var(--button-primary-focus-focus-ring);
+  }
+}
+
+.button-secondary {
+  background-color: var(--button-secondary-default-background);
+  color: var(--button-secondary-default-text);
+
+  .icon {
+    stroke: var(--button-secondary-default-text);
+  }
+
+  &:hover {
+    background-color: var(--button-secondary-hover-background);
+    color: var(--button-secondary-hover-text);
+    .icon {
+      stroke: var(--button-secondary-hover-text);
+    }
+  }
+
+  &:active {
+    background-color: var(--button-secondary-press-background);
+    color: var(--button-secondary-press-text);
+    .icon {
+      stroke: var(--button-secondary-press-text);
+    }
+  }
+
+  &:focus-visible {
+    background-color: var(--button-secondary-focus-background);
+    color: var(--button-secondary-focus-text);
+    .icon {
+      stroke: var(--button-secondary-focus-text);
+    }
+    outline: 1px solid var(--button-secondary-focus-focus-ring);
+  }
+}
+
+.button-ghost {
+  &.button-primary {
+    background-color: transparent;
+    color: var(--button-primary-default-ghost-text);
+
+    .icon {
+      stroke: var(--button-primary-default-ghost-text);
+    }
+
+    &:hover {
+      color: var(--button-primary-hover-ghost-text);
+      .icon {
+        stroke: var(--button-primary-hover-ghost-text);
+      }
+    }
+
+    &:active {
+      color: var(--button-primary-press-ghost-text);
+      .icon {
+        stroke: var(--button-primary-press-ghost-text);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--button-primary-focus-ghost-text);
+      .icon {
+        stroke: var(--button-primary-focus-ghost-text);
+      }
+    }
+  }
+
+  &.button-secondary {
+    background-color: transparent;
+    color: var(--button-secondary-default-ghost-text);
+
+    .icon {
+      stroke: var(--button-secondary-default-ghost-text);
+    }
+
+    &:hover {
+      color: var(--button-secondary-hover-ghost-text);
+      .icon {
+        stroke: var(--button-secondary-hover-ghost-text);
+      }
+    }
+
+    &:active {
+      color: var(--button-secondary-press-ghost-text);
+      .icon {
+        stroke: var(--button-secondary-press-ghost-text);
+      }
+    }
+
+    &:focus-visible {
+      color: var(--button-secondary-focus-ghost-text);
+      .icon {
+        stroke: var(--button-secondary-focus-ghost-text);
+      }
+    }
+  }
+}
+
+.button-rounded {
+  border-radius: 1111px;
+}
+
+.button-square-rounded {
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.button-S {
+  padding: 6px 8px;
+  gap: 2px;
+
+  .button__label {
+    font: var(--font-medium-S);
+  }
+  outline-offset: 4px;
+}
+
+.button-M {
+  padding: 8px 12px;
+  gap: 4px;
+
+  .button__label {
+    font: var(--font-medium-M);
+  }
+  outline-offset: 4px;
+}
+
+.button-L {
+  padding: 12px 16px;
+  gap: 4px;
+
+  .button__label {
+    font: var(--font-medium-L);
+  }
+  outline-offset: 4px;
+}
+
+.button-XL {
+  padding: 12px 24px;
+  gap: 4px;
+
+  .button__label {
+    font: var(--font-medium-XL);
+  }
+  outline-offset: 6px;
+  outline-width: 2px !important;
+}

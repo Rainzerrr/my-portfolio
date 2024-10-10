@@ -1,33 +1,14 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--font-poppins) !important;
 }
 
 a {
@@ -35,8 +16,413 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Fonts */
+:root {
+  /* Transitions */
+  --transition-background-fast: background-color 0.2s ease-in-out;
+  --transition-text-fast: color 0.2s ease-in-out;
+
+  /* Fonts */
+
+  /* Bold */
+  --font-bold-h1: normal 700 5rem/6rem "Poppins", sans-serif; /* 80px/96px */
+  --font-bold-h2: normal 700 3.75rem/4.5rem "Poppins", sans-serif; /* 60px/72px */
+  --font-bold-h3: normal 700 3rem/3.5rem "Poppins", sans-serif; /* 48px/56px */
+  --font-bold-h4: normal 700 2.25rem/2.5rem "Poppins", sans-serif; /* 36px/40px */
+  --font-bold-h5: normal 700 1.5rem/2rem "Poppins", sans-serif; /* 24px/32px */
+  --font-bold-h6: normal 700 1.25rem/1.75rem "Poppins", sans-serif; /* 20px/28px */
+
+  /* SemiBold heading*/
+  --font-semibold-h1: normal 600 1.875rem/2.25rem "Poppins", sans-serif; /* 30px/36px */
+  --font-semibold-h2: normal 600 1.5rem/2rem "Poppins", sans-serif; /* 24px/32px */
+  --font-semibold-h3: normal 600 1.25rem/1.75rem "Poppins", sans-serif; /* 20px/28px */
+  --font-semibold-h4: normal 600 1.125rem/1.5rem "Poppins", sans-serif; /* 18px/24px */
+  --font-semibold-h5: normal 600 1rem/1.25rem "Poppins", sans-serif; /* 16px/20px */
+  --font-semibold-h6: normal 600 0.875rem/1.125rem "Poppins", sans-serif; /* 14px/18px */
+
+  /* SemiBold text*/
+  --font-semibold-XL: normal 600 1.125rem/1.5rem "Poppins", sans-serif; /* 18px/24px */
+  --font-semibold-L: normal 600 1rem/1.25rem "Poppins", sans-serif; /* 16px/20px */
+  --font-semibold-M: normal 600 0.875rem/1.125rem "Poppins", sans-serif; /* 14px/18px */
+  --font-semibold-S: normal 600 0.8125rem/1rem "Poppins", sans-serif; /* 13px/16px */
+  --font-semibold-XS: normal 600 0.75rem/0.875rem "Poppins", sans-serif; /* 12px/14px */
+
+  /* Medium */
+  --font-medium-XL: normal 500 1.25rem/1.5rem "Poppins", sans-serif; /* 20px/24px */
+  --font-medium-L: normal 500 1rem/1.25rem "Poppins", sans-serif; /* 16px/20px */
+  --font-medium-M: normal 500 0.875rem/1.125rem "Poppins", sans-serif; /* 14px/18px */
+  --font-medium-S: normal 500 0.8125rem/1rem "Poppins", sans-serif; /* 13px/16px */
+  --font-medium-XS: normal 500 0.75rem/0.875rem "Poppins", sans-serif; /* 12px/14px */
+  --font-medium-2XS: normal 500 0.625rem/0.75rem "Poppins", sans-serif;
+
+  /* Regular */
+  --font-regular-XL: normal 400 1.125rem/1.5rem "Poppins", sans-serif; /* 18px/24px */
+  --font-regular-L: normal 400 1rem/1.25rem "Poppins", sans-serif; /* 16px/20px */
+  --font-regular-M: normal 400 0.875rem/1.125rem "Poppins", sans-serif; /* 14px/18px */
+  --font-regular-S: normal 400 0.8125rem/1rem "Poppins", sans-serif; /* 13px/16px */
+  --font-regular-XS: normal 400 0.75rem/0.875rem "Poppins", sans-serif; /* 12px/14px */
+
+  /* Tokens colors dark */
+  --background: var(--background-transparent-lower);
+  --focus-ring: var(--background-neutral-highest);
+  --ghost-icon: var(--background-neutral-higher);
+  --ghost-text: var(--background-neutral-higher);
+  --icon: var(--background-neutral-highest);
+  --text: var(--background-neutral-highest);
+
+  /* Danger colors */
+  --background-danger-high: var(--core-red-600);
+  --background-danger-higher: var(--core-red-800);
+  --background-danger-highest: var(--core-red-950);
+  --background-danger-low: var(--core-red-300);
+  --background-danger-lower: var(--core-red-200);
+  --background-danger-lowest: var(--core-red-50);
+  --background-danger-medium: var(--core-red-400);
+
+  /* Neutral colors */
+  --background-neutral-high: var(--core-slate-600);
+  --background-neutral-higher: var(--core-slate-800);
+  --background-neutral-highest: var(--core-slate-950);
+  --background-neutral-low: var(--core-slate-300);
+  --background-neutral-lower: var(--core-slate-200);
+  --background-neutral-lowest: var(--core-light-100);
+  --background-neutral-medium: var(--core-slate-400);
+
+  /* Primary colors */
+  --background-primary-high: var(--core-purple-600);
+  --background-primary-higher: var(--core-purple-900);
+  --background-primary-highest: var(--core-purple-950);
+  --background-primary-low: var(--core-purple-300);
+  --background-primary-lower: var(--core-purple-200);
+  --background-primary-lowest: var(--core-purple-50);
+  --background-primary-medium: var(--core-purple-400);
+
+  /* Success colors */
+  --background-success-high: var(--core-emerald-600);
+  --background-success-higher: var(--core-emerald-800);
+  --background-success-highest: var(--core-emerald-950);
+  --background-success-low: var(--core-emerald-300);
+  --background-success-lower: var(--core-emerald-200);
+  --background-success-lowest: var(--core-emerald-50);
+  --background-success-medium: var(--core-emerald-400);
+
+  /* Transparent background */
+  --background-transparent-high: var(--core-dark-50);
+  --background-transparent-higher: var(--core-dark-70);
+  --background-transparent-highest: var(--core-dark-100);
+  --background-transparent-low: var(--core-dark-20);
+  --background-transparent-lower: var(--core-dark-10);
+  --background-transparent-lowest: var(--core-dark-6);
+  --background-transparent-medium: var(--core-dark-30);
+
+  /* Warning colors */
+  --background-warning-high: var(--core-orange-600);
+  --background-warning-higher: var(--core-orange-800);
+  --background-warning-highest: var(--core-orange-950);
+  --background-warning-low: var(--core-orange-300);
+  --background-warning-lower: var(--core-orange-200);
+  --background-warning-lowest: var(--core-orange-50);
+  --background-warning-medium: var(--core-orange-400);
+
+  /* Badge colors */
+  --badges-danger-background: var(--background-danger-medium);
+  --badges-danger-icon: var(--background-neutral-lowest);
+  --badges-danger-text: var(--background-neutral-lowest);
+  --badges-primary-background: var(--background-primary-medium);
+  --badges-primary-icon: var(--background-neutral-lowest);
+  --badges-primary-text: var(--background-neutral-lowest);
+  --badges-secondary-background: var(--background-neutral-lowest);
+  --badges-secondary-border: var(--background-transparent-lower);
+  --badges-secondary-icon: var(--background-neutral-highest);
+  --badges-secondary-text: var(--background-neutral-highest);
+  --badges-success-background: var(--background-success-medium);
+  --badges-success-icon: var(--background-neutral-lowest);
+  --badges-success-text: var(--background-neutral-lowest);
+  --badges-tertiary-icon: var(--background-neutral-high);
+  --badges-tertiary-text: var(--background-neutral-high);
+  --badges-warning-background: var(--background-warning-medium);
+  --badges-warning-icon: var(--background-neutral-lowest);
+  --badges-warning-text: var(--background-neutral-lowest);
+
+  /* Button primary */
+  --button-primary-default-background: var(--background-neutral-highest);
+  --button-primary-default-ghost-icon: var(--background-neutral-highest);
+  --button-primary-default-ghost-text: var(--background-neutral-highest);
+  --button-primary-default-icon: var(--background-neutral-lowest);
+  --button-primary-default-text: var(--background-neutral-lowest);
+  --button-primary-focus-background: var(--background-neutral-highest);
+  --button-primary-focus-focus-ring: var(--background-neutral-highest);
+  --button-primary-focus-ghost-icon: var(--background-neutral-highest);
+  --button-primary-focus-ghost-text: var(--background-neutral-highest);
+  --button-primary-focus-icon: var(--background-neutral-lowest);
+  --button-primary-focus-text: var(--background-neutral-lowest);
+  --button-primary-hover-background: var(--background-neutral-higher);
+  --button-primary-hover-ghost-icon: var(--background-neutral-high);
+  --button-primary-hover-ghost-text: var(--background-neutral-high);
+  --button-primary-hover-icon: var(--background-neutral-lowest);
+  --button-primary-hover-text: var(--background-neutral-lowest);
+  --button-primary-press-background: var(--background-neutral-high);
+  --button-primary-press-icon: var(--background-neutral-lowest);
+  --button-primary-press-text: var(--background-neutral-lowest);
+  --button-primary-press-ghost-icon: var(--background-neutral-high);
+  --button-primary-press-ghost-text: var(--background-neutral-high);
+
+  /* Button secondary */
+  --button-secondary-default-background: var(--background-transparent-lowest);
+  --button-secondary-default-ghost-icon: var(--background-neutral-highest);
+  --button-secondary-default-ghost-text: var(--background-neutral-highest);
+  --button-secondary-default-icon: var(--background-neutral-highest);
+  --button-secondary-default-text: var(--background-neutral-highest);
+  --button-secondary-focus-background: var(--background-transparent-lower);
+  --button-secondary-focus-focus-ring: var(--background-neutral-highest);
+  --button-secondary-focus-ghost-icon: var(--background-neutral-highest);
+  --button-secondary-focus-ghost-text: var(--background-neutral-highest);
+  --button-secondary-focus-icon: var(--background-neutral-highest);
+  --button-secondary-focus-text: var(--background-neutral-highest);
+  --button-secondary-hover-background: var(--background-transparent-lower);
+  --button-secondary-hover-ghost-icon: var(--background-neutral-higher);
+  --button-secondary-hover-ghost-text: var(--background-neutral-higher);
+  --button-secondary-hover-icon: var(--background-neutral-highest);
+  --button-secondary-hover-text: var(--background-neutral-highest);
+  --button-secondary-press-background: var(--background-transparent-low);
+  --button-secondary-press-ghost-icon: var(--background-neutral-high);
+  --button-secondary-press-ghost-text: var(--background-neutral-high);
+  --button-secondary-press-icon: var(--background-neutral-highest);
+  --button-secondary-press-text: var(--background-neutral-highest);
+
+  /* Chips */
+  --chips-button-active-background: var(--background-primary-highest);
+  --chips-button-active-border: var(--background-primary-highest);
+  --chips-button-active-icon: var(--background-neutral-lowest);
+  --chips-button-active-text: var(--background-neutral-lowest);
+  --chips-button-active-hover-background: var(--background-primary-higher);
+  --chips-button-active-hover-border: var(--background-primary-higher);
+  --chips-button-active-hover-icon: var(--background-neutral-lowest);
+  --chips-button-active-hover-text: var(--background-neutral-lowest);
+  --chips-button-default-background: var(--background-neutral-lowest);
+  --chips-button-default-border: var(--background-primary-high);
+  --chips-button-default-icon: var(--background-primary-high);
+  --chips-button-default-text: var(--background-primary-highest);
+  --chips-button-hover-background: var(--background-primary-lowest);
+  --chips-button-hover-border: var(--background-primary-high);
+  --chips-button-hover-icon: var(--background-primary-high);
+  --chips-button-hover-text: var(--background-primary-highest);
+
+  /* Navigation */
+  --nav-active-background: var(--background-transparent-lower);
+  --nav-active-icon: var(--background-neutral-highest);
+  --nav-active-text: var(--background-neutral-highest);
+  --nav-default-background: var(--core-dark-0);
+  --nav-default-icon: var(--background-neutral-highest);
+  --nav-default-text: var(--background-neutral-highest);
+  --nav-focus-background: var(--core-dark-0);
+  --nav-focus-focus-ring: var(--background-neutral-highest);
+  --nav-focus-icon: var(--background-neutral-highest);
+  --nav-focus-text: var(--background-neutral-highest);
+  --nav-hover-background: var(--background-transparent-lowest);
+  --nav-hover-icon: var(--background-neutral-highest);
+  --nav-hover-text: var(--background-neutral-highest);
+
+  /* Project cards */
+  --project-cards-active-background: var(--background-neutral-lowest);
+  --project-cards-active-border: var(--background-transparent-high);
+  --project-cards-active-icon: var(--background-neutral-high);
+  --project-cards-active-text: var(--background-neutral-high);
+  --project-cards-default-background: var(--background-neutral-lowest);
+  --project-cards-default-border: var(--background-transparent-high);
+  --project-cards-default-icon: var(--background-neutral-highest);
+  --project-cards-default-text: var(--background-neutral-highest);
+  --project-cards-hover-background: var(--background-neutral-low);
+  --project-cards-hover-border: var(--background-primary-high);
+  --project-cards-hover-icon: var(--background-neutral-highest);
+  --project-cards-hover-text: var(--background-neutral-highest);
+
+  /* Inputs */
+  --input-background: var(--background-transparent-lowest);
+  --input-border: var(--background-neutral-lower);
+  --input-focus-border: var(--background-primary-medium);
+  --input-focus-background: var(--background-transparent-lower);
+  --input-placeholder: var(--background-neutral-medium);
+  --input-text: var(--background-neutral-highest);
+  --input-text-on-focus: var(--background-primary-highest);
+  --input-text-on-hover: var(--background-primary-highest);
+
+  /* Components */
+  --component-background: var(--background-neutral-lowest);
+  --component-border: var(--background-neutral-low);
+  --component-text: var(--background-neutral-highest);
+  --component-hover-background: var(--background-neutral-lower);
+  --component-hover-border: var(--background-neutral-medium);
+  --component-hover-text: var(--background-neutral-highest);
+
+  /* Random chips */
+  --random-chips-black: var(--core-slate-950);
+  --random-chips-blue: var(--core-blue-400);
+  --random-chips-green: var(--core-emerald-400);
+  --random-chips-grey: var(--core-slate-500);
+  --random-chips-red: var(--core-red-500);
+  --random-chips-yellow: var(--core-amber-300);
+  --random-chips-violet: var(--core-purple-600);
+
+  /* Syntax colors */
+  --random-syntax-colors-comments: var(--core-lime-500);
+  --random-syntax-colors-conditions: var(--core-purple-400);
+  --random-syntax-colors-higher: var(--core-amber-200);
+  --random-syntax-colors-low: var(--core-sky-300);
+  --random-syntax-colors-text: var(--core-slate-200);
+
+  /* Primitives colors */
+
+  --core-light-0: #ffffff00;
+  --core-light-10: #ffffff1a;
+  --core-light-100: #ffffff;
+  --core-light-2: #ffffff05;
+  --core-light-20: #ffffff33;
+  --core-light-30: #ffffff4d;
+  --core-light-4: #ffffff0a;
+  --core-light-40: #ffffff66;
+  --core-light-50: #ffffff80;
+  --core-light-6: #ffffff0f;
+  --core-light-60: #ffffff99;
+  --core-light-70: #ffffffb2;
+  --core-light-8: #ffffff14;
+  --core-light-80: #ffffffcc;
+  --core-light-90: #ffffffe5;
+  --core-dark-0: #00000000;
+  --core-dark-10: #0000001a;
+  --core-dark-100: #000000;
+  --core-dark-2: #00000005;
+  --core-dark-20: #00000033;
+  --core-dark-30: #0000004d;
+  --core-dark-4: #0000000a;
+  --core-dark-40: #00000066;
+  --core-dark-50: #00000080;
+  --core-dark-6: #0000000f;
+  --core-dark-60: #00000099;
+  --core-dark-70: #000000b2;
+  --core-dark-8: #00000014;
+  --core-dark-80: #000000cc;
+  --core-dark-90: #000000e5;
+  --core-lime-100: #ecfccb;
+  --core-lime-200: #d9f99d;
+  --core-lime-300: #bef264;
+  --core-lime-400: #a3e635;
+  --core-lime-50: #f7fee7;
+  --core-lime-500: #84cc16;
+  --core-lime-600: #65a30d;
+  --core-lime-700: #4d7c0f;
+  --core-lime-800: #3f6212;
+  --core-lime-900: #365314;
+  --core-lime-950: #1a2e05;
+  --core-sky-100: #e0f2fe;
+  --core-sky-200: #bae6fd;
+  --core-sky-300: #7dd3fc;
+  --core-sky-400: #38bdf8;
+  --core-sky-50: #f0f9ff;
+  --core-sky-500: #0ea5e9;
+  --core-sky-600: #0284c7;
+  --core-sky-700: #0369a1;
+  --core-sky-800: #075985;
+  --core-sky-900: #0c4a6e;
+  --core-sky-950: #082f49;
+  --core-teal-100: #ccfbf1;
+  --core-teal-200: #99f6e4;
+  --core-teal-300: #5eead4;
+  --core-teal-400: #2dd4bf;
+  --core-teal-50: #f0fdfa;
+  --core-teal-500: #14b8a6;
+  --core-teal-600: #0d9488;
+  --core-teal-700: #0f766e;
+  --core-teal-800: #115e59;
+  --core-teal-900: #134e4a;
+  --core-teal-950: #042f2e;
+  --core-amber-100: #fef3c7;
+  --core-amber-200: #fde68a;
+  --core-amber-300: #fcd34d;
+  --core-amber-400: #fbbf24;
+  --core-amber-50: #fffbeb;
+  --core-amber-500: #f59e0b;
+  --core-amber-600: #d97706;
+  --core-amber-700: #b45309;
+  --core-amber-800: #92400e;
+  --core-amber-900: #78350f;
+  --core-amber-950: #451a03;
+  --core-emerald-100: #d1fae5;
+  --core-emerald-200: #a7f3d0;
+  --core-emerald-300: #6ee7b7;
+  --core-emerald-400: #34d399;
+  --core-emerald-50: #ecfdf5;
+  --core-emerald-500: #10b981;
+  --core-emerald-600: #059669;
+  --core-emerald-700: #047857;
+  --core-emerald-800: #065f46;
+  --core-emerald-900: #064e3b;
+  --core-emerald-950: #022c22;
+  --core-purple-100: #f3e8ff;
+  --core-purple-200: #e9d5ff;
+  --core-purple-300: #d8b4fe;
+  --core-purple-400: #c084fc;
+  --core-purple-50: #faf5ff;
+  --core-purple-500: #a855f7;
+  --core-purple-600: #9333ea;
+  --core-purple-700: #7e22ce;
+  --core-purple-800: #6b21a8;
+  --core-purple-900: #581c87;
+  --core-purple-950: #3b0764;
+  --core-red-100: #fee2e2;
+  --core-red-200: #fecaca;
+  --core-red-300: #fca5a5;
+  --core-red-400: #f87171;
+  --core-red-50: #fef2f2;
+  --core-red-500: #ef4444;
+  --core-red-600: #dc2626;
+  --core-red-700: #b91c1c;
+  --core-red-800: #991b1b;
+  --core-red-900: #7f1d1d;
+  --core-red-950: #450a0a;
+  --core-blue-100: #dbeafe;
+  --core-blue-200: #bfdbfe;
+  --core-blue-300: #93c5fd;
+  --core-blue-400: #60a5fa;
+  --core-blue-50: #eff6ff;
+  --core-blue-500: #3b82f6;
+  --core-blue-600: #2563eb;
+  --core-blue-700: #1d4ed8;
+  --core-blue-800: #1e40af;
+  --core-blue-900: #1e3a8a;
+  --core-blue-950: #172554;
+  --core-orange-100: #ffedd5;
+  --core-orange-200: #fed7aa;
+  --core-orange-300: #fdba74;
+  --core-orange-400: #fb923c;
+  --core-orange-50: #fff7ed;
+  --core-orange-500: #f97316;
+  --core-orange-600: #ea580c;
+  --core-orange-700: #c2410c;
+  --core-orange-800: #9a3412;
+  --core-orange-900: #7c2d12;
+  --core-orange-950: #450a0a;
+  --core-slate-100: #f1f5f9;
+  --core-slate-200: #e2e8f0;
+  --core-slate-300: #cbd5e1;
+  --core-slate-400: #94a3b8;
+  --core-slate-50: #f8fafc;
+  --core-slate-500: #64748b;
+  --core-slate-600: #475569;
+  --core-slate-700: #334155;
+  --core-slate-800: #1e293b;
+  --core-slate-900: #0f172a;
+  --core-slate-950: #020617;
+  --core-fuchsia-100: #fae8ff;
+  --core-fuchsia-200: #f5d0fe;
+  --core-fuchsia-300: #f0abfc;
+  --core-fuchsia-400: #e879f9;
+  --core-fuchsia-50: #fdf4ff;
+  --core-fuchsia-500: #d946ef;
+  --core-fuchsia-600: #c026d3;
+  --core-fuchsia-700: #a21caf;
+  --core-fuchsia-800: #86198f;
+  --core-fuchsia-900: #701a75;
+  --core-fuchsia-950: #4a044e;
 }
+

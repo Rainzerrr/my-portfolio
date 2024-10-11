@@ -1,12 +1,11 @@
 "use client";
 
-import React, { FC, MouseEvent } from "react";
+import React, { FC } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import classNames from "classnames";
 import Icon from "@/components/atoms/icon/icon";
 import "./nav-item.scss";
-import path from "path";
 
 interface NavItemProps {
   className?: string;

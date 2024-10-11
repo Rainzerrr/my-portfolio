@@ -45,17 +45,17 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
     }
   }, [showLanguageSwitchOptions]);
 
-  const handleThemeSwitch = () => {
-    setTheme(isDarkThemeActive ? "dark" : "light");
-    setIsDarkThemeActive(!isDarkThemeActive);
-    if (!isDarkThemeActive) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
+  // const handleThemeSwitch = () => {
+  //   setTheme(isDarkThemeActive ? "dark" : "light");
+  //   setIsDarkThemeActive(!isDarkThemeActive);
+  //   if (!isDarkThemeActive) {
+  //     document.documentElement.classList.add("dark");
+  //     localStorage.setItem("theme", "dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //     localStorage.setItem("theme", "light");
+  //   }
+  // };
 
   const renderNavItems = useMemo(() => {
     return navItems.map((navItem: Omit<NavItemProps, "size">) => {

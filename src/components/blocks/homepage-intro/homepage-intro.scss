@@ -40,6 +40,7 @@
   font: var(--font-regular-XS);
   color: var(--background-neutral-high);
   opacity: 0;
+  max-width: 460px;
   animation: startText 0.5s ease-in-out 1s forwards;
 }
 
@@ -57,7 +58,7 @@
   }
 
   .icon-linkedin {
-    stroke: none;
+    stroke: none !important;
   }
 }
 
@@ -81,7 +82,7 @@
 
   .homepage__intro__desc {
     font: var(--font-regular-S);
-    max-width: 560px;
+    max-width: 460px;
   }
 }
 

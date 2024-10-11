@@ -29,7 +29,7 @@ const HomepageIntro = () => {
       <div className="homepage__intro__buttons">
         <Button
           theme="primary"
-          label="Voir mes projets"
+          label="Mes projets"
           rightIcon="arrow-right"
           shape="rounded"
           size="L"

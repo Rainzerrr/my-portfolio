@@ -1,15 +1,17 @@
+@import "../../../app//breakpoints.scss";
+
 .homepage__intro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 36px;
 }
 
 .homepage__intro__text {
   display: flex;
   flex-direction: column;
   place-items: center;
-  gap: 10px;
+  gap: 16px;
 }
 
 .homepage__intro__title {
@@ -17,12 +19,28 @@
   flex-direction: column;
   place-items: center;
   font: var(--font-bold-h5);
+  opacity: 0;
+  animation: startText 1s ease-in-out 0.5s forwards;
+}
+
+.homepage__intro__title-highlight {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage__intro__title-underline {
+  position: relative;
+  width: 124px;
+  height: 4px;
+  margin-top: -4px;
 }
 
 .homepage__intro__desc {
   text-align: center;
-  font: var(--font-medium-M);
+  font: var(--font-regular-XS);
   color: var(--background-neutral-high);
+  opacity: 0;
+  animation: startText 0.5s ease-in-out 1s forwards;
 }
 
 .homepage__intro__buttons {
@@ -30,6 +48,17 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  opacity: 0;
+
+  animation: startButtons 0.5s ease-in-out 1s forwards;
+
+  .icon-github {
+    fill: none;
+  }
+
+  .icon-linkedin {
+    stroke: none;
+  }
 }
 
 .homepage__intro__buttons-secondary {
@@ -37,4 +66,55 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .homepage__intro__title {
+    font: var(--font-bold-h4);
+  }
+
+  .homepage__intro__title-underline {
+    width: 188px;
+    height: 6px;
+    margin-top: -2px;
+  }
+
+  .homepage__intro__desc {
+    font: var(--font-regular-S);
+    max-width: 560px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .homepage__intro__title {
+    font: var(--font-bold-h2);
+  }
+
+  .homepage__intro__title-underline {
+    width: 311px;
+    height: 10px;
+    margin-top: -6px;
+  }
+
+  .homepage__intro__desc {
+    font: var(--font-regular-L);
+  }
+}
+
+@keyframes startText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes startButtons {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }

@@ -1,8 +1,22 @@
 @import "../../../app//breakpoints.scss";
 
 .homepage {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 24px;
+  padding-top: 80px;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .homepage {
+    padding-top: 128px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .homepage {
+    padding-top: 192px;
+  }
 }

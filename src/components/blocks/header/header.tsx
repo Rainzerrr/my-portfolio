@@ -8,6 +8,7 @@ import LanguageSwitch from "@/components/organisms/language-switch/language-swit
 import { DropdownItemProps } from "@/components/molecules/dropdown-item/dropdown-item";
 import Icon from "@/components/atoms/icon/icon";
 import "./header.scss";
+import { useTheme } from "next-themes";
 
 interface HeaderProps {
   navItems: Omit<NavItemProps, "size">[];
@@ -32,6 +33,8 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showLanguageSwitchOptions, setShowLanguageSwitchOptions] =
     useState(false);
+  const { setTheme } = useTheme();
+  const [isDarkThemeActive, setIsDarkThemeActive] = useState<boolean>(false);
 
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
@@ -41,6 +44,18 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
       }, 500);
     }
   }, [showLanguageSwitchOptions]);
+
+  const handleThemeSwitch = () => {
+    setTheme(isDarkThemeActive ? "dark" : "light");
+    setIsDarkThemeActive(!isDarkThemeActive);
+    if (!isDarkThemeActive) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
 
   const renderNavItems = useMemo(() => {
     return navItems.map((navItem: Omit<NavItemProps, "size">) => {

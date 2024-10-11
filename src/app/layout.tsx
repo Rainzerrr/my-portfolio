@@ -3,6 +3,7 @@ import Header from "@/components/blocks/header/header";
 import { NavItemProps } from "@/components/molecules/nav-item/nav-item";
 import "./layout.scss";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
@@ -38,10 +39,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${poppins_init.variable} layout`}>
-        <Header navItems={navItems} />
-        <div className="layout__children">{children}</div>
-      </body>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <body className={`${poppins_init.variable} layout`}>
+          <Header navItems={navItems} />
+          <div className="layout__children">{children}</div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

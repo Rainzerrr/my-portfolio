@@ -1,5 +1,6 @@
 import Button from "@/components/molecules/button/button";
 import React from "react";
+import Image from "next/image";
 import "./homepage-intro.scss";
 
 const HomepageIntro = () => {
@@ -7,12 +8,22 @@ const HomepageIntro = () => {
     <div className="homepage__intro">
       <div className="homepage__intro__text">
         <div className="homepage__intro__title">
-          <p>Rayan,</p>
-          <p>Développeur Full Stack</p>
+          <p>Rayan, Développeur</p>
+          <div className="homepage__intro__title-highlight">
+            <p>Full-stack</p>
+            <div className="homepage__intro__title-underline">
+              <Image
+                src="/underline.svg"
+                alt="title underline"
+                fill
+                quality={100}
+              />
+            </div>
+          </div>
         </div>
         <p className="homepage__intro__desc">
-          Je suis ravi de réaliser des interfaces modernes et complexes pour
-          répondre aux besoin des clients !
+          J’aime contribuer à la création de solutions technologiques durables
+          et évolutives qui façonnent le monde de demain.
         </p>
       </div>
       <div className="homepage__intro__buttons">
@@ -33,7 +44,7 @@ const HomepageIntro = () => {
           />
           <Button
             theme="secondary"
-            label="GitHub"
+            label="Github"
             rightIcon="github"
             shape="rounded"
             size="L"

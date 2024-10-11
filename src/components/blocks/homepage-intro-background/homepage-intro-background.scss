@@ -1,0 +1,75 @@
+@import "../../../app/breakpoints.scss";
+
+.homepage__background__light {
+  position: absolute;
+  top: 142px;
+  left: 0;
+  width: 100%;
+  height: 86px;
+
+  filter: blur(45px);
+  z-index: -1;
+
+  opacity: 0;
+  animation: startBackground 0.8s ease-in-out 0.5s forwards;
+  .homepage__background__light-image {
+    object-fit: cover;
+  }
+}
+
+.homepage__background__codelines {
+  position: absolute;
+  top: 60px;
+  width: 150px;
+  height: 153px;
+  margin-left: -70px;
+
+  z-index: -1;
+  fill: var(--background-primary-lower);
+
+  opacity: 0;
+  animation: startCodelines 0.8s ease-in-out 0.5s forwards;
+  .homepage__background__codelines-image {
+    object-fit: contain;
+    object-position: left 0%;
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .homepage__background__light {
+    height: 136px;
+    top: 200px;
+    filter: blur(70px);
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .homepage__background__light {
+    height: 180px;
+    top: 220px;
+    // filter: blur(95px);
+    img {
+      fill: var(--background-primary-lower);
+    }
+  }
+}
+
+@keyframes startBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes startCodelines {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}

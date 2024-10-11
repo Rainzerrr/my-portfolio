@@ -77,6 +77,14 @@ const HomepageIntroBackground = () => {
           fill
         />
       </div>
+      <div className="homepage__background__codelines9">
+        <Image
+          className="homepage__background__codelines-image"
+          src="/codelines7.svg"
+          alt="background home"
+          fill
+        />
+      </div>
     </>
   );
 };

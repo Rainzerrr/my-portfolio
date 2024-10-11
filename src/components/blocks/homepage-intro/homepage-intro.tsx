@@ -1,9 +1,12 @@
+"use client";
 import Button from "@/components/molecules/button/button";
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import "./homepage-intro.scss";
 
 const HomepageIntro = () => {
+  const { push } = useRouter();
   return (
     <div className="homepage__intro">
       <div className="homepage__intro__text">
@@ -32,7 +35,8 @@ const HomepageIntro = () => {
           label="Mes projets"
           rightIcon="arrow-right"
           shape="rounded"
-          size="L"
+          size="XL"
+          onClick={() => push("/projects")}
         />
         <div className="homepage__intro__buttons-secondary">
           <Button
@@ -40,14 +44,16 @@ const HomepageIntro = () => {
             label="LinkedIn"
             rightIcon="linkedin"
             shape="rounded"
-            size="L"
+            size="XL"
+            onClick={() => push("https://www.linkedin.com/in/rayanainouche/")}
           />
           <Button
             theme="secondary"
             label="Github"
             rightIcon="github"
             shape="rounded"
-            size="L"
+            size="XL"
+            onClick={() => push("https://github.com/Rainzerrr")}
           />
         </div>
       </div>

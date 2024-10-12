@@ -1,5 +1,9 @@
 @import "./breakpoints.scss";
 
+.layout {
+  position: relative;
+}
+
 .layout__children {
   margin-top: 58px;
   background-color: var(--background-neutral-lowest);

@@ -1,0 +1,32 @@
+@import "../../../app//breakpoints.scss";
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.page-wrapper__content {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0px 24px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .page-wrapper__content {
+    padding: 0px 32px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .page-wrapper__content {
+    padding: 0px 56px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-large) {
+}
+
+@media screen and (min-width: $breakpoint-xlarge) {
+}

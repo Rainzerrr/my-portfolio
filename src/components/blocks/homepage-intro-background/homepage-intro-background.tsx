@@ -6,13 +6,40 @@ const HomepageIntroBackground = () => {
   return (
     <>
       <div className="homepage__background__light">
-        <Image
+        <svg
           className="homepage__background__light-image"
-          src="/homepage-background.svg"
-          alt="background home"
-          fill
-        />
+          viewBox="0 0 1440 905"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_f_519_10506)">
+            <path d="M1386.75 371.374C1538.84 457.199 1662.57 463.449 1367.35 535.567C754.948 207.483 656.629 535.567 335.819 655C255.859 655 -199.109 504.623 -143.265 283.675C-44.6773 94.2915 284.684 518.626 364.643 518.626C664.45 335.685 1386.75 321.226 1386.75 371.374Z" />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_519_10506"
+              x="-398"
+              y="-15"
+              width="2195"
+              height="920"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="125"
+                result="effect1_foregroundBlur_519_10506"
+              />
+            </filter>
+          </defs>
+        </svg>
       </div>
+
       <div className="homepage__background__codelines1">
         <Image
           className="homepage__background__codelines-image"

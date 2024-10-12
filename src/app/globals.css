@@ -227,14 +227,19 @@ a {
   --project-cards-active-background: var(--background-neutral-lowest);
   --project-cards-active-border: var(--background-transparent-high);
   --project-cards-active-icon: var(--background-neutral-high);
-  --project-cards-active-text: var(--background-neutral-high);
+  --project-cards-active-details: var(--background-neutral-medium);
+  --project-cards-active-text: var(--background-neutral-highest);
+
   --project-cards-default-background: var(--background-neutral-lowest);
-  --project-cards-default-border: var(--background-transparent-high);
+  --project-cards-default-border: var(--background-transparent-lower);
   --project-cards-default-icon: var(--background-neutral-highest);
+  --project-cards-default-details: var(--background-neutral-medium);
   --project-cards-default-text: var(--background-neutral-highest);
-  --project-cards-hover-background: var(--background-neutral-low);
-  --project-cards-hover-border: var(--background-primary-high);
+
+  --project-cards-hover-background: var(--background-neutral-lowest);
+  --project-cards-hover-border: var(--background-primary-medium);
   --project-cards-hover-icon: var(--background-neutral-highest);
+  --project-cards-hover-details: var(--background-neutral-medium);
   --project-cards-hover-text: var(--background-neutral-highest);
 
   /* Inputs */
@@ -424,5 +429,209 @@ a {
   --core-fuchsia-800: #86198f;
   --core-fuchsia-900: #701a75;
   --core-fuchsia-950: #4a044e;
+}
+
+.dark {
+  /* Background colors */
+  --background: var(--background-transparent-lower);
+  --focus-ring: var(--background-neutral-highest);
+  --ghost-icon: var(--background-neutral-higher);
+  --ghost-text: var(--background-neutral-higher);
+  --icon: var(--background-neutral-highest);
+  --text: var(--background-neutral-highest);
+
+  /* Danger colors */
+  --background-danger-high: var(--core-red-300);
+  --background-danger-higher: var(--core-red-100);
+  --background-danger-highest: var(--core-red-50);
+  --background-danger-low: var(--core-red-600);
+  --background-danger-lower: var(--core-red-800);
+  --background-danger-lowest: var(--core-red-950);
+  --background-danger-medium: var(--core-red-500);
+
+  /* Neutral colors */
+  --background-neutral-high: var(--core-slate-300);
+  --background-neutral-higher: var(--core-slate-100);
+  --background-neutral-highest: var(--core-light-100);
+  --background-neutral-low: var(--core-slate-600);
+  --background-neutral-lower: var(--core-slate-800);
+  --background-neutral-lowest: var(--core-slate-950);
+  --background-neutral-medium: var(--core-slate-500);
+
+  /* Primary colors */
+  --background-primary-high: var(--core-purple-300);
+  --background-primary-higher: var(--core-purple-100);
+  --background-primary-highest: var(--core-purple-50);
+  --background-primary-low: var (--core-purple-600);
+  --background-primary-lower: var(--core-purple-800);
+  --background-primary-lowest: var(--core-purple-950);
+  --background-primary-medium: var(--core-purple-500);
+
+  /* Success colors */
+  --background-succes-high: var(--core-emerald-300);
+  --background-succes-higher: var(--core-emerald-100);
+  --background-succes-highest: var(--core-emerald-50);
+  --background-succes-low: var(--core-emerald-600);
+  --background-succes-lower: var(--core-emerald-800);
+  --background-succes-lowest: var(--core-emerald-950);
+  --background-succes-medium: var(--core-emerald-500);
+
+  /* Transparent colors */
+  --background-transparent-high: var(--core-light-50);
+  --background-transparent-higher: var(--core-light-70);
+  --background-transparent-highest: var(--core-light-100);
+  --background-transparent-low: var(--core-light-20);
+  --background-transparent-lower: var(--core-light-10);
+  --background-transparent-lowest: var(--core-light-6);
+  --background-transparent-medium: var(--core-light-30);
+
+  /* Warning colors */
+  --background-warning-high: var(--core-orange-300);
+  --background-warning-higher: var (--core-orange-100);
+  --background-warning-highest: var(--core-orange-50);
+  --background-warning-low: var(--core-orange-600);
+  --background-warning-lower: var(--core-orange-800);
+  --background-warning-lowest: var(--core-orange-950);
+  --background-warning-medium: var(--core-orange-500);
+
+  /* Badge colors */
+  --badges-danger-background: var(--background-danger-higher);
+  --badges-danger-icon: var(--background-neutral-lowest);
+  --badges-danger-text: var(--background-neutral-lowest);
+  --badges-primary-background: var(--background-primary-higher);
+  --badges-primary-icon: var(--background-neutral-lowest);
+  --badges-primary-text: var(--background-neutral-lowest);
+  --badges-secondary-background: var(--background-neutral-lowest);
+  --badges-secondary-border: var(--background-transparent-lower);
+  --badges-secondary-icon: var(--background-neutral-highest);
+  --badges-secondary-text: var(--background-neutral-highest);
+  --badges-succes-background: var(--background-succes-higher);
+  --badges-succes-icon: var(--background-neutral-lowest);
+  --badges-succes-text: var(--background-neutral-lowest);
+  --badges-tertiary-icon: var(--background-neutral-high);
+  --badges-tertiary-text: var(--background-neutral-high);
+  --badges-warning-background: var(--background-warning-higher);
+  --badges-warning-icon: var(--background-neutral-lowest);
+  --badges-warning-text: var(--background-neutral-lowest);
+
+  /* Button primary */
+  --button-primary-default-background: var(--background-neutral-highest);
+  --button-primary-default-ghost-icon: var(--background-neutral-highest);
+  --button-primary-default-ghost-text: var(--background-neutral-highest);
+  --button-primary-default-icon: var(--background-neutral-lowest);
+  --button-primary-default-text: var(--background-neutral-lowest);
+  --button-primary-focus-background: var(--background-neutral-highest);
+  --button-primary-focus-focus-ring: var(--background-neutral-highest);
+  --button-primary-focus-ghost-icon: var(--background-neutral-highest);
+  --button-primary-focus-ghost-text: var(--background-neutral-highest);
+  --button-primary-focus-icon: var(--background-neutral-lowest);
+  --button-primary-focus-text: var(--background-neutral-lowest);
+  --button-primary-hover-background: var(--background-neutral-higher);
+  --button-primary-hover-ghost-icon: var(--background-neutral-high);
+  --button-primary-hover-ghost-text: var(--background-neutral-high);
+  --button-primary-hover-icon: var(--background-neutral-lowest);
+  --button-primary-hover-text: var(--background-neutral-lowest);
+  --button-primary-press-background: var(--background-neutral-high);
+  --button-primary-press-icon: var(--background-neutral-lowest);
+  --button-primary-press-text: var(--background-neutral-lowest);
+  --button-primary-press-ghost-icon: var(--background-neutral-high);
+  --button-primary-press-ghost-text: var(--background-neutral-high);
+
+  /* Button secondary */
+  --button-secondary-default-background: var(--background-transparent-lowest);
+  --button-secondary-default-ghost-icon: var(--background-neutral-highest);
+  --button-secondary-default-ghost-text: var(--background-neutral-highest);
+  --button-secondary-default-icon: var(--background-neutral-highest);
+  --button-secondary-default-text: var(--background-neutral-highest);
+  --button-secondary-focus-background: var(--background-transparent-lower);
+  --button-secondary-focus-focus-ring: var(--background-neutral-highest);
+  --button-secondary-focus-ghost-icon: var(--background-neutral-highest);
+  --button-secondary-focus-ghost-text: var(--background-neutral-highest);
+  --button-secondary-focus-icon: var(--background-neutral-highest);
+  --button-secondary-focus-text: var(--background-neutral-highest);
+  --button-secondary-hover-background: var(--background-transparent-lower);
+  --button-secondary-hover-ghost-icon: var(--background-neutral-higher);
+  --button-secondary-hover-ghost-text: var(--background-neutral-higher);
+  --button-secondary-hover-icon: var(--background-neutral-highest);
+  --button-secondary-hover-text: var(--background-neutral-highest);
+  --button-secondary-press-background: var(--background-transparent-low);
+  --button-secondary-press-ghost-icon: var(--background-neutral-high);
+  --button-secondary-press-ghost-text: var(--background-neutral-high);
+  --button-secondary-press-icon: var(--background-neutral-highest);
+  --button-secondary-press-text: var(--background-neutral-highest);
+
+  /* Chips button */
+  --chips-button-active-background: var(--background-primary-highest);
+  --chips-button-active-border: var(--background-primary-highest);
+  --chips-button-active-icon: var(--background-neutral-lowest);
+  --chips-button-active-text: var(--background-neutral-lowest);
+  --chips-button-active-hover-background: var(--background-primary-higher);
+  --chips-button-active-hover-border: var(--background-primary-higher);
+  --chips-button-active-hover-icon: var(--background-neutral-lowest);
+  --chips-button-active-hover-text: var(--background-neutral-lowest);
+  --chips-button-default-background: var(--background-neutral-lowest);
+  --chips-button-default-border: var(--background-primary-high);
+  --chips-button-default-icon: var(--background-primary-high);
+  --chips-button-default-text: var(--background-primary-highest);
+  --chips-button-hover-background: var(--background-primary-lowest);
+  --chips-button-hover-border: var(--background-primary-high);
+  --chips-button-hover-icon: var(--background-primary-high);
+  --chips-button-hover-text: var(--background-primary-highest);
+
+  /* Navigation */
+  --nav-active-background: var(--background-transparent-lowest);
+  --nav-active-icon: var(--background-neutral-highest);
+  --nav-active-text: var(--background-neutral-highest);
+  --nav-default-background: var(--core-light-0);
+  --nav-default-icon: var(--background-neutral-highest);
+  --nav-default-text: var(--background-neutral-highest);
+  --nav-focus-background: var(--core-light-0);
+  --nav-focus-focus-ring: var(--background-neutral-highest);
+  --nav-focus-icon: var(--background-neutral-highest);
+  --nav-focus-text: var(--background-neutral-highest);
+  --nav-hover-background: var(--background-transparent-lowest);
+  --nav-hover-icon: var(--background-neutral-highest);
+  --nav-hover-text: var(--background-neutral-highest);
+
+  /* Project cards */
+  --project-cards-active-background: var(--background-neutral-high);
+  --project-cards-active-border: var(--background-transparent-higher);
+  --project-cards-active-details: var(--background-neutral-medium);
+  --project-cards-active-title: var(--background-neutral-highest);
+  --project-cards-default-background: var(--background-neutral-lowest);
+  --project-cards-default-border: var(--background-neutral-low);
+  --project-cards-default-details: var(--background-neutral-medium);
+  --project-cards-default-title: var(--background-neutral-highest);
+  --project-cards-hover-background: var(--background-neutral-highest);
+  --project-cards-hover-border: var(--background-transparent-higher);
+  --project-cards-hover-details: var(--background-neutral-medium);
+  --project-cards-hover-title: var(--background-neutral-highest);
+
+  /* Text colors */
+  --text-default-informations: var(--background-neutral-medium);
+  --text-default-primary: var(--background-neutral-highest);
+  --text-secondary-informations: var(--background-neutral-medium);
+  --text-secondary-primary: var(--background-neutral-highest);
+
+  /* Tabs */
+  --tabs-default-border-bottom: var(--background-transparent-higher);
+  --tabs-default-text: var(--background-neutral-highest);
+  --tabs-focus-border-bottom: var(--background-neutral-highest);
+  --tabs-focus-focus-ring: var(--background-neutral-highest);
+  --tabs-focus-text: var(--background-neutral-highest);
+  --tabs-hover-border-bottom: var(--background-transparent-lower);
+  --tabs-hover-text: var(--background-neutral-highest);
+
+  /* Tags */
+  --tags-default-background: var(--background-neutral-low);
+  --tags-default-icon: var(--background-neutral-lowest);
+  --tags-default-text: var(--background-neutral-lowest);
+  --tags-focus-background: var(--background-neutral-low);
+  --tags-focus-focus-ring: var(--background-neutral-highest);
+  --tags-focus-icon: var(--background-neutral-lowest);
+  --tags-focus-text: var(--background-neutral-lowest);
+  --tags-hover-background: var(--background-neutral-medium);
+  --tags-hover-icon: var(--background-neutral-lowest);
+  --tags-hover-text: var(--background-neutral-lowest);
 }
 

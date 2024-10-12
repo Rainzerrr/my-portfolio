@@ -11,21 +11,25 @@
   align-items: center;
   justify-content: center;
   background-color: var(--nav-default-background);
+  color: var(--nav-default-text);
 
   transition: var(--transition-background-fast);
 
   &:hover {
     background-color: var(--nav-hover-background);
+    color: var(--nav-hover-text);
   }
 
   &:focus-visible {
     outline: 2px solid var(--nav-focus-focus-ring);
+    color: var(--nav-focus-text);
     outline-offset: -2px;
   }
 }
 
 .nav-item--active {
   background-color: var(--nav-active-background);
+  color: var(--nav-active-text);
 }
 
 .nav-item--S {

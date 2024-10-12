@@ -2,6 +2,8 @@
 
 .layout__children {
   margin-top: 58px;
+  background-color: var(--background-neutral-lowest);
+  overflow: hidden;
 }
 
 @media screen and (min-width: $breakpoint-medium) {

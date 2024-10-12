@@ -1,7 +1,6 @@
 "use client";
 import Button from "@/components/molecules/button/button";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import "./homepage-intro.scss";
 
@@ -15,17 +14,23 @@ const HomepageIntro = () => {
     <div className="homepage__intro">
       <div className="homepage__intro__text">
         <div className="homepage__intro__title">
-          <p>Rayan, Développeur</p>
+          <p>Rayan, développeur</p>
           <div className="homepage__intro__title-highlight">
             <p>Full-stack</p>
-            <div className="homepage__intro__title-underline">
-              <Image
-                src="/underline.svg"
-                alt="title underline"
-                fill
-                quality={100}
+            <svg
+              className="homepage__intro__title-underline"
+              xmlns="http://www.w3.org/2000/svg"
+              width="126"
+              height="4"
+              viewBox="0 0 126 4"
+              fill="none"
+            >
+              <path
+                d="M1 3C47.9831 -0.622193 103.243 1.49075 125 3"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               />
-            </div>
+            </svg>
           </div>
         </div>
         <p className="homepage__intro__desc">

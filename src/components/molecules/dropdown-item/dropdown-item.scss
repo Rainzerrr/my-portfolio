@@ -5,9 +5,17 @@
   gap: 10px;
   padding: 8px 12px;
   border-radius: 6px;
+  color: var(--nav-default-text);
 
   &:hover {
     background-color: var(--background-transparent-lowest);
+    color: var(--nav-hover-text);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--nav-focus-focus-ring);
+    color: var(--nav-focus-text);
+    outline-offset: -2px;
   }
 }
 

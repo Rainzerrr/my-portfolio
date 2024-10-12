@@ -1,12 +1,11 @@
 @import "../../../app//breakpoints.scss";
 
 .homepage {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 24px;
   padding-top: 80px;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: $breakpoint-small) {

@@ -141,7 +141,8 @@
   }
 }
 
-.button-rounded {
+.button-rounded,
+.button-circle {
   border-radius: 1111px;
 }
 
@@ -158,6 +159,9 @@
     font: var(--font-medium-S);
   }
   outline-offset: 4px;
+  &.button-circle {
+    padding: 6px 6px;
+  }
 }
 
 .button-M {
@@ -168,6 +172,9 @@
     font: var(--font-medium-M);
   }
   outline-offset: 4px;
+  &.button-circle {
+    padding: 8px 8px;
+  }
 }
 
 .button-L {
@@ -178,6 +185,9 @@
     font: var(--font-medium-L);
   }
   outline-offset: 4px;
+  &.button-circle {
+    padding: 12px 12px;
+  }
 }
 
 .button-XL {
@@ -189,4 +199,7 @@
   }
   outline-offset: 6px;
   outline-width: 2px !important;
+  &.button-circle {
+    padding: 12px 12px;
+  }
 }

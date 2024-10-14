@@ -1,0 +1,13 @@
+.project-hub {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 0px;
+}
+
+.project-hub__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-self: stretch;
+}

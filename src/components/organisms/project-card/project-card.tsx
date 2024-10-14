@@ -6,7 +6,8 @@ import Button, { ButtonProps } from "@/components/molecules/button/button";
 import "./project-card.scss";
 import classNames from "classnames";
 
-interface PreojectCardProps {
+interface ProjectCardProps {
+  className?: string;
   title: string;
   details: string;
   badges: BadgeProps[];
@@ -17,7 +18,8 @@ interface PreojectCardProps {
   variant: "default" | "emphasized";
 }
 
-const ProjectCard: FC<PreojectCardProps> = ({
+const ProjectCard: FC<ProjectCardProps> = ({
+  className,
   title,
   details,
   badges,
@@ -34,7 +36,11 @@ const ProjectCard: FC<PreojectCardProps> = ({
   return (
     <Link
       href={redirectUrl}
-      className={classNames("project-card", `project-card--${variant}`)}
+      className={classNames(
+        "project-card",
+        `project-card--${variant}`,
+        className
+      )}
     >
       <div className="project-card__image">
         <Image src={imageUrl} alt={imageAlt} fill quality={100} />
@@ -60,3 +66,4 @@ const ProjectCard: FC<PreojectCardProps> = ({
 };
 
 export default ProjectCard;
+export type { ProjectCardProps };

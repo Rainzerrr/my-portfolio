@@ -38,7 +38,7 @@ const ProjectFeature = () => {
           imageAlt="Image de présentation du projet fruit and go"
           redirectUrl="www.youtube.com"
           button={{
-            shape: "rounded",
+            shape: "circle",
             size: "M",
             theme: "secondary",
 
@@ -58,7 +58,7 @@ const ProjectFeature = () => {
           imageAlt="Image de présentation du projet fruit and go"
           redirectUrl="www.youtube.com"
           button={{
-            shape: "rounded",
+            shape: "circle",
             size: "M",
             theme: "secondary",
             leftIcon: "arrow-right",

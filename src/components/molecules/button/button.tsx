@@ -11,7 +11,7 @@ interface ButtonProps {
   rightIcon?: string;
   theme: "primary" | "secondary";
   isGhost?: boolean;
-  shape: "rounded" | "square-rounded";
+  shape: "circle" | "rounded" | "square-rounded";
   size: "S" | "M" | "L" | "XL";
   onClick?: () => void;
 }

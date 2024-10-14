@@ -1,15 +1,14 @@
 "use client";
 import Button from "@/components/molecules/button/button";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
+import useWidth from "@/hooks/useWidth";
+
 import "./homepage-intro.scss";
 
 const HomepageIntro = () => {
   const { push } = useRouter();
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
+  const { width } = useWidth();
   return (
     <div className="homepage__intro">
       <div className="homepage__intro__text">

@@ -1,0 +1,32 @@
+@import "../../../app/breakpoints.scss";
+
+.technology-icon {
+  display: flex;
+  height: 18px;
+  align-items: center;
+  gap: 4px;
+
+  width: fit-content;
+}
+
+.technology-icon__icon {
+  padding: unset;
+}
+
+.technology-icon__label {
+  font: var(--font-medium-S);
+  color: var(--badges-tertiary-text);
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .technology-icon {
+    background-color: var(--background-transparent-lowest);
+    border-radius: 4px;
+    height: unset;
+    padding: 4px;
+  }
+
+  .technology-icon__label {
+    display: none;
+  }
+}

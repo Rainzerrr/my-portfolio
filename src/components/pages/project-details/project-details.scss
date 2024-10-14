@@ -1,5 +1,14 @@
 @import "../../../app/breakpoints.scss";
 
+.project-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details__return-btn {
+  padding: unset;
+}
+
 @media screen and (min-width: $breakpoint-small) {
 }
 

@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-
-import "./project-details.scss";
 import { BadgeProps } from "@/components/molecules/badge/badge";
 import PortfolioPage from "@/components/wrappers/portfolio-page/portfolio-page";
 import Button from "@/components/molecules/button/button";
+import ProjectFeatured from "@/components/blocks/project-featured/project-featured";
+import "./project-details.scss";
 
 interface ProjectDetailsProps {
   title: string;
@@ -40,6 +40,11 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           shape="rounded"
           leftIcon="arrow-right"
         />
+        <div className="project-details__content">
+          <div className=""></div>
+          <div />
+          <ProjectFeatured title="Autres projets" />
+        </div>
       </PortfolioPage>
     </div>
   );

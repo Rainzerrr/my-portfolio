@@ -1,11 +1,15 @@
 import ProjectCard from "@/components/organisms/project-card/project-card";
-import React from "react";
-import "./project-feature.scss";
+import React, { FC } from "react";
+import "./project-featured.scss";
 
-const ProjectFeature = () => {
+interface ProjectFeaturedProps {
+  title: string;
+}
+
+const ProjectFeatured: FC<ProjectFeaturedProps> = ({ title }) => {
   return (
     <div className="homepage__featured-projects">
-      <p className="homepage__featured-projects__title">Derniers projets</p>
+      <p className="homepage__featured-projects__title">{title}</p>
       <div className="homepage__featured-projects__list">
         <ProjectCard
           title="Fruit&Go"
@@ -16,7 +20,7 @@ const ProjectFeature = () => {
           ]}
           imageUrl="/image_fruitandgo.png"
           imageAlt="Image de présentation du projet fruit and go"
-          redirectUrl="www.youtube.com"
+          redirectUrl="/project-details/Fruit&Go"
           button={{
             shape: "rounded",
             size: "M",
@@ -70,4 +74,4 @@ const ProjectFeature = () => {
   );
 };
 
-export default ProjectFeature;
+export default ProjectFeatured;

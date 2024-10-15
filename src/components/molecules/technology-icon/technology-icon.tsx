@@ -24,3 +24,4 @@ const TechnologyIconText: FC<TechnologyIconTextProps> = ({ icon, label }) => {
 };
 
 export default TechnologyIconText;
+export type { TechnologyIconTextProps };

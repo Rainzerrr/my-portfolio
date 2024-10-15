@@ -50,7 +50,7 @@
   color: var(--button-secondary-default-text);
 
   .icon {
-    stroke: var(--button-secondary-default-text);
+    stroke: var(--button-secondary-default-icon);
   }
 
   &:hover {
@@ -202,4 +202,9 @@
   &.button-circle {
     padding: 12px 12px;
   }
+}
+
+.button--full_width {
+  width: unset;
+  flex: 1;
 }

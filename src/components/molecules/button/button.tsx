@@ -13,6 +13,7 @@ interface ButtonProps {
   isGhost?: boolean;
   shape: "circle" | "rounded" | "square-rounded";
   size: "S" | "M" | "L" | "XL";
+  fullWidth?: boolean;
   onClick?: () => void;
 }
 
@@ -25,8 +26,16 @@ const Button: FC<ButtonProps> = ({
   theme,
   isGhost,
   size = "M",
+  fullWidth,
   onClick = () => null,
 }) => {
+  const sizes = {
+    S: "XS",
+    M: "S",
+    L: "M",
+    XL: "XL",
+  };
+
   return (
     <button
       className={classNames(
@@ -34,14 +43,15 @@ const Button: FC<ButtonProps> = ({
         `button-${size}`,
         `button-${theme}`,
         `button-${shape}`,
+        fullWidth && `button--full_width`,
         isGhost && `button-ghost`,
         className
       )}
       onClick={() => onClick()}
     >
-      {leftIcon && <Icon name={leftIcon} size={size === "S" ? "XS" : size} />}
+      {leftIcon && <Icon name={leftIcon} size={sizes[size]} />}
       {label && <p className="button__label">{label}</p>}
-      {rightIcon && <Icon name={rightIcon} size={size === "S" ? "XS" : size} />}
+      {rightIcon && <Icon name={rightIcon} size={sizes[size]} />}
     </button>
   );
 };

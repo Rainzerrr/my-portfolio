@@ -1,12 +1,12 @@
 import ProjectCard from "@/components/organisms/project-card/project-card";
 import React, { FC } from "react";
-import "./project-featured.scss";
+import "./main-projects.scss";
 
-interface ProjectFeaturedProps {
+interface MainProjectsProps {
   title: string;
 }
 
-const ProjectFeatured: FC<ProjectFeaturedProps> = ({ title }) => {
+const MainProjects: FC<MainProjectsProps> = ({ title }) => {
   return (
     <div className="homepage__featured-projects">
       <p className="homepage__featured-projects__title">{title}</p>
@@ -74,4 +74,4 @@ const ProjectFeatured: FC<ProjectFeaturedProps> = ({ title }) => {
   );
 };
 
-export default ProjectFeatured;
+export default MainProjects;

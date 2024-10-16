@@ -1,12 +1,26 @@
+"use client";
 import ProjectCard from "@/components/organisms/project-card/project-card";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import ProjectDetailsModal from "@/components/pages/project-details-modal/project-details-modal";
+import { ProjectDetailsProps } from "@/components/pages/project-details/project-details";
 import "./main-projects.scss";
+import data from "@/app/data";
 
 interface MainProjectsProps {
   title: string;
 }
 
 const MainProjects: FC<MainProjectsProps> = ({ title }) => {
+  const [currentProject, setCurrentProject] =
+    useState<ProjectDetailsProps | null>(null);
+  const [isProjectDetailsModalOpen, setIsProjectDetailsModalOpen] =
+    useState(false);
+
+  const openProjectDetails = (data: ProjectDetailsProps) => {
+    setCurrentProject(data);
+    setIsProjectDetailsModalOpen(true);
+  };
+
   return (
     <div className="homepage__featured-projects">
       <p className="homepage__featured-projects__title">{title}</p>
@@ -29,6 +43,9 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
             label: "Voir le projet",
           }}
           variant="emphasized"
+          onClick={() => {
+            openProjectDetails(data.projectDetails[0]);
+          }}
         />
         <ProjectCard
           title="Fountain Finder"
@@ -70,6 +87,12 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
           variant="default"
         />
       </div>
+      {currentProject !== null && isProjectDetailsModalOpen && (
+        <ProjectDetailsModal
+          {...currentProject}
+          setIsModalOpen={setIsProjectDetailsModalOpen}
+        />
+      )}
     </div>
   );
 };

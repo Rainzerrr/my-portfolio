@@ -3,8 +3,8 @@ import Badge, { BadgeProps } from "@/components/molecules/badge/badge";
 import Image from "next/image";
 import Link from "next/link";
 import Button, { ButtonProps } from "@/components/molecules/button/button";
-import "./project-card.scss";
 import classNames from "classnames";
+import "./project-card.scss";
 
 interface ProjectCardProps {
   className?: string;
@@ -16,6 +16,7 @@ interface ProjectCardProps {
   redirectUrl: string;
   button: ButtonProps;
   variant: "default" | "emphasized";
+  onClick?: () => void;
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({
@@ -28,6 +29,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   redirectUrl,
   button,
   variant = "emphasized",
+  onClick = () => null,
 }) => {
   const renderProjectCardBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
@@ -36,6 +38,12 @@ const ProjectCard: FC<ProjectCardProps> = ({
   return (
     <Link
       href={redirectUrl}
+      onClick={(e) => {
+        if (window.innerWidth >= 1024) {
+          e.preventDefault();
+          onClick();
+        }
+      }}
       className={classNames(
         "project-card",
         `project-card--${variant}`,

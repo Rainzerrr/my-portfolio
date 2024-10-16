@@ -1,0 +1,23 @@
+@import "../../../app/breakpoints.scss";
+
+.project-details-modal__buttons {
+  display: none;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .project-details-modal {
+    display: flex;
+    gap: 20px;
+    border-radius: 16px;
+  }
+
+  .project-details-modal__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .button {
+      width: fit-content;
+    }
+  }
+}

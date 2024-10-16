@@ -14,6 +14,7 @@ import ProjectFeature, {
 } from "@/components/blocks/project-feature/project-feature";
 import { redirect } from "next/navigation";
 import "./project-details.scss";
+import Link from "next/link";
 
 interface ProjectDetailsProps {
   title: string;
@@ -56,18 +57,33 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
       </>
     );
   };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log("Texte copié dans le presse-papier avec succès!");
+      })
+      .catch((err) => {
+        console.error("Erreur lors de la copie dans le presse-papier : ", err);
+      });
+  };
+
   return (
     <div className="project-details">
       <PortfolioPage>
-        <Button
-          className="project-details__return-btn"
-          theme="primary"
-          isGhost
-          label="Retour"
-          size="XL"
-          shape="rounded"
-          leftIcon="chevron-left"
-        />
+        <Link href="/">
+          <Button
+            className="project-details__return-btn"
+            theme="primary"
+            isGhost
+            label="Retour"
+            size="XL"
+            shape="rounded"
+            leftIcon="chevron-left"
+          />
+        </Link>
+
         <div className="project-details__content">
           <div className="project-details__infos">
             <div className="project-details__infos__top">
@@ -80,6 +96,10 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                     shape="circle"
                     leftIcon="link"
                     theme="secondary"
+                    onClick={() => {
+                      copyToClipboard(window.location.href);
+                      alert("URL copiée dans le presse papier.");
+                    }}
                   />
                 </div>
                 <div className="project-details__separator" />

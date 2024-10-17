@@ -200,7 +200,7 @@
 }
 
 @media screen and (min-width: $breakpoint-medium) {
-  .project-details {
+  .project-details--modal {
     border-radius: 16px;
     max-height: calc(100vh - 64px);
     overflow-y: auto;

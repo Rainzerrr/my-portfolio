@@ -4,30 +4,30 @@ import classNames from "classnames";
 import NavItem, {
   NavItemProps,
 } from "@/components/molecules/nav-item/nav-item";
-import LanguageSwitch from "@/components/organisms/language-switch/language-switch";
-import { DropdownItemProps } from "@/components/molecules/dropdown-item/dropdown-item";
+// import LanguageSwitch from "@/components/organisms/language-switch/language-switch";
+// import { DropdownItemProps } from "@/components/molecules/dropdown-item/dropdown-item";
 import Icon from "@/components/atoms/icon/icon";
-import "./header.scss";
 import { useTheme } from "next-themes";
+import "./header.scss";
 
 interface HeaderProps {
   navItems: Omit<NavItemProps, "size">[];
 }
 
-const options: DropdownItemProps[] = [
-  {
-    iconName: "french",
-    label: "Français",
-    value: "fr",
-    onClick: () => null,
-  },
-  {
-    iconName: "england",
-    label: "Anglais",
-    value: "en",
-    onClick: () => null,
-  },
-];
+// const options: DropdownItemProps[] = [
+//   {
+//     iconName: "french",
+//     label: "Français",
+//     value: "fr",
+//     onClick: () => null,
+//   },
+//   {
+//     iconName: "england",
+//     label: "Anglais",
+//     value: "en",
+//     onClick: () => null,
+//   },
+// ];
 
 const Header: FC<HeaderProps> = ({ navItems }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -74,21 +74,15 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
 
   useEffect(() => {
     setIsDarkThemeActive(localStorage.getItem("theme") === "dark");
-    // Obtenir la balise <html>
     const htmlElement = document.documentElement;
-
-    // Lire le thème actuel depuis localStorage
     const theme = localStorage.getItem("theme");
+    htmlElement.classList.remove("light");
+    htmlElement.classList.remove("dark");
 
-    // Suppression de toutes les classes existantes (ou spécifiées)
-    htmlElement.classList.remove("light"); // Exemple de classe à retirer
-    htmlElement.classList.remove("dark"); // Autre exemple de classe à retirer
-
-    // Ajouter la classe basée sur le thème actuel
     if (theme) {
-      htmlElement.classList.add(theme); // "light" ou "dark" selon la valeur du thème
+      htmlElement.classList.add(theme);
     } else {
-      htmlElement.classList.add("light"); // Valeur par défaut
+      htmlElement.classList.add("light");
     }
   });
 
@@ -141,12 +135,12 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
         />
         <div className="header__mobile-menu__content">
           <div className="header__nav-items">{renderNavItems}</div>
-          <LanguageSwitch
+          {/* <LanguageSwitch
             className="header-mobile-menu__language-switch"
             options={options}
             showOptions={showLanguageSwitchOptions}
             setShowOptions={setShowLanguageSwitchOptions}
-          />
+          /> */}
         </div>
       </div>
 

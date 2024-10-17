@@ -49,6 +49,7 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
       <ProjectCard
         key={projectCard.title + projectCard.variant}
         {...projectCard}
+        redirectUrl={`/project-details/${projectCard.title}`}
         style={{
           order: isOnDesktop ? cardOrderDisplayForDesktop(index) : index,
         }}

@@ -20,10 +20,10 @@ export default function LocaleLayout({
       label: "Accueil",
       redirectUrl: "/",
     },
-    {
-      label: "Présentation",
-      redirectUrl: "/presentation",
-    },
+    // {
+    //   label: "Présentation",
+    //   redirectUrl: "/presentation",
+    // },
     {
       label: "Projets",
       redirectUrl: "/projects",

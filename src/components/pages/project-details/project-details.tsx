@@ -15,6 +15,7 @@ import ProjectFeature, {
 import { redirect } from "next/navigation";
 import "./project-details.scss";
 import Link from "next/link";
+import classNames from "classnames";
 
 interface ProjectDetailsProps {
   title: string;
@@ -72,7 +73,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   };
 
   return (
-    <div className="project-details">
+    <div
+      className={classNames(
+        "project-details",
+        isModal && "project-details--modal"
+      )}
+    >
       <PortfolioPage>
         {!isModal && (
           <Link href="/">
@@ -119,7 +125,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                         <div className="project-details__nb-persons">
                           <Icon name="trash" size="XS" />
                           <p className="project-details__context-label">
-                            {nbPeople}
+                            {nbPeople} {nbPeople > 1 ? "personnes" : "personne"}
                           </p>
                         </div>
 

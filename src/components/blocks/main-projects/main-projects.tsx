@@ -57,7 +57,7 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
           ]}
           imageUrl="/fountain_finder_background_image.png"
           imageAlt="Image de présentation du projet fruit and go"
-          redirectUrl="www.youtube.com"
+          redirectUrl={`/project-details/Fountain Finder`}
           button={{
             shape: "circle",
             size: "M",
@@ -83,7 +83,7 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
           ]}
           imageUrl="/vibe_background_image.png"
           imageAlt="Image de présentation du projet fruit and go"
-          redirectUrl="www.youtube.com"
+          redirectUrl="/project-details/VIBE."
           button={{
             shape: "circle",
             size: "M",

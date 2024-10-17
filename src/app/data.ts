@@ -18,12 +18,11 @@ const data: DataProps = {
       nbPeople: 2,
       time: "2 mois",
       technologies: [
-        { icon: "react", label: "React.js" },
         { icon: "next-js", label: "Next.js" },
         { icon: "css_3", label: "CSS 3" },
       ],
       repoUrl: "https://github.com/Rainzerrr/fruit-and-go-demo",
-      deployedUrl: "https://fruit-and-go-demo.vercel.app/",
+      deployedUrl: "https://fruitandgo.fr/",
       features: [
         {
           title: "Introduction.",

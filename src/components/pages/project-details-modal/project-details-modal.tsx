@@ -60,7 +60,7 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
               leftIcon="link"
               onClick={() => {
                 copyToClipboard(
-                  `http://localhost:3000/project-details/${props.title}`
+                  `https://mon-eportfolio.vercel.app/project-details/${props.title}`
                 );
                 alert("Lien de la page copié avec succès !");
               }}

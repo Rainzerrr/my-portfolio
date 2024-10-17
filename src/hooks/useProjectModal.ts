@@ -16,7 +16,6 @@ const useProjectModal = () => {
 
   const findProjectDetailsData = (projectTitle: string) => {
     return data.projectDetails.find((project) => {
-      console.log(project.title, projectTitle);
       return project.title == projectTitle;
     });
   };

@@ -12,10 +12,10 @@ import TechnologyIconText, {
 import ProjectFeature, {
   ProjectFeatureProps,
 } from "@/components/blocks/project-feature/project-feature";
-import { redirect } from "next/navigation";
 import "./project-details.scss";
 import Link from "next/link";
 import classNames from "classnames";
+import { useRouter } from "next/navigation";
 
 interface ProjectDetailsProps {
   title: string;
@@ -46,6 +46,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   features,
   isModal,
 }) => {
+  const { push } = useRouter();
   const renderBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
   };
@@ -123,7 +124,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                       </div>
                       <div className="project-details__infos__context">
                         <div className="project-details__nb-persons">
-                          <Icon name="trash" size="XS" />
+                          <Icon name="person" size="XS" />
                           <p className="project-details__context-label">
                             {nbPeople} {nbPeople > 1 ? "personnes" : "personne"}
                           </p>
@@ -147,12 +148,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
               <div className="project-details__infos__buttons">
                 <Button
                   label="Projet déployé"
-                  rightIcon="link"
+                  rightIcon="laptop"
                   theme="primary"
                   shape="rounded"
                   size="L"
                   fullWidth
-                  onClick={() => deployedUrl && redirect(deployedUrl)}
+                  onClick={() => deployedUrl && push(deployedUrl)}
                 />
                 <Button
                   label="Repository"
@@ -161,7 +162,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                   shape="rounded"
                   size="L"
                   fullWidth
-                  onClick={() => repoUrl && redirect(repoUrl)}
+                  onClick={() => repoUrl && push(repoUrl)}
                 />
               </div>
             </div>

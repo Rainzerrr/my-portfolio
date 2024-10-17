@@ -22,6 +22,8 @@ const data: DataProps = {
         { icon: "next-js", label: "Next.js" },
         { icon: "css_3", label: "CSS 3" },
       ],
+      repoUrl: "https://github.com/Rainzerrr/fruit-and-go-demo",
+      deployedUrl: "https://fruit-and-go-demo.vercel.app/",
       features: [
         {
           title: "Introduction.",
@@ -77,6 +79,8 @@ const data: DataProps = {
         { icon: "react", label: "React.js" },
         { icon: "css_3", label: "SCSS" },
       ],
+      repoUrl: "https://github.com/Rainzerrr/fountain-finder",
+      deployedUrl: "https://fountain-finder.vercel.app/",
       features: [
         {
           title: "Introduction.",

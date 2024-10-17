@@ -19,7 +19,6 @@ const DropdownItem: FC<DropdownItemProps> = ({
   onClick,
 }) => {
   const pathname = usePathname();
-  console.log(value);
   return (
     <Link
       href={pathname}

@@ -28,6 +28,7 @@ interface ProjectDetailsProps {
   deployedUrl?: string;
   repoUrl?: string;
   features: ProjectFeatureProps[];
+  isModal?: boolean;
 }
 
 const ProjectDetails: FC<ProjectDetailsProps> = ({
@@ -42,6 +43,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   deployedUrl,
   repoUrl,
   features,
+  isModal,
 }) => {
   const renderBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
@@ -72,17 +74,19 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   return (
     <div className="project-details">
       <PortfolioPage>
-        <Link href="/">
-          <Button
-            className="project-details__return-btn"
-            theme="primary"
-            isGhost
-            label="Retour"
-            size="XL"
-            shape="rounded"
-            leftIcon="chevron-left"
-          />
-        </Link>
+        {!isModal && (
+          <Link href="/">
+            <Button
+              className="project-details__return-btn"
+              theme="primary"
+              isGhost
+              label="Retour"
+              size="XL"
+              shape="rounded"
+              leftIcon="chevron-left"
+            />
+          </Link>
+        )}
 
         <div className="project-details__content">
           <div className="project-details__infos">
@@ -90,17 +94,19 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
               <div className="project-details__infos__text">
                 <div className="project-details__infos__title-link">
                   <p className="project-details__title">{title}</p>
-                  <Button
-                    className="project-details__infos__link-button"
-                    size="L"
-                    shape="circle"
-                    leftIcon="link"
-                    theme="secondary"
-                    onClick={() => {
-                      copyToClipboard(window.location.href);
-                      alert("URL copiée dans le presse papier.");
-                    }}
-                  />
+                  {!isModal && (
+                    <Button
+                      className="project-details__infos__link-button"
+                      size="L"
+                      shape="circle"
+                      leftIcon="link"
+                      theme="secondary"
+                      onClick={() => {
+                        copyToClipboard(window.location.href);
+                        alert("URL copiée dans le presse papier.");
+                      }}
+                    />
+                  )}
                 </div>
                 <div className="project-details__separator" />
                 <div className="project-details__infos__properties-desc">

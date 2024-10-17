@@ -145,7 +145,7 @@
   }
 
   .header__left-space {
-    width: 190px;
+    width: 30px;
   }
 
   .header__nav-items {
@@ -176,6 +176,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    align-self: center;
 
     padding: unset;
     width: unset;

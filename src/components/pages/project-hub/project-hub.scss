@@ -1,8 +1,16 @@
+@import "../../../app/breakpoints.scss";
+
 .project-hub {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   padding: 24px 0px;
+}
+
+.project-hub__title {
+  font: var(--font-semibold-h2);
+  color: var(--background-neutral-high);
 }
 
 .project-hub__cards {
@@ -10,4 +18,29 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   align-self: stretch;
+
+  .project-card {
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .project-hub {
+    padding: 32px 0px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .project-hub {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 56px 0px;
+  }
+
+  .project-hub__title {
+    font: var(--font-semibold-h1);
+  }
+
+  .project-card {
+  }
 }

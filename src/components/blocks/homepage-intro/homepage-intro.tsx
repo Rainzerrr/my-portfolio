@@ -8,7 +8,7 @@ import "./homepage-intro.scss";
 
 const HomepageIntro = () => {
   const { push } = useRouter();
-  const { width } = useWidth();
+  const { isOnDesktop } = useWidth();
   return (
     <div className="homepage__intro">
       <div className="homepage__intro__text">
@@ -43,7 +43,7 @@ const HomepageIntro = () => {
           label="Mes projets"
           rightIcon="arrow-right"
           shape="rounded"
-          size={width >= 1024 ? "XL" : "L"}
+          size={isOnDesktop ? "XL" : "L"}
           onClick={() => push("/projects")}
         />
         <div className="homepage__intro__buttons-secondary">
@@ -52,7 +52,7 @@ const HomepageIntro = () => {
             label="LinkedIn"
             rightIcon="linkedin"
             shape="rounded"
-            size={width >= 1024 ? "XL" : "L"}
+            size={isOnDesktop ? "XL" : "L"}
             onClick={() => push("https://www.linkedin.com/in/rayanainouche/")}
           />
           <Button
@@ -60,7 +60,7 @@ const HomepageIntro = () => {
             label="Github"
             rightIcon="github"
             shape="rounded"
-            size={width >= 1024 ? "XL" : "L"}
+            size={isOnDesktop ? "XL" : "L"}
             onClick={() => push("https://github.com/Rainzerrr")}
           />
         </div>

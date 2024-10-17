@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useCallback, useMemo, useState } from "react";
+import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import classNames from "classnames";
 import NavItem, {
   NavItemProps,
@@ -46,7 +46,7 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
   }, [showLanguageSwitchOptions]);
 
   const handleThemeSwitch = () => {
-    console.log("thheme dark : ", isDarkThemeActive);
+    console.log("theme dark : ", isDarkThemeActive);
     setTheme(isDarkThemeActive ? "dark" : "light");
     setIsDarkThemeActive(!isDarkThemeActive);
     if (!isDarkThemeActive) {
@@ -72,6 +72,26 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
     });
   }, [closeMobileMenu, navItems]);
 
+  useEffect(() => {
+    setIsDarkThemeActive(localStorage.getItem("theme") === "dark");
+    // Obtenir la balise <html>
+    const htmlElement = document.documentElement;
+
+    // Lire le thème actuel depuis localStorage
+    const theme = localStorage.getItem("theme");
+
+    // Suppression de toutes les classes existantes (ou spécifiées)
+    htmlElement.classList.remove("light"); // Exemple de classe à retirer
+    htmlElement.classList.remove("dark"); // Autre exemple de classe à retirer
+
+    // Ajouter la classe basée sur le thème actuel
+    if (theme) {
+      htmlElement.classList.add(theme); // "light" ou "dark" selon la valeur du thème
+    } else {
+      htmlElement.classList.add("light"); // Valeur par défaut
+    }
+  });
+
   return (
     <div className="header">
       <div
@@ -84,12 +104,12 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
       />
 
       <div className="header__settings">
-        <LanguageSwitch
+        {/* <LanguageSwitch
           className="hide-mobile"
           options={options}
           showOptions={showLanguageSwitchOptions}
           setShowOptions={setShowLanguageSwitchOptions}
-        />
+        /> */}
         <Icon
           className="header__settings__icon"
           name={isDarkThemeActive ? "sun" : "moon-star"}

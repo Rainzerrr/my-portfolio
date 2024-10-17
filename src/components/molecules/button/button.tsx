@@ -17,6 +17,9 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
+type SizeKey = "S" | "M" | "L" | "XL";
+type SizeValue = "XS" | "S" | "M" | "XL";
+
 const Button: FC<ButtonProps> = ({
   className,
   label,
@@ -29,7 +32,7 @@ const Button: FC<ButtonProps> = ({
   fullWidth,
   onClick = () => null,
 }) => {
-  const sizes = {
+  const sizes: Record<SizeKey, SizeValue> = {
     S: "XS",
     M: "S",
     L: "M",

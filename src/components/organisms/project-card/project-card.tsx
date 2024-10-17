@@ -1,10 +1,12 @@
-import React, { FC } from "react";
+"use client";
+import React, { CSSProperties, FC } from "react";
 import Badge, { BadgeProps } from "@/components/molecules/badge/badge";
 import Image from "next/image";
 import Link from "next/link";
 import Button, { ButtonProps } from "@/components/molecules/button/button";
 import classNames from "classnames";
 import "./project-card.scss";
+import useWidth from "@/hooks/useWidth";
 
 interface ProjectCardProps {
   className?: string;
@@ -16,6 +18,7 @@ interface ProjectCardProps {
   redirectUrl: string;
   button: ButtonProps;
   variant: "default" | "emphasized";
+  style?: CSSProperties;
   onClick?: () => void;
 }
 
@@ -29,17 +32,20 @@ const ProjectCard: FC<ProjectCardProps> = ({
   redirectUrl,
   button,
   variant = "emphasized",
+  style,
   onClick = () => null,
 }) => {
+  const { isOnDesktop } = useWidth();
   const renderProjectCardBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
   };
 
   return (
     <Link
+      style={style}
       href={redirectUrl}
       onClick={(e) => {
-        if (window.innerWidth >= 1024) {
+        if (isOnDesktop) {
           e.preventDefault();
           onClick();
         }

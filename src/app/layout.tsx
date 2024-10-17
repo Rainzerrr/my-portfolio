@@ -3,7 +3,6 @@ import Header from "@/components/blocks/header/header";
 import { NavItemProps } from "@/components/molecules/nav-item/nav-item";
 import "./layout.scss";
 import "./globals.css";
-// import { Providers } from "./providers";
 
 const poppins_init = Poppins({
   subsets: ["latin"],
@@ -11,16 +10,10 @@ const poppins_init = Poppins({
   variable: "--font-poppins",
 });
 
-export async function generateStaticParams() {
-  return [{ locale: "fr" }, { locale: "en" }];
-}
-
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
-  params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
   const navItems: Omit<NavItemProps, "size">[] = [
     {
@@ -38,7 +31,7 @@ export default async function LocaleLayout({
   ];
 
   return (
-    <html lang={locale}>
+    <html>
       {/* <Providers> */}
       <body className={`${poppins_init.variable} layout`}>
         <Header navItems={navItems} />

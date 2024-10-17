@@ -29,6 +29,7 @@
   flex-direction: column;
   align-self: stretch;
   gap: 32px;
+  justify-content: space-between;
 }
 
 .project-details__infos__top {
@@ -37,6 +38,7 @@
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
+  flex: 1;
 }
 
 .project-details__infos__text {
@@ -200,8 +202,8 @@
 @media screen and (min-width: $breakpoint-medium) {
   .project-details {
     border-radius: 16px;
-    overflow-y: scroll;
-    height: fit-content;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
   }
   .project-details__content {
     padding: 32px 0px;

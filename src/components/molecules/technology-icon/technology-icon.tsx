@@ -10,13 +10,13 @@ interface TechnologyIconTextProps {
 }
 
 const TechnologyIconText: FC<TechnologyIconTextProps> = ({ icon, label }) => {
-  const { width } = useWidth();
+  const { isOnDesktop } = useWidth();
   return (
     <div className="technology-icon">
       <Icon
         className="technology-icon__icon"
         name={icon}
-        size={width >= 1024 ? "2XL" : "S"}
+        size={isOnDesktop ? "2XL" : "S"}
       />
       <p className="technology-icon__label">{label}</p>
     </div>

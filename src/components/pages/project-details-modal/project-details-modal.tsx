@@ -31,7 +31,8 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
     <PortfolioPage>
       <Modal setIsOpen={setIsModalOpen}>
         <div className="project-details-modal">
-          <ProjectDetails {...props} />
+          <ProjectDetails {...props} isModal />
+
           <div className="project-details-modal__buttons">
             <Button
               size="L"
@@ -49,6 +50,7 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
               shape="circle"
               onClick={() => {
                 setIsModalOpen(false);
+                window.scrollTo(0, 0);
                 push(`/project-details/${props.title}`);
               }}
             />
@@ -56,11 +58,12 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
             <Button
               size="L"
               leftIcon="link"
-              onClick={() =>
+              onClick={() => {
                 copyToClipboard(
                   `http://localhost:3000/project-details/${props.title}`
-                )
-              }
+                );
+                alert("Lien de la page copié avec succès !");
+              }}
               theme="primary"
               shape="circle"
             />

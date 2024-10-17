@@ -1,25 +1,22 @@
 "use client";
 import ProjectCard from "@/components/organisms/project-card/project-card";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import ProjectDetailsModal from "@/components/pages/project-details-modal/project-details-modal";
-import { ProjectDetailsProps } from "@/components/pages/project-details/project-details";
+import useProjectModal from "@/hooks/useProjectModal";
 import "./main-projects.scss";
-import data from "@/app/data";
 
 interface MainProjectsProps {
   title: string;
 }
 
 const MainProjects: FC<MainProjectsProps> = ({ title }) => {
-  const [currentProject, setCurrentProject] =
-    useState<ProjectDetailsProps | null>(null);
-  const [isProjectDetailsModalOpen, setIsProjectDetailsModalOpen] =
-    useState(false);
-
-  const openProjectDetails = (data: ProjectDetailsProps) => {
-    setCurrentProject(data);
-    setIsProjectDetailsModalOpen(true);
-  };
+  const {
+    currentProject,
+    isProjectDetailsModalOpen,
+    setIsProjectDetailsModalOpen,
+    openProjectDetails,
+    findProjectDetailsData,
+  } = useProjectModal();
 
   return (
     <div className="homepage__featured-projects">
@@ -44,7 +41,10 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
           }}
           variant="emphasized"
           onClick={() => {
-            openProjectDetails(data.projectDetails[0]);
+            const projectData = findProjectDetailsData("Fruit&Go");
+            if (projectData !== undefined) {
+              openProjectDetails(projectData);
+            }
           }}
         />
         <ProjectCard
@@ -66,6 +66,12 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
             rightIcon: "arrow-right",
           }}
           variant="default"
+          onClick={() => {
+            const projectData = findProjectDetailsData("Fountain Finder");
+            if (projectData !== undefined) {
+              openProjectDetails(projectData);
+            }
+          }}
         />
 
         <ProjectCard
@@ -85,6 +91,12 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
             leftIcon: "arrow-right",
           }}
           variant="default"
+          onClick={() => {
+            const projectData = findProjectDetailsData("VIBE.");
+            if (projectData !== undefined) {
+              openProjectDetails(projectData);
+            }
+          }}
         />
       </div>
       {currentProject !== null && isProjectDetailsModalOpen && (

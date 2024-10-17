@@ -8,6 +8,7 @@
   background-color: var(--project-cards-default-background);
   overflow: hidden;
   grid-column: span 4;
+  z-index: 10;
 
   &:hover {
     .project-card__image {

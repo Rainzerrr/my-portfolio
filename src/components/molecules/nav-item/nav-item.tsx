@@ -37,7 +37,10 @@ const NavItem: FC<NavItemProps> = ({
 
   return (
     <Link
-      onClick={onClick}
+      onClick={() => {
+        window.scrollTo(0, 0);
+        onClick();
+      }}
       className={classNames("nav-item", className)}
       href={redirectUrl}
     >

@@ -6,8 +6,10 @@ import ProjectDetails, {
 } from "../project-details/project-details";
 import Button from "@/components/molecules/button/button";
 import PortfolioPage from "@/components/wrappers/portfolio-page/portfolio-page";
-import "./project-details-modal.scss";
 import { useRouter } from "next/navigation";
+import useSnackbar from "@/hooks/useSnackbar";
+import Snackbar from "@/components/molecules/snackbar/snackbar";
+import "./project-details-modal.scss";
 
 interface ProjectDetailsModalProps extends ProjectDetailsProps {
   setIsModalOpen: Dispatch<React.SetStateAction<boolean>>;
@@ -15,7 +17,10 @@ interface ProjectDetailsModalProps extends ProjectDetailsProps {
 
 const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
   const { setIsModalOpen } = props;
+  const { isSnackbarOpen, snackBarText, showSnackbar } = useSnackbar();
   const { push } = useRouter();
+
+  console.log(isSnackbarOpen, snackBarText);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard
@@ -28,49 +33,53 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
       });
   };
   return (
-    <PortfolioPage>
-      <Modal setIsOpen={setIsModalOpen}>
-        <div className="project-details-modal">
-          <ProjectDetails {...props} isModal />
+    <>
+      {" "}
+      <PortfolioPage>
+        <Modal setIsOpen={setIsModalOpen}>
+          <div className="project-details-modal">
+            <ProjectDetails {...props} isModal />
 
-          <div className="project-details-modal__buttons">
-            <Button
-              size="L"
-              leftIcon="cross"
-              onClick={() => {
-                setIsModalOpen(false);
-              }}
-              theme="primary"
-              shape="circle"
-            />
-            <Button
-              size="L"
-              leftIcon="fullscreen"
-              theme="primary"
-              shape="circle"
-              onClick={() => {
-                setIsModalOpen(false);
-                window.scrollTo(0, 0);
-                push(`/project-details/${props.title}`);
-              }}
-            />
+            <div className="project-details-modal__buttons">
+              <Button
+                size="L"
+                leftIcon="cross"
+                onClick={() => {
+                  setIsModalOpen(false);
+                }}
+                theme="primary"
+                shape="circle"
+              />
+              <Button
+                size="L"
+                leftIcon="fullscreen"
+                theme="primary"
+                shape="circle"
+                onClick={() => {
+                  setIsModalOpen(false);
+                  window.scrollTo(0, 0);
+                  push(`/project-details/${props.title}`);
+                }}
+              />
 
-            <Button
-              size="L"
-              leftIcon="link"
-              onClick={() => {
-                copyToClipboard(
-                  `https://mon-eportfolio.vercel.app/project-details/${props.title}`
-                );
-                alert("Lien de la page copié avec succès !");
-              }}
-              theme="primary"
-              shape="circle"
-            />
+              <Button
+                size="L"
+                leftIcon="link"
+                onClick={() => {
+                  copyToClipboard(
+                    `https://mon-eportfolio.vercel.app/project-details/${props.title}`
+                  );
+                  showSnackbar("Lien de la page copié avec succès !");
+                }}
+                theme="primary"
+                shape="circle"
+              />
+            </div>
           </div>
-        </div>
-      </Modal>
-    </PortfolioPage>
+        </Modal>
+      </PortfolioPage>
+      <Snackbar isSnackbarOpen={isSnackbarOpen} text={snackBarText} />
+    </>
   );
 };
 

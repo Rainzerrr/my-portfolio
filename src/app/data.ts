@@ -15,14 +15,14 @@ const data: DataProps = {
       ],
       imageUrl: "/image_fruitandgo.png",
       imageAlt: "Image de présentation du projet fruit and go",
-      nbPeople: 2,
-      time: "2 mois",
+      nbPeople: 1,
+      time: "6 mois",
       technologies: [
         { icon: "next-js", label: "Next.js" },
         { icon: "css_3", label: "CSS 3" },
       ],
       repoUrl: "https://github.com/Rainzerrr/fruit-and-go-demo",
-      deployedUrl: "https://fruitandgo.fr/",
+      deployedUrl: "https://fruit-and-go.vercel.app/",
       features: [
         {
           title: "Introduction.",

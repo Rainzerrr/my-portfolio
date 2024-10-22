@@ -12,10 +12,12 @@ import TechnologyIconText, {
 import ProjectFeature, {
   ProjectFeatureProps,
 } from "@/components/blocks/project-feature/project-feature";
-import "./project-details.scss";
 import Link from "next/link";
 import classNames from "classnames";
 import { useRouter } from "next/navigation";
+import useSnackbar from "@/hooks/useSnackbar";
+import Snackbar from "@/components/molecules/snackbar/snackbar";
+import "./project-details.scss";
 
 interface ProjectDetailsProps {
   title: string;
@@ -46,6 +48,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   features,
   isModal,
 }) => {
+  const { isSnackbarOpen, snackBarText, showSnackbar } = useSnackbar();
   const { push } = useRouter();
   const renderBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
@@ -110,7 +113,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                       theme="secondary"
                       onClick={() => {
                         copyToClipboard(window.location.href);
-                        alert("URL copiée dans le presse papier.");
+                        showSnackbar("Lien de la page copié avec succès !");
                       }}
                     />
                   )}
@@ -180,6 +183,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
         <div className="project-details__separator" />
         <MainProjects title="Autres projets" />
       </PortfolioPage>
+      <Snackbar isSnackbarOpen={isSnackbarOpen} text={snackBarText} />
     </div>
   );
 };

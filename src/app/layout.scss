@@ -8,11 +8,12 @@
   margin-top: 58px;
   background-color: var(--background-neutral-lowest);
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - 58px);
 }
 
 @media screen and (min-width: $breakpoint-medium) {
   .layout__children {
     margin-top: 96px;
+    min-height: calc(100vh - 96px);
   }
 }

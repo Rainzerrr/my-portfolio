@@ -1,6 +1,18 @@
 import { ProjectCardProps } from "@/components/organisms/project-card/project-card";
 import ProjectHub from "@/components/pages/project-hub/project-hub";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Mes projets - Mon E-portfolio",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `https://mon-eportfolio.vercel.app/projects`,
+  },
+};
 
 const projectCards: ProjectCardProps[] = [
   {

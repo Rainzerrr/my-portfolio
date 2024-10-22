@@ -1,0 +1,67 @@
+@import "../../../app/breakpoints.scss";
+.snackbar-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 37px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.snackbar {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--background-neutral-highest);
+
+  box-shadow: 0px 4px 4px 0px var(--background-transparent-low),
+    var(--background-transparent-lower);
+  border-radius: 8px;
+  cursor: default;
+}
+
+.snackbar__text {
+  font: var(--font-semibold-h6);
+  color: var(--background-neutral-lowest);
+}
+
+.snackbar__icon {
+  stroke: var(--background-neutral-lowest);
+}
+
+.snackbar--open {
+  opacity: 1;
+  z-index: 900;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .snackbar-wrapper {
+    top: 92px;
+  }
+
+  .snackbar {
+    padding: 10px 16px;
+  }
+
+  .snackbar__text {
+    font: var(--font-semibold-h5);
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .snackbar-wrapper {
+    top: 137px;
+  }
+
+  .snackbar {
+    padding: 12px 20px;
+  }
+
+  .snackbar__text {
+    font: var(--font-semibold-h3);
+  }
+}

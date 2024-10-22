@@ -7,6 +7,7 @@ import Button, { ButtonProps } from "@/components/molecules/button/button";
 import classNames from "classnames";
 import "./project-card.scss";
 import useWidth from "@/hooks/useWidth";
+import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
   className?: string;
@@ -36,17 +37,24 @@ const ProjectCard: FC<ProjectCardProps> = ({
   onClick = () => null,
 }) => {
   const { isOnDesktop } = useWidth();
+  const { push } = useRouter();
   const renderProjectCardBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
   };
 
+  const Component = isOnDesktop ? "div" : Link;
+
   return (
-    <Link
+    <Component
       style={style}
       href={redirectUrl}
       onClick={(e) => {
-        if (isOnDesktop) {
-          e.preventDefault();
+        const clickedElement = e.target as HTMLElement;
+        if (
+          isOnDesktop &&
+          clickedElement.tagName !== "BUTTON" &&
+          clickedElement.closest(".project-card__button")?.tagName !== "BUTTON"
+        ) {
           onClick();
         }
       }}
@@ -73,9 +81,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        <Button className="project-card__button" {...button} />
+        <Button
+          className="project-card__button"
+          {...button}
+          onClick={() => push(redirectUrl)}
+        />
       </div>
-    </Link>
+    </Component>
   );
 };
 

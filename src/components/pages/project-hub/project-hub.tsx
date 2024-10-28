@@ -1,17 +1,17 @@
 "use client";
 import React, { FC } from "react";
-import ProjectCard, {
-  ProjectCardProps,
-} from "@/components/organisms/project-card/project-card";
+import ProjectCard from "@/components/organisms/project-card/project-card";
 // import Button from "@/components/molecules/button/button";
 import PortfolioPage from "@/components/wrappers/portfolio-page/portfolio-page";
 import useWidth from "@/hooks/useWidth";
-import "./project-hub.scss";
 import useProjectModal from "@/hooks/useProjectModal";
 import ProjectDetailsModal from "../project-details-modal/project-details-modal";
+import { useTranslations } from "next-intl";
+import { ProjectProps } from "@/app/[locale]/data";
+import "./project-hub.scss";
 
 interface ProjectHubProps {
-  projectCards: ProjectCardProps[];
+  projectCards: ProjectProps[];
 }
 
 const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
@@ -23,6 +23,7 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
     openProjectDetails,
     findProjectDetailsData,
   } = useProjectModal();
+  const t = useTranslations();
   const cardOrderDisplayForDesktop = (index: number) => {
     if (Math.floor(index / 3) % 3 === 0) {
       return index;
@@ -44,7 +45,7 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
       }
     }
   };
-  const renderProjectCard = (projectCard: ProjectCardProps, index: number) => {
+  const renderProjectCard = (projectCard: ProjectProps, index: number) => {
     return (
       <ProjectCard
         key={projectCard.title + projectCard.variant}
@@ -52,6 +53,16 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
         redirectUrl={`/project-details/${projectCard.title}`}
         style={{
           order: isOnDesktop ? cardOrderDisplayForDesktop(index) : index,
+        }}
+        button={{
+          shape: projectCard.variant === "emphasized" ? "rounded" : "circle",
+          size: "M",
+          theme: "secondary",
+          rightIcon: "arrow-right",
+          label:
+            projectCard.variant === "emphasized"
+              ? "projects.card.redirect-button"
+              : undefined,
         }}
         onClick={() => {
           const projectData = findProjectDetailsData(projectCard.title);
@@ -73,7 +84,7 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
           theme="secondary"
           size="L"
         /> */}
-        <p className="project-hub__title">Mes réalisations</p>
+        <p className="project-hub__title">{t("hub-projects.title")}</p>
         <div className="project-hub__cards">
           {projectCards.map(renderProjectCard)}
         </div>

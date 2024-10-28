@@ -6,6 +6,7 @@ import DropdownItem, {
 import Icon from "@/components/atoms/icon/icon";
 import "./dropdown.scss";
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
 
 interface DropdownProps {
   className?: string;
@@ -24,6 +25,7 @@ const Dropdown: FC<DropdownProps> = ({
   setShowOptions,
   handleSelectOption,
 }) => {
+  const t = useTranslations();
   const renderDropdownItems = (item: DropdownItemProps) => (
     <DropdownItem
       key={item.value}
@@ -46,7 +48,9 @@ const Dropdown: FC<DropdownProps> = ({
         onClick={() => showDropdownOptions()}
       >
         <Icon name={activeOption.iconName} size="M" />
-        <p className="dropdown__active-option__label">{activeOption.label}</p>
+        <p className="dropdown__active-option__label">
+          {t(activeOption.labelKey)}
+        </p>
       </div>
       {showOptions && (
         <div className="dropdown__options">

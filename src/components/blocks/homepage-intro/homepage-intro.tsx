@@ -1,21 +1,24 @@
 "use client";
 import Button from "@/components/molecules/button/button";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import useWidth from "@/hooks/useWidth";
-
+import { useTranslations } from "next-intl";
+import LinkedInButton from "@/components/molecules/linkedin-button/linkedin-button";
+import GitHubButton from "@/components/molecules/github-button/github-button";
 import "./homepage-intro.scss";
 
 const HomepageIntro = () => {
   const { push } = useRouter();
   const { isOnDesktop } = useWidth();
+  const t = useTranslations();
   return (
     <div className="homepage__intro">
       <div className="homepage__intro__text">
         <div className="homepage__intro__title">
-          <p>Rayan, développeur</p>
+          <p>{t("homepage.title.main")}</p>
           <div className="homepage__intro__title-highlight">
-            <p>Full-stack</p>
+            <p>{t("homepage.title.underlined")}</p>
             <svg
               className="homepage__intro__title-underline"
               xmlns="http://www.w3.org/2000/svg"
@@ -32,37 +35,20 @@ const HomepageIntro = () => {
             </svg>
           </div>
         </div>
-        <p className="homepage__intro__desc">
-          J’aime contribuer à la création de solutions technologiques durables
-          et évolutives qui façonnent le monde de demain.
-        </p>
+        <p className="homepage__intro__desc">{t("homepage.description")}</p>
       </div>
       <div className="homepage__intro__buttons">
         <Button
           theme="primary"
-          label="Mes projets"
+          label="homepage.buttons.main"
           rightIcon="arrow-right"
           shape="rounded"
           size={isOnDesktop ? "XL" : "L"}
           onClick={() => push("/projects")}
         />
         <div className="homepage__intro__buttons-secondary">
-          <Button
-            theme="secondary"
-            label="LinkedIn"
-            rightIcon="linkedin"
-            shape="rounded"
-            size={isOnDesktop ? "XL" : "L"}
-            onClick={() => push("https://www.linkedin.com/in/rayanainouche/")}
-          />
-          <Button
-            theme="secondary"
-            label="Github"
-            rightIcon="github"
-            shape="rounded"
-            size={isOnDesktop ? "XL" : "L"}
-            onClick={() => push("https://github.com/Rainzerrr")}
-          />
+          <LinkedInButton />
+          <GitHubButton />
         </div>
       </div>
     </div>

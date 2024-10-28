@@ -11,6 +11,14 @@
   transition: var(--transition-background-fast, --transition-text-fast);
 }
 
+.button__label {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .button-primary {
   background-color: var(--button-primary-default-background);
   color: var(--button-primary-default-text);
@@ -205,6 +213,6 @@
 }
 
 .button--full_width {
-  width: unset;
+  width: -webkit-fill-available;
   flex: 1;
 }

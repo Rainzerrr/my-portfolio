@@ -1,5 +1,5 @@
 "use client";
-import data from "@/app/data";
+import data from "@/app/[locale]/data";
 import { ProjectDetailsProps } from "@/components/pages/project-details/project-details";
 import { useState } from "react";
 

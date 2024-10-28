@@ -1,15 +1,12 @@
 "use client";
 import ProjectCard from "@/components/organisms/project-card/project-card";
-import React, { FC } from "react";
 import ProjectDetailsModal from "@/components/pages/project-details-modal/project-details-modal";
 import useProjectModal from "@/hooks/useProjectModal";
+import { useTranslations } from "next-intl";
+import data from "@/app/[locale]/data";
 import "./main-projects.scss";
 
-interface MainProjectsProps {
-  title: string;
-}
-
-const MainProjects: FC<MainProjectsProps> = ({ title }) => {
+const MainProjects = () => {
   const {
     currentProject,
     isProjectDetailsModalOpen,
@@ -17,47 +14,36 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
     openProjectDetails,
     findProjectDetailsData,
   } = useProjectModal();
-
+  const t = useTranslations();
   return (
     <div className="homepage__featured-projects">
-      <p className="homepage__featured-projects__title">{title}</p>
+      <p className="homepage__featured-projects__title">
+        {t("homepage.projects-title")}
+      </p>
       <div className="homepage__featured-projects__list">
         <ProjectCard
-          title="Fruit&Go"
-          details="E-commerce"
-          badges={[
-            { label: "Frontend", variant: "tertiary", color: "green" },
-            { label: "Backend", variant: "tertiary", color: "purple" },
-          ]}
-          imageUrl="/image_fruitandgo.png"
-          imageAlt="Image de présentation du projet fruit and go"
-          redirectUrl="/project-details/Fruit&Go"
+          {...data.projectDetails[0]}
           button={{
             shape: "rounded",
             size: "M",
             theme: "secondary",
             rightIcon: "arrow-right",
-            label: "Voir le projet",
+            label: "projects.card.redirect-button",
           }}
+          redirectUrl={`/project-details/${data.projectDetails[0].title}`}
           variant="emphasized"
           onClick={() => {
-            const projectData = findProjectDetailsData("Fruit&Go");
+            const projectData = findProjectDetailsData(
+              data.projectDetails[0].title
+            );
             if (projectData !== undefined) {
               openProjectDetails(projectData);
             }
           }}
         />
         <ProjectCard
-          title="Fountain Finder"
-          details="Carte des fontaines de Paris"
-          badges={[
-            { label: "Frontend", variant: "tertiary", color: "green" },
-            { label: "Backend", variant: "tertiary", color: "purple" },
-            { label: "UX/UI Design", variant: "tertiary", color: "blue" },
-          ]}
-          imageUrl="/fountain_finder_background_image.png"
-          imageAlt="Image de présentation du projet fruit and go"
-          redirectUrl={`/project-details/Fountain Finder`}
+          {...data.projectDetails[1]}
+          redirectUrl={`/project-details/${data.projectDetails[1].title}`}
           button={{
             shape: "circle",
             size: "M",
@@ -67,7 +53,9 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
           }}
           variant="default"
           onClick={() => {
-            const projectData = findProjectDetailsData("Fountain Finder");
+            const projectData = findProjectDetailsData(
+              data.projectDetails[1].title
+            );
             if (projectData !== undefined) {
               openProjectDetails(projectData);
             }
@@ -75,15 +63,8 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
         />
 
         <ProjectCard
-          title="VIBE."
-          details="Diffusion de vidéo en direct"
-          badges={[
-            { label: "Frontend", variant: "tertiary", color: "green" },
-            { label: "UX/UI Design", variant: "tertiary", color: "blue" },
-          ]}
-          imageUrl="/vibe_background_image.png"
-          imageAlt="Image de présentation du projet fruit and go"
-          redirectUrl="/project-details/VIBE."
+          {...data.projectDetails[2]}
+          redirectUrl={`/project-details/${data.projectDetails[2].title}`}
           button={{
             shape: "circle",
             size: "M",
@@ -92,7 +73,9 @@ const MainProjects: FC<MainProjectsProps> = ({ title }) => {
           }}
           variant="default"
           onClick={() => {
-            const projectData = findProjectDetailsData("VIBE.");
+            const projectData = findProjectDetailsData(
+              data.projectDetails[2].title
+            );
             if (projectData !== undefined) {
               openProjectDetails(projectData);
             }

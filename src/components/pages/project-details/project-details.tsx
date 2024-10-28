@@ -12,25 +12,16 @@ import TechnologyIconText, {
 import ProjectFeature, {
   ProjectFeatureProps,
 } from "@/components/blocks/project-feature/project-feature";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import classNames from "classnames";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import useSnackbar from "@/hooks/useSnackbar";
 import Snackbar from "@/components/molecules/snackbar/snackbar";
+import { ProjectProps } from "@/app/[locale]/data";
 import "./project-details.scss";
+import { useTranslations } from "next-intl";
 
-interface ProjectDetailsProps {
-  title: string;
-  description: string;
-  badges: BadgeProps[];
-  nbPeople: number;
-  time: string;
-  imageUrl: string;
-  imageAlt: string;
-  technologies: { icon: string; label: string }[];
-  deployedUrl?: string;
-  repoUrl?: string;
-  features: ProjectFeatureProps[];
+interface ProjectDetailsProps extends ProjectProps {
   isModal?: boolean;
 }
 
@@ -50,6 +41,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
 }) => {
   const { isSnackbarOpen, snackBarText, showSnackbar } = useSnackbar();
   const { push } = useRouter();
+  const t = useTranslations();
   const renderBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
   };
@@ -90,7 +82,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
               className="project-details__return-btn"
               theme="primary"
               isGhost
-              label="Retour"
+              label="project-details.buttons.return"
               size="XL"
               shape="rounded"
               leftIcon="chevron-left"
@@ -129,14 +121,15 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                         <div className="project-details__nb-persons">
                           <Icon name="person" size="XS" />
                           <p className="project-details__context-label">
-                            {nbPeople} {nbPeople > 1 ? "personnes" : "personne"}
+                            {nbPeople} {t("project-details.person")}
+                            {nbPeople > 1 ? "s" : ""}
                           </p>
                         </div>
 
                         <div className="project-details__time">
                           <Icon name="time" size="XS" />
                           <p className="project-details__context-label">
-                            {time}
+                            {t(time)}
                           </p>
                         </div>
                       </div>
@@ -145,12 +138,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                       {technologies.map(renderTechnologies)}
                     </div>
                   </div>
-                  <p className="project-details__desc">{description}</p>
+                  <p className="project-details__desc">{t(description)}</p>
                 </div>
               </div>
               <div className="project-details__infos__buttons">
                 <Button
-                  label="Projet déployé"
+                  label="project-details.buttons.deployed"
                   rightIcon="laptop"
                   theme="primary"
                   shape="rounded"
@@ -159,7 +152,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                   onClick={() => deployedUrl && push(deployedUrl)}
                 />
                 <Button
-                  label="Repository"
+                  label="project-details.buttons.repository"
                   rightIcon="github"
                   theme="secondary"
                   shape="rounded"
@@ -181,7 +174,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           {features.map(renderProjectFeature)}
         </div>
         <div className="project-details__separator" />
-        <MainProjects title="Autres projets" />
+        <MainProjects />
       </PortfolioPage>
       <Snackbar isSnackbarOpen={isSnackbarOpen} text={snackBarText} />
     </div>

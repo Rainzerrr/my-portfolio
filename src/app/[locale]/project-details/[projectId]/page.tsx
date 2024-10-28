@@ -1,4 +1,4 @@
-import data from "@/app/data";
+import data from "@/app/[locale]/data";
 import ProjectDetails, {
   ProjectDetailsProps,
 } from "@/components/pages/project-details/project-details";
@@ -12,7 +12,6 @@ export const generateMetadata = async ({
 }) => {
   const projectData: ProjectDetailsProps | undefined = data.projectDetails.find(
     (project) => {
-      console.log(project.title, params.projectId);
       return project.title == decodeURIComponent(params.projectId);
     }
   );
@@ -25,11 +24,9 @@ export const generateMetadata = async ({
 
 const page = ({ params }: { params: { projectId: string } }) => {
   const { projectId } = params;
-  console.log(projectId);
 
   const retrieveProjectDetailsProps = (projectTitle: string | undefined) => {
     return data.projectDetails.find((project) => {
-      console.log(project.title, projectTitle);
       return project.title == projectTitle;
     });
   };
@@ -37,7 +34,6 @@ const page = ({ params }: { params: { projectId: string } }) => {
   const projectData = retrieveProjectDetailsProps(
     decodeURIComponent(projectId || "")
   );
-  console.log(data);
   if (projectData) return <ProjectDetails {...projectData} />;
   redirect("/404");
 };

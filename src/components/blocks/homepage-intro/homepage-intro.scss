@@ -1,4 +1,4 @@
-@import "../../../app//breakpoints.scss";
+@import "../../../app//[locale]/breakpoints.scss";
 
 .homepage__intro {
   display: flex;
@@ -7,7 +7,11 @@
   gap: 36px;
   z-index: 3px;
 }
-
+.test {
+  border: 2px solid red;
+  font: var(--font-bold-h5);
+  color: black;
+}
 .homepage__intro__text {
   display: flex;
   flex-direction: column;

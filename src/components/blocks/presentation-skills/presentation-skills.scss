@@ -1,0 +1,91 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.presentation-skills {
+  display: flex;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+
+  border-radius: 12px;
+  border: 1px solid var(--background-neutral-lower);
+  background-color: var(--background-neutral-lowest);
+}
+
+.presentation-skills__bottom-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.presentation-skills__section,
+.presentation-skills__technologies-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.presentation-skills__technologies-section__technologies {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 13px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.presentation-skills__title {
+  font: var(--font-semibold-S);
+  color: var(--background-neutral-highest);
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .presentation-skills {
+    gap: 16px;
+  }
+
+  .presentation-skills__title {
+    font: var(--font-semibold-M);
+  }
+
+  .presentation-skills__bottom-sections {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    height: 120px;
+
+    .separator {
+      width: 1px;
+      height: 100%;
+    }
+
+    .presentation-skills__section {
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .presentation-skills {
+    gap: 24px;
+  }
+  .presentation-skills__title {
+    font: var(--font-semibold-L);
+  }
+
+  .presentation-skills__bottom-sections {
+    flex-direction: column;
+    gap: 24px;
+    height: unset;
+
+    .separator {
+      width: 100%;
+      height: 1px;
+    }
+  }
+}

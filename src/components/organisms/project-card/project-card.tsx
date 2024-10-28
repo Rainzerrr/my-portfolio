@@ -2,20 +2,16 @@
 import React, { CSSProperties, FC } from "react";
 import Badge, { BadgeProps } from "@/components/molecules/badge/badge";
 import Image from "next/image";
-import Link from "next/link";
 import Button, { ButtonProps } from "@/components/molecules/button/button";
 import classNames from "classnames";
-import "./project-card.scss";
 import useWidth from "@/hooks/useWidth";
-import { useRouter } from "next/navigation";
+import { Link, useRouter } from "@/i18n/routing";
+import { ProjectProps } from "@/app/[locale]/data";
+import "./project-card.scss";
+import { useTranslations } from "next-intl";
 
-interface ProjectCardProps {
+interface ProjectCardProps extends ProjectProps {
   className?: string;
-  title: string;
-  details: string;
-  badges: BadgeProps[];
-  imageUrl: string;
-  imageAlt: string;
   redirectUrl: string;
   button: ButtonProps;
   variant: "default" | "emphasized";
@@ -38,6 +34,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 }) => {
   const { isOnDesktop } = useWidth();
   const { push } = useRouter();
+  const t = useTranslations();
   const renderProjectCardBadges = (badge: BadgeProps) => {
     return <Badge key={badge.label} {...badge} />;
   };
@@ -71,7 +68,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
       <div className="project-card__infos-button">
         <div className="project-card__infos">
           <div className="project-card__infos__title-details">
-            <p className="project-card__infos__details">{details}</p>
+            <p className="project-card__infos__details">{t(details)}</p>
 
             <p className="project-card__infos__title">{title}</p>
           </div>

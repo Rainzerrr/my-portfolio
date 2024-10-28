@@ -1,0 +1,141 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.presentation-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.presentation-intro__infos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  flex: 1;
+}
+
+.presentation-intro__image-wrapper {
+  position: relative;
+  width: 57px;
+  height: 57px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.presentation-intro__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.presentation-intro__infos__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.presentation-intro__fullname {
+  font: var(--font-bold-h6);
+  background: linear-gradient(
+    90deg,
+    var(--background-primary-high) 0%,
+    var(--background-primary-medium) 43.6%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.presentation-intro__position {
+  font: var(--font-semibold-h6);
+  color: var(--background-neutral-high);
+}
+
+.presentation-intro__coordinates {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.presentation-intro__coordinate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.presentation-intro__coordinate__icon {
+  stroke: var(--background-neutral-high);
+}
+
+.presentation-intro__coordinate__label {
+  font: var(--font-regular-XS);
+  color: var(--background-neutral-high);
+}
+
+.presentation-intro__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .presentation-intro {
+    flex-direction: row;
+    gap: unset;
+  }
+
+  .presentation-intro__image-wrapper {
+    width: 76px;
+    height: 76px;
+  }
+
+  .presentation-intro__fullname {
+    font: var(--font-bold-h5);
+  }
+
+  .presentation-intro__position {
+    font: var(--font-semibold-h5);
+  }
+
+  .presentation-intro__coordinate__label {
+    font: var(--font-regular-S);
+  }
+
+  .presentation-intro__buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .presentation-intro__image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .presentation-intro__fullname {
+    font: var(--font-bold-h3);
+  }
+
+  .presentation-intro__position {
+    font: var(--font-semibold-h3);
+  }
+
+  .presentation-intro__coordinate__label {
+    font: var(--font-regular-XL);
+  }
+
+  .presentation-intro__coordinates {
+    flex-direction: row;
+
+    gap: 20px;
+  }
+}

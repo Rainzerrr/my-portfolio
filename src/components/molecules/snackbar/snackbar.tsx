@@ -24,7 +24,7 @@ const Snackbar: FC<SnackbarProps> = ({ text, isSnackbarOpen }) => {
         <p className="snackbar__text">{text}</p>
         <Icon
           className="snackbar__icon"
-          name="arrow-right"
+          name="check"
           size={isOnDesktop ? "M" : "S"}
         />
       </div>

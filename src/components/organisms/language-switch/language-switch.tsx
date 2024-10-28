@@ -2,6 +2,7 @@
 import React, { Dispatch, FC, useState } from "react";
 import Dropdown from "../dropdown/dropdown";
 import { DropdownItemProps } from "@/components/molecules/dropdown-item/dropdown-item";
+import { useLocale } from "next-intl";
 
 interface LanguageSwitchProps {
   className?: string;
@@ -16,8 +17,9 @@ const LanguageSwitch: FC<LanguageSwitchProps> = ({
   showOptions,
   setShowOptions,
 }) => {
+  const locale = useLocale();
   const [activeLanguage, setActiveLanguage] = useState<DropdownItemProps>(
-    options[0]
+    options.find((opt) => opt.value === locale) || options[0]
   );
   const handleSelectLanguage = (item: DropdownItemProps) => {
     setActiveLanguage(item);

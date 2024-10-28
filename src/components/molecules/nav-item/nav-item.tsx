@@ -2,15 +2,16 @@
 
 import React, { FC } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import classNames from "classnames";
 import Icon from "@/components/atoms/icon/icon";
 import "./nav-item.scss";
+import { useTranslations } from "next-intl";
 
 interface NavItemProps {
   className?: string;
   size: "S" | "M" | "L" | "XL";
-  label?: string;
+  labelKey?: string;
   leftIcon?: string;
   rightIcon?: string;
   redirectUrl: string;
@@ -20,13 +21,14 @@ interface NavItemProps {
 const NavItem: FC<NavItemProps> = ({
   className,
   size,
-  label,
+  labelKey,
   leftIcon,
   rightIcon,
   redirectUrl,
   onClick = () => null,
 }) => {
   const currentPath = usePathname();
+  const t = useTranslations();
 
   const isNavItemActive = () => {
     if (redirectUrl === "/") {
@@ -52,7 +54,7 @@ const NavItem: FC<NavItemProps> = ({
         )}
       >
         {leftIcon && <Icon name={leftIcon} />}
-        {label && <p className="nav-item__label">{label}</p>}
+        {labelKey && <p className="nav-item__label">{t(labelKey)}</p>}
         {rightIcon && <Icon name={rightIcon} />}
       </button>
     </Link>

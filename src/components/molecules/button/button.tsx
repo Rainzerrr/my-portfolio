@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import classNames from "classnames";
 import Icon from "@/components/atoms/icon/icon";
 import "./button.scss";
+import { useTranslations } from "next-intl";
 
 interface ButtonProps {
   className?: string;
@@ -32,6 +33,7 @@ const Button: FC<ButtonProps> = ({
   fullWidth,
   onClick = () => null,
 }) => {
+  const t = useTranslations();
   const sizes: Record<SizeKey, SizeValue> = {
     S: "XS",
     M: "S",
@@ -53,7 +55,7 @@ const Button: FC<ButtonProps> = ({
       onClick={() => onClick()}
     >
       {leftIcon && <Icon name={leftIcon} size={sizes[size]} />}
-      {label && <p className="button__label">{label}</p>}
+      {label && <p className="button__label">{t(label)}</p>}
       {rightIcon && <Icon name={rightIcon} size={sizes[size]} />}
     </button>
   );

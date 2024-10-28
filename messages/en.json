@@ -1,0 +1,149 @@
+{
+  "header": {
+    "home": "Home",
+    "projects": "Projects",
+    "presentation": "Presentation",
+    "language": {
+      "fr": "French",
+      "en": "English"
+    }
+  },
+  "homepage": {
+    "title": {
+      "main": "Rayan, Full-stack",
+      "underlined": "developer"
+    },
+    "description": "I enjoy contributing to the creation of sustainable and scalable technological solutions that shape the world of tomorrow.",
+    "buttons": {
+      "main": "My projects",
+      "left": "LinkedIn",
+      "right": "GitHub"
+    },
+    "projects-title": "Latest projects"
+  },
+  "hub-projects": {
+    "title": "My achievements"
+  },
+  "project-details": {
+    "person": "person",
+    "buttons": {
+      "return": "Go back",
+      "deployed": "Deployed project",
+      "repository": "Repository"
+    },
+    "suggestions-title": "Other projects"
+  },
+  "projects": {
+    "card": {
+      "redirect-button": "View project"
+    },
+    "fruit&go": {
+      "details": "E-commerce",
+      "description": "Fruit and Go is an e-commerce application designed for a greengrocer and for selling general food products. The main objective is to allow customers to order online and have their orders delivered directly to their homes.",
+      "imageAlt": "Presentation image of the Fruit&Go project",
+      "time": "6 months",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "The idea for this project arose from the greengrocer's desire to adopt a delivery ordering system to better manage periods of high traffic and provide a smoother customer experience. With this application, the greengrocer can expand their market and optimize revenue by simplifying access to products. In this project, I collaborated with a UX/UI expert who handled graphic assets, such as site illustrations and the introductory video.",
+        "imageAlt": "Presentation image of the Fruit&Go project"
+      },
+      "feature2": {
+        "title": "Dynamic cart",
+        "desc": "The dynamic cart is one of the key features of the application. Accessible at the top right of the screen, it allows users to track in real-time the items they add. A dedicated cart page provides a complete and interactive view where users can see their products, modify quantities, or remove items. The total price is automatically updated, offering a smooth and intuitive ordering experience. This feature enhances the shopping experience by making item management simple and transparent.",
+        "imageAlt": "Presentation image of the Fruit&Go project"
+      },
+      "feature3": {
+        "title": "Filtering system",
+        "desc": "The application also offers an effective filtering system on the product category page. With this feature, users can refine their search based on various criteria such as product type, availability, or promotions. The filters are dynamic and can work together to provide a personalized browsing experience. Additionally, a button allows users to reset the filters at any time, simplifying catalog exploration.",
+        "imageAlt": "Presentation image of the Fruit&Go project"
+      },
+      "feature4": {
+        "title": "Payment with Stripe",
+        "desc": "To centralize and facilitate payments, the application is connected to Stripe, a reliable and secure solution. During the ordering process, users are redirected to an integrated Stripe interface where they can finalize their payment securely. For the store manager, Stripe also offers a dedicated platform for tracking billing and orders, simplifying transaction management and financial reporting without the need for complicated third-party systems.",
+        "imageAlt": "Presentation image of the Fruit&Go project"
+      },
+      "feature5": {
+        "title": "Content management with Strapi",
+        "desc": "The site is connected to Strapi, a Headless CMS that allows the manager to intuitively manage site content without needing to rely on the development team. Through this interface, they can control all textual and visual content on the various pages, manage the product list, and highlight certain items in suggestions. This integration provides complete autonomy for the manager to adjust content based on business needs, facilitating daily site management.",
+        "imageAlt": "Presentation image of the Fruit&Go project"
+      }
+    },
+    "fountain_finder": {
+      "details": "Map of fountains in Paris",
+      "description": "Fountain Finder is an application designed to check the real-time availability of water fountains in Paris. Availability here means that the fountains are actually providing water. This project offers a practical solution for users looking to quickly find a working fountain in Paris.",
+      "imageAlt": "Presentation image of the Fountain Finder project",
+      "time": "3 days",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "This project emerged from the desire to modernize an initial concept developed during a university project, which had been created using HTML, CSS, and JavaScript. The new version uses React to provide a more efficient and optimized application. It also features a modernized user interface (UI), with new sliders and an overall improvement in visual and interactive experience.",
+        "imageAlt": "Presentation image of the Fountain Finder project"
+      },
+      "feature2": {
+        "title": "Map of Paris",
+        "desc": "The application relies on a map of Paris provided by the Leaflet library. This map displays in detail the streets, districts, and buildings of the city, offering a comprehensive view of Paris and facilitating navigation. The integration of Leaflet allows for a dynamic map that follows user interactions while remaining lightweight and fast.",
+        "imageAlt": "Map of Paris in Fountain Finder"
+      },
+      "feature3": {
+        "title": "Displaying fountains",
+        "desc": "The water fountains in Paris are retrieved from the Paris water API, which lists all the fountains in the city and its surroundings. Each fountain is represented on the map with key information such as the street it is located on, its type (classic fountain, water wall, etc.), and importantly, its availability. This feature provides a clear view of the state of fountains at any time.",
+        "imageAlt": "Displaying fountains on the map in Fountain Finder"
+      },
+      "feature4": {
+        "title": "Fountain clusters",
+        "desc": "Displaying several thousand points of interest, such as fountains, can quickly burden the application and affect its performance. To avoid this, I implemented a clustering system. These clusters group together several geographically close fountains, thus reducing the number of elements displayed at once and optimizing performance. Each cluster shows the number of fountains present in its area, providing a quick overview without overwhelming the screen.",
+        "imageAlt": "Clustering system for fountains in Fountain Finder"
+      },
+      "feature5": {
+        "title": "Custom markers",
+        "desc": "The markers for the fountains have been completely customized for this version of the application. Unlike the standard markers provided by Leaflet, I designed specific markers that display an image corresponding to the type of fountain. This allows for better visual distinction between different types of fountains, enhancing the user experience. This is an improvement over the previous version, where a single type of marker was used for all fountains.",
+        "imageAlt": "Custom markers for each type of fountain in Fountain Finder"
+      }
+    },
+    "vibe": {
+      "details": "Live video streaming platform",
+      "description": "VIBE is a video streaming platform that allows users to broadcast live videos while interacting in real-time with their audience. This project was developed as part of our annual project in the final year of our IT degree, aiming to acquire skills in handling live video streams.",
+      "imageAlt": "Presentation image of the VIBE project",
+      "time": "9 months",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "The VIBE project is the result of our team's shared passion for streaming platforms. We aimed to create a practical and functional application for video content creators. This project allowed us to implement various technical skills while collaborating to produce a cohesive and polished final product. By integrating modern features like live streaming, user account management, and intuitive interfaces, VIBE positions itself as a powerful and versatile platform for live content broadcasting.",
+        "imageAlt": "Presentation image of the VIBE project"
+      }
+    }
+  },
+  "presentation": {
+    "fullname": "Rayan Ainouche",
+    "position": "Full-stack developer",
+    "location": "Paris, Île-de-france",
+    "phone": "07 61 54 34 37",
+    "profile": {
+      "title": "Profile.",
+      "description": "Passionate Full Stack Developer with two years of experience, currently seeking a new apprenticeship opportunity in web development for October 2024 as part of my engineering program at ESIEE Paris. Specializing in IT, design, architecture, and development, I am available for a three-year position."
+    },
+    "experience": {},
+    "education": {},
+    "skills": {
+      "hard-skills-title": "Skills",
+      "soft-skills-title": "Soft Skills",
+      "soft-skill1": "Good communication",
+      "soft-skill2": "Autonomy",
+      "soft-skill3": "AGILE methodology",
+      "soft-skill4": "Organization",
+      "soft-skill5": "Team collaboration",
+      "soft-skill6": "Analytical mindset"
+    },
+    "languages": {
+      "title": "Languages",
+      "fr": "French: Fluent",
+      "en": "English: Advanced (C1)",
+      "es": "Spanish: Intermediate (B1)"
+    },
+    "interests": {
+      "title": "Interests",
+      "interest1": "Passionate about travel",
+      "interest2": "Dedicated to sports",
+      "interest3": "Web development"
+    },
+    "download-button-label": "Download my CV in PDF"
+  }
+}

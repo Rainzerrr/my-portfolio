@@ -1,4 +1,4 @@
-@import "../../../app/breakpoints.scss";
+@import "../../../app/[locale]/breakpoints.scss";
 
 .header {
   position: fixed;
@@ -100,7 +100,7 @@
 }
 
 .header__settings__icon {
-  padding: 6px;
+  padding: 6px !important;
 
   stroke: var(--background-neutral-highest);
   fill: none;
@@ -145,7 +145,7 @@
   }
 
   .header__left-space {
-    width: 30px;
+    width: 196px;
   }
 
   .header__nav-items {

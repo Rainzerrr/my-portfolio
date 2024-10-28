@@ -6,7 +6,7 @@ import ProjectDetails, {
 } from "../project-details/project-details";
 import Button from "@/components/molecules/button/button";
 import PortfolioPage from "@/components/wrappers/portfolio-page/portfolio-page";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import useSnackbar from "@/hooks/useSnackbar";
 import Snackbar from "@/components/molecules/snackbar/snackbar";
 import "./project-details-modal.scss";
@@ -19,8 +19,6 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
   const { setIsModalOpen } = props;
   const { isSnackbarOpen, snackBarText, showSnackbar } = useSnackbar();
   const { push } = useRouter();
-
-  console.log(isSnackbarOpen, snackBarText);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard

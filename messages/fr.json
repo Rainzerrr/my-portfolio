@@ -1,0 +1,150 @@
+{
+  "header": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "presentation": "Présentation",
+    "language": {
+      "fr": "Français",
+      "en": "Anglais"
+    }
+  },
+  "homepage": {
+    "title": {
+      "main": "Rayan, développeur",
+      "underlined": "Full-stack"
+    },
+    "description": "J’aime contribuer à la création de solutions technologiques durables et évolutives qui façonnent le monde de demain.",
+    "buttons": {
+      "main": "Mes projets",
+      "left": "LinkedIn",
+      "right": "GitHub"
+    },
+    "projects-title": "Derniers projets"
+  },
+  "hub-projects": {
+    "title": "Mes réalisations"
+  },
+  "project-details": {
+    "person": "personne",
+
+    "buttons": {
+      "return": "Retour",
+      "deployed": "Projet déployé",
+      "repository": "Dépôt GitHub"
+    },
+    "suggestions-title": "Autres projets"
+  },
+  "projects": {
+    "card": {
+      "redirect-button": "Voir le projet"
+    },
+    "fruit&go": {
+      "details": "E-commerce",
+      "description": "Fruit and Go est une application e-commerce conçue pour un primeur et pour la vente d’alimentation générale. L’objectif principal est de permettre à ses clients de passer commande en ligne et de se faire livrer directement chez eux.",
+      "imageAlt": "Image de présentation du projet Fruit&Go",
+      "time": "6 mois",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "L'idée de ce projet est née de la volonté du primeur d'adopter un système de commande par livraison pour mieux gérer les périodes de forte affluence et offrir une expérience client plus fluide. Grâce à cette application, le primeur peut élargir son marché et optimiser son chiffre d'affaires en simplifiant l'accès à ses produits. Dans ce projet, j’ai travaillé en collaboration avec un expert UX/UI, qui s’est chargé des assets graphiques, tels que les illustrations du site et la vidéo d’introduction.",
+        "imageAlt": "Image de présentation du projet Fruit&Go"
+      },
+      "feature2": {
+        "title": "Panier dynamique",
+        "desc": "Le panier dynamique est l'une des fonctionnalités clés de l'application. Accessible en haut à droite de l'écran, il permet aux utilisateurs de suivre en temps réel les articles qu'ils ajoutent. Une page dédiée au panier offre une vue complète et interactive où l'utilisateur peut voir ses produits, modifier la quantité ou supprimer des articles. Le prix total est automatiquement mis à jour, offrant une expérience de commande fluide et intuitive. Cette fonctionnalité améliore l'expérience d'achat, en rendant la gestion des articles ajoutés simple et transparente.",
+        "imageAlt": "Image de présentation du projet Fruit&Go"
+      },
+      "feature3": {
+        "title": "Système de filtres",
+        "desc": "L'application propose également un système de filtres efficace sur la page des catégories de produits. Grâce à cette fonctionnalité, les utilisateurs peuvent affiner leur recherche en fonction de différents critères, tels que le type de produit, la disponibilité ou encore les promotions. Les filtres sont dynamiques et peuvent fonctionner ensemble pour offrir une expérience de navigation personnalisée. De plus, un bouton permet de réinitialiser les filtres à tout moment, ce qui simplifie l'exploration du catalogue pour l'utilisateur.",
+        "imageAlt": "Image de présentation du projet Fruit&Go"
+      },
+      "feature4": {
+        "title": "Paiement avec Stripe",
+        "desc": "Afin de centraliser et faciliter les paiements, l'application est reliée à Stripe, une solution fiable et sécurisée. Lors du processus de commande, les utilisateurs sont redirigés vers une interface Stripe intégrée, où ils peuvent finaliser leur paiement en toute sécurité. Pour le gérant du magasin, Stripe offre également une plateforme dédiée pour le suivi des facturations et des commandes. Cela permet une gestion simplifiée des transactions et des rapports financiers, sans avoir à passer par des systèmes tiers compliqués.",
+        "imageAlt": "Image de présentation du projet Fruit&Go"
+      },
+      "feature5": {
+        "title": "Gestion du contenu avec Strapi",
+        "desc": "Le site est connecté à Strapi, un CMS Headless qui permet au gérant de gérer de manière intuitive le contenu du site sans avoir à solliciter l'équipe de développement. Grâce à cette interface, il peut contrôler l’ensemble du contenu textuel et visuel des différentes pages, gérer la liste des produits et mettre en avant certains d'entre eux dans les suggestions. Cette intégration offre une autonomie complète au gérant pour ajuster les contenus en fonction des besoins commerciaux, facilitant ainsi la gestion quotidienne du site.",
+        "imageAlt": "Image de présentation du projet Fruit&Go"
+      }
+    },
+    "fountain_finder": {
+      "details": "Carte des fontaines de Paris",
+      "description": "Fountain Finder est une application conçue pour vérifier en temps réel la disponibilité des fontaines à eau de Paris. La disponibilité signifie ici que les fontaines fournissent effectivement de l'eau. Ce projet offre une solution pratique pour les utilisateurs qui souhaitent trouver rapidement une fontaine en état de marche dans Paris.",
+      "imageAlt": "Image de présentation du projet Fountain Finder",
+      "time": "3 jours",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "Ce projet est né de l'envie de moderniser un concept initial développé lors d’un projet universitaire, qui avait été réalisé en HTML, CSS et JavaScript. La nouvelle version utilise React pour proposer une application plus performante et optimisée. Elle apporte aussi une interface utilisateur (UI) modernisée, avec de nouveaux curseurs et une amélioration générale de l’expérience visuelle et interactive.",
+        "imageAlt": "Image de présentation du projet Fountain Finder"
+      },
+      "feature2": {
+        "title": "Carte de Paris",
+        "desc": "L’application s’appuie sur une carte de Paris fournie par la bibliothèque Leaflet. Cette carte affiche en détail les rues, arrondissements, et bâtiments de la ville, offrant une vue complète de Paris et facilitant la navigation. L’intégration de Leaflet permet de créer une carte dynamique qui suit les interactions des utilisateurs tout en restant légère et rapide.",
+        "imageAlt": "Image de la carte de Paris dans Fountain Finder"
+      },
+      "feature3": {
+        "title": "Affichage des fontaines",
+        "desc": "Les fontaines à eau de Paris sont récupérées à partir de l’API des eaux de Paris, qui répertorie toutes les fontaines de la ville et ses environs. Chaque fontaine est représentée sur la carte avec des informations clés telles que la rue où elle se trouve, son type (fontaine classique, mur d’eau, etc.) et surtout sa disponibilité. Cette fonctionnalité permet d’avoir une vue claire de l’état des fontaines à tout moment.",
+        "imageAlt": "Affichage des fontaines sur la carte dans Fountain Finder"
+      },
+      "feature4": {
+        "title": "Clusters de fontaines",
+        "desc": "Afficher plusieurs milliers de points d’intérêts, comme les fontaines, peut rapidement alourdir l’application et affecter ses performances. Pour éviter cela, j’ai implémenté un système de clusters. Ces clusters regroupent plusieurs fontaines proches géographiquement, réduisant ainsi le nombre d'éléments affichés en même temps et optimisant les performances. Chaque cluster affiche le nombre de fontaines présentes dans sa zone, offrant un aperçu rapide sans surcharger l’écran.",
+        "imageAlt": "Système de clusters pour les fontaines sur Fountain Finder"
+      },
+      "feature5": {
+        "title": "Markers personnalisés",
+        "desc": "Les markers des fontaines ont été entièrement personnalisés pour cette version de l’application. Contrairement aux markers standards fournis par Leaflet, j’ai conçu des markers spécifiques qui affichent une image correspondant au type de fontaine. Cela permet une meilleure distinction visuelle entre les différents types de fontaines, améliorant ainsi l'expérience utilisateur. C’est une évolution par rapport à la version précédente, où un seul type de marker était utilisé pour toutes les fontaines.",
+        "imageAlt": "Markers personnalisés pour chaque type de fontaine dans Fountain Finder"
+      }
+    },
+    "vibe": {
+      "details": "Plateforme de diffusion de vidéos en direct",
+      "description": "VIBE est une plateforme de streaming vidéo qui permet aux utilisateurs de diffuser des vidéos en direct tout en interagissant en temps réel avec leur audience. Ce projet a été développé dans le cadre de notre projet annuel de dernière année de BUT Informatique, visant à acquérir des compétences dans la manipulation de flux vidéo en direct.",
+      "imageAlt": "Image de présentation du projet VIBE",
+      "time": "9 mois",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "Le projet VIBE est le fruit de la passion partagée par notre équipe pour les plateformes de streaming. Nous avons souhaité créer une application pratique et fonctionnelle pour les créateurs de contenu vidéo. Ce projet nous a permis de mettre en œuvre diverses compétences techniques tout en collaborant pour produire un produit final cohérent et abouti. En intégrant des fonctionnalités modernes comme la diffusion en direct, la gestion des comptes utilisateurs, et des interfaces intuitives, VIBE se positionne comme une plateforme puissante et polyvalente pour la diffusion de contenu en direct.",
+        "imageAlt": "Image de présentation du projet VIBE"
+      }
+    }
+  },
+  "presentation": {
+    "fullname": "Rayan Ainouche",
+    "position": "Développeur Full-stack",
+    "location": "Paris, Île-de-france",
+    "phone": "07 61 54 34 37",
+    "profile": {
+      "title": "Profil.",
+      "description": "Développeur Full Stack passionné, fort de deux années d'expérience, je suis à la recherche d’une nouvelle opportunité d’alternance dans le développement web pour Octobre 2024, dans le cadre de mon cursus d'ingénieur à l'ESIEE Paris, spécialisé en informatique, design, architecture et développement, pour une durée de trois ans."
+    },
+    "experience": {},
+    "education": {},
+    "skills": {
+      "hard-skills-title": "Compétences",
+      "soft-skills-title": "Soft skills",
+      "soft-skill1": "Bonne communication",
+      "soft-skill2": "Autonomie",
+      "soft-skill3": "Méthodologie AGILE",
+      "soft-skill4": "Organisation",
+      "soft-skill5": "Collaboration en équipe",
+      "soft-skill6": "Esprit d’analyse"
+    },
+    "languages": {
+      "title": "Langues",
+      "fr": "Français : courant",
+      "en": "Anglais : Avancé (C1)",
+      "es": "Espagnol : intermédiaire (B1)"
+    },
+    "interests": {
+      "title": "Intérets",
+      "interest1": "Passionné de voyage",
+      "interest2": "Sportif assidu",
+      "interest3": "Développement web"
+    },
+    "download-button-label": "Télécharger mon CV en PDF"
+  }
+}

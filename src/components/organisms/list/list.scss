@@ -1,0 +1,32 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+}
+
+.list__item__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: var(--background-neutral-high);
+}
+
+.list__item__label {
+  font: var(--font-regular-XS);
+  color: var(--background-neutral-high);
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .list__item__label {
+    font: var(--font-regular-M);
+  }
+}

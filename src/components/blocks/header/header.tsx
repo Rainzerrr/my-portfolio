@@ -4,30 +4,29 @@ import classNames from "classnames";
 import NavItem, {
   NavItemProps,
 } from "@/components/molecules/nav-item/nav-item";
-// import LanguageSwitch from "@/components/organisms/language-switch/language-switch";
-// import { DropdownItemProps } from "@/components/molecules/dropdown-item/dropdown-item";
+import LanguageSwitch from "@/components/organisms/language-switch/language-switch";
+import { DropdownItemProps } from "@/components/molecules/dropdown-item/dropdown-item";
 import Icon from "@/components/atoms/icon/icon";
 import { useTheme } from "next-themes";
 import "./header.scss";
-
 interface HeaderProps {
   navItems: Omit<NavItemProps, "size">[];
 }
 
-// const options: DropdownItemProps[] = [
-//   {
-//     iconName: "french",
-//     label: "Français",
-//     value: "fr",
-//     onClick: () => null,
-//   },
-//   {
-//     iconName: "england",
-//     label: "Anglais",
-//     value: "en",
-//     onClick: () => null,
-//   },
-// ];
+const options: DropdownItemProps[] = [
+  {
+    iconName: "fr",
+    labelKey: "header.language.fr",
+    value: "fr",
+    onClick: () => null,
+  },
+  {
+    iconName: "en",
+    labelKey: "header.language.en",
+    value: "en",
+    onClick: () => null,
+  },
+];
 
 const Header: FC<HeaderProps> = ({ navItems }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,7 +45,6 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
   }, [showLanguageSwitchOptions]);
 
   const handleThemeSwitch = () => {
-    console.log("theme dark : ", isDarkThemeActive);
     setTheme(isDarkThemeActive ? "dark" : "light");
     setIsDarkThemeActive(!isDarkThemeActive);
     if (!isDarkThemeActive) {
@@ -62,8 +60,8 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
     return navItems.map((navItem: Omit<NavItemProps, "size">) => {
       return (
         <NavItem
-          key={navItem.label}
-          label={navItem.label}
+          key={navItem.labelKey}
+          labelKey={navItem.labelKey}
           size="XL"
           redirectUrl={navItem.redirectUrl}
           onClick={() => closeMobileMenu()}
@@ -98,22 +96,22 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
       />
 
       <div className="header__settings">
-        {/* <LanguageSwitch
+        <LanguageSwitch
           className="hide-mobile"
           options={options}
           showOptions={showLanguageSwitchOptions}
           setShowOptions={setShowLanguageSwitchOptions}
-        /> */}
+        />
         <Icon
           className="header__settings__icon"
           name={isDarkThemeActive ? "sun" : "moon-star"}
-          size="L"
+          size="M"
           onClick={() => handleThemeSwitch()}
         />
         <Icon
           className="header__settings__icon hide-desktop"
           name="menu"
-          size="L"
+          size="M"
           onClick={() => setIsMobileMenuOpen(true)}
         />
       </div>
@@ -135,12 +133,12 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
         />
         <div className="header__mobile-menu__content">
           <div className="header__nav-items">{renderNavItems}</div>
-          {/* <LanguageSwitch
+          <LanguageSwitch
             className="header-mobile-menu__language-switch"
             options={options}
             showOptions={showLanguageSwitchOptions}
             setShowOptions={setShowLanguageSwitchOptions}
-          /> */}
+          />
         </div>
       </div>
 

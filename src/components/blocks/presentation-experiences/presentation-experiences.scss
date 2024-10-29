@@ -1,0 +1,23 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.presentation-experiences {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.presentation-experiences__subitems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .presentation-experiences__subitems {
+    padding-left: 24px;
+  }
+}

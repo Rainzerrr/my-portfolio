@@ -32,7 +32,7 @@ const ProjectFeature: FC<ProjectFeatureProps> = ({
         <Image
           className="project-feature__image"
           src={imageUrl}
-          alt={imageAlt}
+          alt={t(imageAlt)}
           fill
         />
       </div>

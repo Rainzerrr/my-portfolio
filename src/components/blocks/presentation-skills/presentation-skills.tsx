@@ -43,7 +43,11 @@ const PresentationSkills = () => {
   ];
 
   const renderTechnologies = (technology: TechnologyIconTextProps) => (
-    <TechnologyIconText icon={technology.icon} label={technology.label} />
+    <TechnologyIconText
+      key={technology.label}
+      icon={technology.icon}
+      label={technology.label}
+    />
   );
 
   return (

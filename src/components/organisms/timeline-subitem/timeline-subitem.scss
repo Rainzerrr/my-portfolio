@@ -1,0 +1,54 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.timeline-subitem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.timeline-subitem__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.timeline-subitem__header {
+  display: flex;
+  gap: 4px;
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-subitem__header__title,
+.timeline-subitem__header__date {
+  font: var(--font-semibold-XS);
+  color: var(--background-neutral-highest);
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .timeline-subitem {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .timeline-subitem__content {
+    flex: 1;
+  }
+
+  .timeline-subitem__header__title,
+  .timeline-subitem__header__date {
+    font: var(--font-semibold-S);
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .timeline-subitem__header__title,
+  .timeline-subitem__header__date {
+    font: var(--font-semibold-M);
+  }
+}

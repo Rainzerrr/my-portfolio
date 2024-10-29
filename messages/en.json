@@ -66,6 +66,11 @@
         "title": "Content management with Strapi",
         "desc": "The site is connected to Strapi, a Headless CMS that allows the manager to intuitively manage site content without needing to rely on the development team. Through this interface, they can control all textual and visual content on the various pages, manage the product list, and highlight certain items in suggestions. This integration provides complete autonomy for the manager to adjust content based on business needs, facilitating daily site management.",
         "imageAlt": "Presentation image of the Fruit&Go project"
+      },
+      "feature6": {
+        "title": "Content Management with Strapi",
+        "desc": "The site is connected to Strapi, a Headless CMS that allows the manager to intuitively handle site content without needing the development team. Through this interface, they can control all text and visual content across various pages, manage the product list, and highlight specific products in suggestions. This integration provides the manager with full autonomy to adjust content according to business needs, simplifying the daily management of the site.",
+        "imageAlt": "Content management feature with Strapi in the Fruit&Go project"
       }
     },
     "fountain_finder": {
@@ -97,6 +102,11 @@
         "title": "Custom markers",
         "desc": "The markers for the fountains have been completely customized for this version of the application. Unlike the standard markers provided by Leaflet, I designed specific markers that display an image corresponding to the type of fountain. This allows for better visual distinction between different types of fountains, enhancing the user experience. This is an improvement over the previous version, where a single type of marker was used for all fountains.",
         "imageAlt": "Custom markers for each type of fountain in Fountain Finder"
+      },
+      "feature6": {
+        "title": "Filter System",
+        "desc": "Fountain Finder’s filter system enables precise and customized fountain searches. With advanced options, users can filter fountains by availability (open or closed), by district, and by type of fountain (standard, drinking water, decorative, etc.). A reset button is also available to clear the filters and display all fountains again.",
+        "imageAlt": "Customized fountain filter system in Fountain Finder"
       }
     },
     "vibe": {
@@ -120,8 +130,55 @@
       "title": "Profile.",
       "description": "Passionate Full Stack Developer with two years of experience, currently seeking a new apprenticeship opportunity in web development for October 2024 as part of my engineering program at ESIEE Paris. Specializing in IT, design, architecture, and development, I am available for a three-year position."
     },
-    "experience": {},
-    "education": {},
+
+    "experience": {
+      "nav-label": "Experiences",
+      "capgemini": {
+        "title": "Capgemini",
+        "position": "Full-stack Developer",
+        "years": "2022 - 2024",
+        "aeroport-paris": {
+          "title": "Aéroports de Paris",
+          "date": "Mar. 2024 - Jul. 2024",
+          "achievement1": "Development of web components in React.js & TypeScript.",
+          "achievement2": "Implementation of the Material UI component library.",
+          "achievement3": "Writing unit and regression tests (Snapshots).",
+          "achievement4": "Deliverable demonstrations internally."
+        },
+        "fdj": {
+          "title": "Française des jeux",
+          "date": "Oct. 2022 - Feb. 2024",
+          "achievement1": "Development of web components in React.js & TypeScript.",
+          "achievement2": "Writing integration tests.",
+          "achievement3": "CMS Directus configuration and management.",
+          "achievement4": "Development and maintenance of the API in Node.js (Fastify).",
+          "achievement5": "Deliverable demonstrations for the client.",
+          "achievement6": "Organization following the AGILE methodology.",
+          "achievement7": "Learning React.js and JavaScript within a week."
+        }
+      }
+    },
+    "education": {
+      "nav-label": "Education",
+      "esiee": {
+        "title": "ESIEE Paris",
+        "diploma": "Software Engineer",
+        "years": "2024 - 2027",
+        "desc": "I am about to join ESIEE Paris for a three-year period, where I will specialize in software engineering, architectural design, and programming. ESIEE Paris is recognized as one of the top engineering schools in computer science in France, offering cutting-edge training in these essential areas of computing."
+      },
+      "iut": {
+        "title": "IUT de Paris - Rives de Seine",
+        "diploma": "Bachelor of Sciences in Computer Science",
+        "years": "2022 - 2024",
+        "desc": "I successfully joined IUT de Paris - Rives de Seine, known as one of the best institutes in computer science in France. There, I received a solid education covering all aspects of IT: networks, databases, and development, with a particular focus on Java and PHP. In parallel, I furthered my personal knowledge by specializing in React and JavaScript during my free time."
+      },
+      "high-school": {
+        "title": "Lycée Charlemagne",
+        "diploma": "High School Diploma",
+        "years": "2018 - 2021",
+        "desc": "I spent my high school years at Lycée Charlemagne, one of the top high schools in France, located in the heart of Paris. I benefited from a rigorous environment with demanding teachers, which allowed me to develop strong skills. I pursued specialties in mathematics and computer science, nurturing my interest in these fields from my early years of study."
+      }
+    },
     "skills": {
       "hard-skills-title": "Skills",
       "soft-skills-title": "Soft Skills",

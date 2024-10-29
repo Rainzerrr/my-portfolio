@@ -1,0 +1,84 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.timeline-item__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  flex: 1;
+}
+
+.timeline-item__header {
+  display: flex;
+  gap: 4px;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.timeline-item__header__title-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.timeline-item__header__title,
+.timeline-item__header__date {
+  font: var(--font-semibold-S);
+  color: var(--background-neutral-highest);
+}
+
+.timeline-item__content__description {
+  font: var(--font-regular-XS);
+  color: var(--background-neutral-high);
+}
+
+@media screen and (min-width: $breakpoint-small) {
+  .timeline-item {
+    flex-direction: unset;
+    gap: 12px;
+  }
+
+  .timeline-item__infos {
+    align-self: unset;
+  }
+
+  .timeline-item__header__title-subtitle {
+    flex-direction: unset;
+    gap: 12px;
+  }
+
+  .timeline-item__header__title,
+  .timeline-item__header__date {
+    font: var(--font-semibold-M);
+  }
+
+  .timeline-item__content__description {
+    font: var(--font-regular-S);
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .timeline-item {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .timeline-item__header__title,
+  .timeline-item__header__date {
+    font: var(--font-semibold-L);
+  }
+
+  .timeline-item__content__description {
+    font: var(--font-regular-M);
+  }
+}

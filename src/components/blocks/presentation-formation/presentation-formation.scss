@@ -1,0 +1,12 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
+.timeline-formation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+}

@@ -46,27 +46,32 @@
       "feature1": {
         "title": "Introduction",
         "desc": "L'idée de ce projet est née de la volonté du primeur d'adopter un système de commande par livraison pour mieux gérer les périodes de forte affluence et offrir une expérience client plus fluide. Grâce à cette application, le primeur peut élargir son marché et optimiser son chiffre d'affaires en simplifiant l'accès à ses produits. Dans ce projet, j’ai travaillé en collaboration avec un expert UX/UI, qui s’est chargé des assets graphiques, tels que les illustrations du site et la vidéo d’introduction.",
-        "imageAlt": "Image de présentation du projet Fruit&Go"
+        "imageAlt": "Image d'introduction du projet Fruit&go"
       },
       "feature2": {
         "title": "Panier dynamique",
         "desc": "Le panier dynamique est l'une des fonctionnalités clés de l'application. Accessible en haut à droite de l'écran, il permet aux utilisateurs de suivre en temps réel les articles qu'ils ajoutent. Une page dédiée au panier offre une vue complète et interactive où l'utilisateur peut voir ses produits, modifier la quantité ou supprimer des articles. Le prix total est automatiquement mis à jour, offrant une expérience de commande fluide et intuitive. Cette fonctionnalité améliore l'expérience d'achat, en rendant la gestion des articles ajoutés simple et transparente.",
-        "imageAlt": "Image de présentation du projet Fruit&Go"
+        "imageAlt": "Fonctionnalité panier dynamique du projet Fruit&go"
       },
       "feature3": {
         "title": "Système de filtres",
         "desc": "L'application propose également un système de filtres efficace sur la page des catégories de produits. Grâce à cette fonctionnalité, les utilisateurs peuvent affiner leur recherche en fonction de différents critères, tels que le type de produit, la disponibilité ou encore les promotions. Les filtres sont dynamiques et peuvent fonctionner ensemble pour offrir une expérience de navigation personnalisée. De plus, un bouton permet de réinitialiser les filtres à tout moment, ce qui simplifie l'exploration du catalogue pour l'utilisateur.",
-        "imageAlt": "Image de présentation du projet Fruit&Go"
+        "imageAlt": "Fonctionnalité filtres du projet Fruit&go"
       },
       "feature4": {
         "title": "Paiement avec Stripe",
         "desc": "Afin de centraliser et faciliter les paiements, l'application est reliée à Stripe, une solution fiable et sécurisée. Lors du processus de commande, les utilisateurs sont redirigés vers une interface Stripe intégrée, où ils peuvent finaliser leur paiement en toute sécurité. Pour le gérant du magasin, Stripe offre également une plateforme dédiée pour le suivi des facturations et des commandes. Cela permet une gestion simplifiée des transactions et des rapports financiers, sans avoir à passer par des systèmes tiers compliqués.",
-        "imageAlt": "Image de présentation du projet Fruit&Go"
+        "imageAlt": "Fonctionnalité paiement avec Stripe du projet Fruit&go"
       },
       "feature5": {
+        "title": "Interface administrateur.",
+        "desc": "L'interface administrateur de Fruit&Go offre une vue complète et en temps réel sur les commandes clients, de leur réception à la livraison. Chaque commande est présentée sous forme de carte détaillant les informations essentielles, comme les produits et le client. Un bouton de statut, accessible sur chaque carte, permet à l’administrateur de mettre facilement à jour l’avancement de la commande.",
+        "imageAlt": "Fonctionnalité interface administrateur du projet Fruit&go"
+      },
+      "feature6": {
         "title": "Gestion du contenu avec Strapi",
         "desc": "Le site est connecté à Strapi, un CMS Headless qui permet au gérant de gérer de manière intuitive le contenu du site sans avoir à solliciter l'équipe de développement. Grâce à cette interface, il peut contrôler l’ensemble du contenu textuel et visuel des différentes pages, gérer la liste des produits et mettre en avant certains d'entre eux dans les suggestions. Cette intégration offre une autonomie complète au gérant pour ajuster les contenus en fonction des besoins commerciaux, facilitant ainsi la gestion quotidienne du site.",
-        "imageAlt": "Image de présentation du projet Fruit&Go"
+        "imageAlt": "Fonctionnalité gestion du contenu avec Strapi du projet Fruit&go"
       }
     },
     "fountain_finder": {
@@ -98,6 +103,11 @@
         "title": "Markers personnalisés",
         "desc": "Les markers des fontaines ont été entièrement personnalisés pour cette version de l’application. Contrairement aux markers standards fournis par Leaflet, j’ai conçu des markers spécifiques qui affichent une image correspondant au type de fontaine. Cela permet une meilleure distinction visuelle entre les différents types de fontaines, améliorant ainsi l'expérience utilisateur. C’est une évolution par rapport à la version précédente, où un seul type de marker était utilisé pour toutes les fontaines.",
         "imageAlt": "Markers personnalisés pour chaque type de fontaine dans Fountain Finder"
+      },
+      "feature6": {
+        "title": "Système de filtres",
+        "desc": "Le système de filtres de Fountain Finder permet une recherche précise et personnalisée des fontaines. Grâce à des options avancées, l’utilisateur peut filtrer les fontaines par disponibilité (ouvertes ou fermées), par arrondissement, et par type de fontaine (classique, à eau potable, décorative, etc.). Un bouton de réinitialisation est également disponible pour remettre les filtres à zéro et afficher à nouveau toutes les fontaines.",
+        "imageAlt": "Système de filtres des fontaines personnalisés dans Fountain Finder"
       }
     },
     "vibe": {
@@ -121,8 +131,54 @@
       "title": "Profil.",
       "description": "Développeur Full Stack passionné, fort de deux années d'expérience, je suis à la recherche d’une nouvelle opportunité d’alternance dans le développement web pour Octobre 2024, dans le cadre de mon cursus d'ingénieur à l'ESIEE Paris, spécialisé en informatique, design, architecture et développement, pour une durée de trois ans."
     },
-    "experience": {},
-    "education": {},
+    "experience": {
+      "nav-label": "Expériences",
+      "capgemini": {
+        "title": "Capgemini",
+        "position": "Développeur Full-stack",
+        "years": "2022 - 2024",
+        "aeroport-paris": {
+          "title": "Aéroports de Paris",
+          "date": "Mar. 2024 - Juil. 2024",
+          "achievement1": "Développement de composants web en React.js & TypeScript.",
+          "achievement2": "Implémentation de la librairie de composant Material UI.",
+          "achievement3": "Rédaction de tests unitaires et de régression (Snapshots).",
+          "achievement4": "Démonstration des livrables en interne."
+        },
+        "fdj": {
+          "title": "Française des jeux",
+          "date": "Oct. 2022 - Fév. 2024",
+          "achievement1": "Développement de composants web en React.js & TypeScript.",
+          "achievement2": "Rédaction de tests d’intégration.",
+          "achievement3": "Manipulation et configuration du CMS Directus.",
+          "achievement4": "Développement et maintenance de l’API en Node.js (Fastify).",
+          "achievement5": "Démonstration des livrables au client.",
+          "achievement6": "Organisation suivant la méthodologie AGILES.",
+          "achievement7": "Apprentissage de React.js et JavaScript en une semaine."
+        }
+      }
+    },
+    "education": {
+      "nav-label": "Formations",
+      "esiee": {
+        "title": "ESIEE Paris",
+        "diploma": "Ingénieur logiciel",
+        "years": "2024 - 2027",
+        "desc": "Je vais rejoindre ESIEE Paris pour une période de trois ans, où je vais me spécialiser dans le génie logiciel, la conception architecturale et la programmation. ESIEE Paris est reconnue comme l'une des meilleures écoles d'ingénieurs en informatique en France, offrant une formation de pointe dans ces domaines cruciaux de l'informatique."
+      },
+      "iut": {
+        "title": "IUT de Paris - Rives de Seine",
+        "diploma": "BUT informatique",
+        "years": "2022 - 2024",
+        "desc": "J'ai rejoint avec succès l'IUT de Paris Rives de Seine, réputé comme l'un des meilleurs en France dans le domaine informatique. Là-bas, j'ai acquis une solide formation couvrant tous les aspects de l'informatique : réseaux, bases de données, et développement, avec une attention particulière portée sur Java et PHP. En parallèle, j'ai approfondi mes connaissances personnelles en me spécialisant dans React et JavaScript durant mon temps libre."
+      },
+      "high-school": {
+        "title": "Lycée Charlemagne",
+        "diploma": "Baccalauréat général",
+        "years": "2018 - 2021",
+        "desc": "J'ai passé mes années lycée au Lycée Charlemagne, l'un des meilleurs lycées français, situé au cœur de Paris. J'y ai bénéficié d'un environnement rigoureux avec des professeurs exigeants, ce qui m'a permis de développer des compétences solides. J'ai suivi les spécialités mathématiques et informatique, nourrissant ainsi mon intérêt pour ces domaines dès mes premières années d'études."
+      }
+    },
     "skills": {
       "hard-skills-title": "Compétences",
       "soft-skills-title": "Soft skills",

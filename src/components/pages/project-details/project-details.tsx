@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import Badge, { BadgeProps } from "@/components/molecules/badge/badge";
 import PortfolioPage from "@/components/wrappers/portfolio-page/portfolio-page";
 import Button from "@/components/molecules/button/button";
@@ -20,6 +20,7 @@ import Snackbar from "@/components/molecules/snackbar/snackbar";
 import { ProjectProps } from "@/app/[locale]/data";
 import "./project-details.scss";
 import { useTranslations } from "next-intl";
+import Separator from "@/components/atoms/separator/separator";
 
 interface ProjectDetailsProps extends ProjectProps {
   isModal?: boolean;
@@ -50,10 +51,10 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   };
   const renderProjectFeature = (feature: ProjectFeatureProps) => {
     return (
-      <>
-        <div className="project-details__separator" />
-        <ProjectFeature key={feature.title} {...feature} />
-      </>
+      <Fragment key={feature.title}>
+        <Separator />
+        <ProjectFeature {...feature} />
+      </Fragment>
     );
   };
 

@@ -1,3 +1,5 @@
+@import "../../../app/[locale]/breakpoints.scss";
+
 .icon-wrapper {
   display: flex;
   align-items: center;
@@ -35,4 +37,18 @@
 
 .icon--clickable {
   cursor: pointer;
+}
+
+.icon-image-wrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .icon-image-wrapper {
+    position: relative;
+    width: 28px;
+    height: 28px;
+  }
 }

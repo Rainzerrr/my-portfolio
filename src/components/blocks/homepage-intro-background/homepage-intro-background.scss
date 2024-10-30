@@ -565,7 +565,7 @@
     transform: translateX(-150px);
   }
   100% {
-    opacity: 100%;
+    opacity: 1;
     transform: translateX(0px);
   }
 }
@@ -576,7 +576,7 @@
     transform: translateX(150px);
   }
   100% {
-    opacity: 100%;
+    opacity: 1;
     transform: translateX(0px);
   }
 }

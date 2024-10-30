@@ -159,7 +159,7 @@ const Presentation = () => {
                   rightIcon="experiences"
                   theme="secondary"
                   isGhost={activeSection === "formation"}
-                  shape="rounded"
+                  shape="square-rounded"
                   size="M"
                   onClick={() => handleNavigateProfile("experiences")}
                 />
@@ -168,7 +168,7 @@ const Presentation = () => {
                   rightIcon="school"
                   theme="secondary"
                   isGhost={activeSection === "experiences"}
-                  shape="rounded"
+                  shape="square-rounded"
                   size="M"
                   onClick={() => handleNavigateProfile("formation")}
                 />

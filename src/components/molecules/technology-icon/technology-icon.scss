@@ -19,14 +19,20 @@
 }
 
 @media screen and (min-width: $breakpoint-medium) {
-  .technology-icon {
+  .technology-icon--project-details {
     background-color: var(--background-transparent-lowest);
     border-radius: 4px;
     height: unset;
     padding: 4px;
+
+    .technology-icon__label {
+      display: none;
+    }
   }
 
-  .technology-icon__label {
-    display: none;
+  .technology-icon--presentation {
+    .technology-icon__label {
+      font: var(--font-medium-M);
+    }
   }
 }

@@ -20,6 +20,8 @@
   align-self: stretch;
 
   .project-card {
+    opacity: 0;
+    animation: fadeInCard 0.5s ease-in-out forwards;
   }
 }
 
@@ -40,7 +42,15 @@
   .project-hub__title {
     font: var(--font-semibold-h1);
   }
+}
 
-  .project-card {
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import TechnologyIconText, {
   TechnologyIconTextProps,
 } from "@/components/molecules/technology-icon/technology-icon";
+import { Fragment } from "react";
 
 const PresentationSkills = () => {
   const t = useTranslations();
@@ -42,12 +43,21 @@ const PresentationSkills = () => {
     "presentation.interests.interest3",
   ];
 
-  const renderTechnologies = (technology: TechnologyIconTextProps) => (
-    <TechnologyIconText
-      key={technology.label}
-      icon={technology.icon}
-      label={technology.label}
-    />
+  const renderTechnologies = (
+    technology: TechnologyIconTextProps,
+    index: number
+  ) => (
+    <Fragment key={technology.label}>
+      <TechnologyIconText
+        key={technology.label}
+        icon={technology.icon}
+        label={technology.label}
+        variant="presentation"
+      />
+      {index < technologies.length - 1 && (
+        <Separator className="hide-mobile" width={8} />
+      )}
+    </Fragment>
   );
 
   return (

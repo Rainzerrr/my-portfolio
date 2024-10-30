@@ -44,15 +44,19 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
         return index - 1;
       }
     }
+    return 0;
   };
   const renderProjectCard = (projectCard: ProjectProps, index: number) => {
+    const cardIndex = cardOrderDisplayForDesktop(index);
+    const order = isOnDesktop ? cardIndex : index;
     return (
       <ProjectCard
         key={projectCard.title + projectCard.variant}
         {...projectCard}
         redirectUrl={`/project-details/${projectCard.title}`}
         style={{
-          order: isOnDesktop ? cardOrderDisplayForDesktop(index) : index,
+          order: order,
+          animationDelay: `${0.4 * order}s`,
         }}
         button={{
           shape: projectCard.variant === "emphasized" ? "rounded" : "circle",

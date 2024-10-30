@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <ProjectHub projectCards={[...data.projectDetails.slice(0, 3)]} />;
+  return <ProjectHub projectCards={[...data.projectDetails]} />;
 };
 
 export default page;

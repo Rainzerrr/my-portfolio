@@ -16,9 +16,13 @@ const HomepageIntro = () => {
     <div className="homepage__intro">
       <div className="homepage__intro__text">
         <div className="homepage__intro__title">
-          <p>{t("homepage.title.main")}</p>
+          <p className="homepage__intro__title__text">
+            {t("homepage.title.main")}
+          </p>
           <div className="homepage__intro__title-highlight">
-            <p>{t("homepage.title.underlined")}</p>
+            <p className="homepage__intro__title__text">
+              {t("homepage.title.underlined")}
+            </p>
             <svg
               className="homepage__intro__title-underline"
               xmlns="http://www.w3.org/2000/svg"

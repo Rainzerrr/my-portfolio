@@ -7,33 +7,59 @@ import TimelineSubitem, {
   TimelineSubitemProps,
 } from "@/components/organisms/timeline-subitem/timeline-subitem";
 import "./presentation-experiences.scss";
+import List from "@/components/organisms/list/list";
+
+interface ExperienceProps {
+  timelineItem: TimelineItemProps;
+  timelineItemList?: string[];
+  timelineSubitems?: TimelineSubitemProps[];
+}
 
 interface PresentationExperiencesProps {
-  timelineItem: TimelineItemProps;
-  timelineSubitems: TimelineSubitemProps[];
+  experiences: ExperienceProps[];
 }
 
 const PresentationExperiences: FC<PresentationExperiencesProps> = ({
-  timelineItem,
-  timelineSubitems,
+  experiences,
 }) => {
   const renderTimelineSubitems = (
     item: TimelineSubitemProps,
-    index: number
+    index: number,
+    timelineSubitems?: TimelineSubitemProps[]
   ) => {
     return (
       <Fragment key={item.title}>
         <TimelineSubitem {...item} />
-        {index < timelineSubitems.length - 1 && <Separator />}
+        {index < (timelineSubitems?.length ?? 0) - 1 && <Separator />}
       </Fragment>
     );
   };
   return (
     <div className="presentation-experiences">
-      <TimelineItem {...timelineItem} />
-      <div className="presentation-experiences__subitems">
-        {timelineSubitems.map(renderTimelineSubitems)}
-      </div>
+      {experiences.map((experience, index) => (
+        <Fragment key={experience.timelineItem.title}>
+          <div className="presentation-experience">
+            <TimelineItem {...experience.timelineItem} />
+            {experience.timelineItemList && (
+              <div className="presentation-experience_item__content">
+                <List items={experience.timelineItemList} />
+              </div>
+            )}
+            {experience.timelineSubitems && (
+              <div className="presentation-experiences__subitems">
+                {experience.timelineSubitems.map((item, index) =>
+                  renderTimelineSubitems(
+                    item,
+                    index,
+                    experience.timelineSubitems
+                  )
+                )}
+              </div>
+            )}
+          </div>
+          {index < experiences.length - 1 && <Separator />}
+        </Fragment>
+      ))}
     </div>
   );
 };

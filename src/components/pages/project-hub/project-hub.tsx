@@ -1,7 +1,6 @@
 "use client";
 import React, { FC } from "react";
 import ProjectCard from "@/components/organisms/project-card/project-card";
-// import Button from "@/components/molecules/button/button";
 import PortfolioPage from "@/components/wrappers/portfolio-page/portfolio-page";
 import useWidth from "@/hooks/useWidth";
 import useProjectModal from "@/hooks/useProjectModal";
@@ -81,13 +80,6 @@ const ProjectHub: FC<ProjectHubProps> = ({ projectCards }) => {
   return (
     <PortfolioPage>
       <div className="project-hub">
-        {/* <Button
-          label="Filtrer"
-          rightIcon="arrow-right"
-          shape="rounded"
-          theme="secondary"
-          size="L"
-        /> */}
         <p className="project-hub__title">{t("hub-projects.title")}</p>
         <div className="project-hub__cards">
           {projectCards.map(renderProjectCard)}

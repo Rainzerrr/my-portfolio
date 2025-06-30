@@ -119,24 +119,86 @@
         "desc": "The VIBE project is the result of our team's shared passion for streaming platforms. We aimed to create a practical and functional application for video content creators. This project allowed us to implement various technical skills while collaborating to produce a cohesive and polished final product. By integrating modern features like live streaming, user account management, and intuitive interfaces, VIBE positions itself as a powerful and versatile platform for live content broadcasting.",
         "imageAlt": "Presentation image of the VIBE project"
       }
+    },
+    "g3d": {
+      "details": "3D Scenes",
+      "description": "G3D is a web-based application (SaaS) designed for the creation, visualization, and manipulation of 3D scenes directly in the browser. Inspired by collaborative tools like Figma, G3D aims to become a go-to platform for real-time collaborative 3D design.\nCurrently developed in React.js, a migration to Next.js is planned to optimize SEO and improve the application's overall performance.",
+      "imageAlt": "Presentation image of the G3D project",
+      "time": "1 month",
+      "feature1": {
+        "title": "Project Origins",
+        "desc": "This project was born from a personal desire to explore 3D on the web — a domain I had not yet explored. A friend of mine, who is passionate about Blender, supported me during the design phase by helping me understand the technical foundations of 3D and by collaborating on the UI mockups.",
+        "imageAlt": "Introduction image of the G3D project"
+      },
+      "feature2": {
+        "title": "Real-Time Scene Display",
+        "desc": "The G3D interface displays the active 3D scene in real time. To aid navigation and spatial awareness, a visible grid made of 1-meter squares is shown, along with two guiding lines representing the X and Y axes.",
+        "imageAlt": "Scene display feature of the G3D project"
+      },
+      "feature3": {
+        "title": "Intuitive 3D Shape Creation",
+        "desc": "Creating meshes (3D shapes) is straightforward via the menu in the top-left corner of the interface. Simply select a shape from the dropdown, and it will be automatically added to the center of the scene. Users can currently create basic shapes, both in 2D (circle, square) and 3D (sphere, cube).",
+        "imageAlt": "Shape creation feature of the G3D project"
+      },
+      "feature4": {
+        "title": "Real-Time Editing and Transformation",
+        "desc": "Meshes can be selected individually by clicking on them, or in groups using Ctrl + click. When one or more meshes are selected, a right-hand side panel appears automatically. This panel allows users to modify core properties such as position, scale (size), and rotation in 3D space.",
+        "imageAlt": "Real-time editing feature of the G3D project"
+      }
+    },
+    "worknest": {
+      "details": "Interactive map of coworking spaces in Paris",
+      "description": "Worknest is a platform dedicated to the analysis and localization of coworking spaces within the Parisian area. It helps future managers identify optimal locations to establish coworking spaces, based on key criteria like price per square meter, transport density, and proximity to restaurants.",
+      "imageAlt": "Project presentation image of Worknest",
+      "time": "1 month",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "This project was developed during my first year of engineering studies at ESIEE Paris as part of a web programming course. Together with my partner, we created an interactive map based on CSV files, focused on analyzing coworking spaces in the Paris region, a topic we were particularly interested in.",
+        "imageAlt": "Introduction image of Worknest project"
+      },
+      "feature2": {
+        "title": "Map and markers display",
+        "desc": "Using Leaflet.js, we displayed a clean map of Paris, showing coworking spaces represented by custom markers. A clustering system groups nearby locations to improve map readability.",
+        "imageAlt": "Map and markers feature of the Worknest project"
+      },
+      "feature3": {
+        "title": "Business district colorization",
+        "desc": "The map also colorizes Paris business districts based on key criteria, allowing users to quickly identify the most interesting zones to open a coworking space.",
+        "imageAlt": "Business district colorization feature of the Worknest project"
+      },
+      "feature4": {
+        "title": "Dynamic filters",
+        "desc": "The menu lets users filter the map by arrondissement, business district, and criteria such as price per m², transport density, or restaurant density. Filters can be combined, and the map updates in real time. The menu can also be hidden for better readability.",
+        "imageAlt": "Dynamic filters feature of the Worknest project"
+      },
+      "feature5": {
+        "title": "Dynamic legend",
+        "desc": "A contextual legend at the bottom of the map adapts automatically to the selected filters, explaining colors, indices, and visual aids to facilitate understanding of data related to Parisian coworking spaces.",
+        "imageAlt": "Dynamic legend feature of the Worknest project"
+      },
+      "feature6": {
+        "title": "Zone details",
+        "desc": "By clicking on a Paris business district, users can view key data related to coworking spaces based on applied filters: overall index, number of restaurants, transport density, average price per m², etc. This information updates in real time.",
+        "imageAlt": "Zone details feature of the Worknest project"
+      }
     }
   },
   "presentation": {
     "fullname": "Rayan Ainouche",
-    "position": "Full-stack developer",
+    "position": "Fullstack developer",
     "location": "Paris, Île-de-france",
     "phone": "07 61 54 34 37",
     "profile": {
       "title": "Profile.",
-      "description": "Passionate Full Stack Developer with two years of experience, currently seeking a new apprenticeship opportunity in web development for October 2024 as part of my engineering program at ESIEE Paris. Specializing in IT, design, architecture, and development, I am available for a three-year position."
+      "description": "Passionate web developer with three years of experience, I am currently seeking a new apprenticeship opportunity in Fullstack development starting in September 2025. This would be part of my engineering program at ESIEE Paris, where I specialize in computer science, design, architecture, and development, for a duration of two years."
     },
 
     "experience": {
       "nav-label": "Experiences",
       "capgemini": {
         "title": "Capgemini",
-        "position": "Full-stack Developer",
-        "years": "2022 - 2024",
+        "position": "Fullstack Developer",
+        "years": "Sept. 2022 - Aug. 2024",
         "aeroport-paris": {
           "title": "Aéroports de Paris",
           "date": "Mar. 2024 - Jul. 2024",
@@ -156,6 +218,17 @@
           "achievement6": "Organization following the AGILE methodology.",
           "achievement7": "Learning React.js and JavaScript within a week."
         }
+      },
+      "genius": {
+        "title": "Genius Gambler",
+        "position": "Fullstack Developer",
+        "years": "Sept. 2024 - Aug. 2025",
+        "achievements": {
+          "achievement1": "Fully implemented the back-office front-end using Flutter Web",
+          "achievement2": "Developed the back-end with Java Spring Boot & Firebase",
+          "achievement3": "Contributed to bug identification, tracking, and reporting",
+          "achievement4": "Analyzed mobile app features and architecture, providing optimization suggestions"
+        }
       }
     },
     "education": {
@@ -164,7 +237,7 @@
         "title": "ESIEE Paris",
         "diploma": "Software Engineer",
         "years": "2024 - 2027",
-        "desc": "I am about to join ESIEE Paris for a three-year period, where I will specialize in software engineering, architectural design, and programming. ESIEE Paris is recognized as one of the top engineering schools in computer science in France, offering cutting-edge training in these essential areas of computing."
+        "desc": "I am currently studying at ESIEE Paris, specializing in software engineering, architectural design, and programming. I have completed the first year of my program and continue to receive advanced training in these key areas of computer science. ESIEE Paris is recognized as one of the top engineering schools in computer science in France."
       },
       "iut": {
         "title": "IUT de Paris - Rives de Seine",
@@ -191,7 +264,6 @@
     },
     "languages": {
       "title": "Languages",
-      "fr": "French: Fluent",
       "en": "English: Advanced (C1)",
       "es": "Spanish: Intermediate (B1)"
     },

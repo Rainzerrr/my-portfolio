@@ -22,7 +22,7 @@ const MainProjects = () => {
       </p>
       <div className="homepage__featured-projects__list">
         <ProjectCard
-          {...data.projectDetails[0]}
+          {...data.projectDetails[4]}
           button={{
             shape: "rounded",
             size: "M",
@@ -30,11 +30,11 @@ const MainProjects = () => {
             rightIcon: "arrow-right",
             label: "projects.card.redirect-button",
           }}
-          redirectUrl={`/project-details/${data.projectDetails[0].title}`}
+          redirectUrl={`/project-details/${data.projectDetails[4].title}`}
           variant="emphasized"
           onClick={() => {
             const projectData = findProjectDetailsData(
-              data.projectDetails[0].title
+              data.projectDetails[4].title
             );
             if (projectData !== undefined) {
               openProjectDetails(projectData);
@@ -42,8 +42,8 @@ const MainProjects = () => {
           }}
         />
         <ProjectCard
-          {...data.projectDetails[1]}
-          redirectUrl={`/project-details/${data.projectDetails[1].title}`}
+          {...data.projectDetails[3]}
+          redirectUrl={`/project-details/${data.projectDetails[3].title}`}
           button={{
             shape: "circle",
             size: "M",
@@ -54,7 +54,7 @@ const MainProjects = () => {
           variant="default"
           onClick={() => {
             const projectData = findProjectDetailsData(
-              data.projectDetails[1].title
+              data.projectDetails[3].title
             );
             if (projectData !== undefined) {
               openProjectDetails(projectData);
@@ -63,8 +63,8 @@ const MainProjects = () => {
         />
 
         <ProjectCard
-          {...data.projectDetails[2]}
-          redirectUrl={`/project-details/${data.projectDetails[2].title}`}
+          {...data.projectDetails[1]}
+          redirectUrl={`/project-details/${data.projectDetails[1].title}`}
           button={{
             shape: "circle",
             size: "M",
@@ -74,7 +74,7 @@ const MainProjects = () => {
           variant="default"
           onClick={() => {
             const projectData = findProjectDetailsData(
-              data.projectDetails[2].title
+              data.projectDetails[1].title
             );
             if (projectData !== undefined) {
               openProjectDetails(projectData);

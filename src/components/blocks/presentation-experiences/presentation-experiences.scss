@@ -1,11 +1,18 @@
 @import "../../../app/[locale]/breakpoints.scss";
 
-.presentation-experiences {
+.presentation-experiences,
+.presentation-experience {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
+}
+
+.presentation-experience_item__content {
+  align-self: stretch;
+  padding-left: 6px;
+  margin-top: -20px;
 }
 
 .presentation-experiences__subitems {
@@ -19,5 +26,17 @@
 @media screen and (min-width: $breakpoint-small) {
   .presentation-experiences__subitems {
     padding-left: 24px;
+  }
+
+  .presentation-experience_item__content {
+    padding-left: 60px;
+    margin-top: -18px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .presentation-experience_item__content {
+    padding-left: 70px;
+    margin-top: -24px;
   }
 }

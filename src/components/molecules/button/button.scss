@@ -215,3 +215,12 @@
   width: -webkit-fill-available;
   flex: 1;
 }
+
+.button--disabled {
+  cursor: default;
+  &:hover {
+    &.button-primary {
+      background-color: var(--button-primary-default-background);
+    }
+  }
+}

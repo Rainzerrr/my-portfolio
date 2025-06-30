@@ -30,6 +30,7 @@
     "buttons": {
       "return": "Retour",
       "deployed": "Projet déployé",
+      "unavailable": "Temporairement indisponible",
       "repository": "Dépôt GitHub"
     },
     "suggestions-title": "Autres projets"
@@ -120,23 +121,85 @@
         "desc": "Le projet VIBE est le fruit de la passion partagée par notre équipe pour les plateformes de streaming. Nous avons souhaité créer une application pratique et fonctionnelle pour les créateurs de contenu vidéo. Ce projet nous a permis de mettre en œuvre diverses compétences techniques tout en collaborant pour produire un produit final cohérent et abouti. En intégrant des fonctionnalités modernes comme la diffusion en direct, la gestion des comptes utilisateurs, et des interfaces intuitives, VIBE se positionne comme une plateforme puissante et polyvalente pour la diffusion de contenu en direct.",
         "imageAlt": "Image de présentation du projet VIBE"
       }
+    },
+    "g3d": {
+      "details": "Scènes 3D",
+      "description": "G3D est une application web (SaaS) dédiée à la création, la visualisation et la manipulation de scènes 3D directement depuis un navigateur. Inspirée par des outils collaboratifs comme Figma, G3D vise à devenir une plateforme de référence pour la conception 3D collaborative en temps réel.\nActuellement développée en React.js, une migration vers Next.js est prévue afin d’optimiser le référencement et d’améliorer les performances globales de l’application.",
+      "imageAlt": "Image de présentation du projet G3D",
+      "time": "1 mois",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "Ce projet est né d'une volonté personnelle d'explorer l'univers de la 3D sur le web, un domaine encore nouveau pour moi. Un ami passionné par Blender m’a accompagné dans la phase de conception, en m’aidant à comprendre les fondements techniques de la 3D et en collaborant à l’élaboration des maquettes de l’interface.",
+        "imageAlt": "Image d'introduction du projet G3D"
+      },
+      "feature2": {
+        "title": "Affichage en temps réel de la scène",
+        "desc": "L’interface de G3D permet d’afficher en temps réel la scène en cours de construction. Pour aider à la navigation et à la perception de l’espace, une grille quadrillée est visible, composée de cases de 1 mètre par 1 mètre, ainsi que deux lignes repères indiquant les directions des axes X et Y.",
+        "imageAlt": "Fonctionnalité d'affichage de la scène du projet G3D"
+      },
+      "feature3": {
+        "title": "Création intuitive de formes 3D",
+        "desc": "La création de meshs (formes 3D) se fait facilement à partir du menu situé en haut à gauche de l’interface. Il suffit de sélectionner une forme dans un menu déroulant, et celle-ci sera automatiquement ajoutée au centre de la scène. Il est actuellement possible de créer plusieurs formes de base, aussi bien en 2D (cercle, carré) qu’en 3D (sphère, cube).",
+        "imageAlt": "Fonctionnalité création de formes du projet G3D"
+      },
+      "feature4": {
+        "title": "Modification et transformation en temps réel",
+        "desc": "La sélection des meshs peut se faire individuellement en cliquant dessus, ou par sélection multiple via Ctrl + clic. Lorsqu’un ou plusieurs meshs sont sélectionnés, un panneau latéral droit s’affiche automatiquement. Ce menu permet de modifier les propriétés fondamentales des objets sélectionnés, à savoir leur position, leur échelle (taille), ainsi que leur rotation dans l’espace.",
+        "imageAlt": "Fonctionnalité édition en temps réel du projet G3D"
+      }
+    },
+    "worknest": {
+      "details": "Carte des espaces de coworking à Paris",
+      "description": "Worknest est une plateforme dédiée à l’analyse et à la localisation des espaces de coworking dans l’espace parisien. Elle aide les futurs gestionnaires à identifier les emplacements optimaux pour implanter leur coworking, en s’appuyant sur des critères clés comme le prix au m², la densité des transports et la proximité des restaurants.",
+      "imageAlt": "Image de présentation du projet Worknest",
+      "time": "1 mois",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "Ce projet a été réalisé durant ma première année d’ingénierie à l’ESIEE Paris dans le cadre d’un module de programmation web. Avec mon binôme, nous avons développé une carte interactive basée sur des fichiers CSV, axée sur l’analyse des espaces de coworking dans la région parisienne, un sujet qui nous intéressait particulièrement.",
+        "imageAlt": "Image d'introduction du projet Worknest"
+      },
+      "feature2": {
+        "title": "Affichage de la carte et des marqueurs",
+        "desc": "Avec Leaflet.js, nous avons affiché une carte sobre de Paris, illustrant les espaces de coworking par des marqueurs personnalisés. Un système de regroupement (cluster) permet d’optimiser la lisibilité lorsque plusieurs espaces sont proches géographiquement.",
+        "imageAlt": "Fonctionnalité d'affichage de la carte du projet Worknest"
+      },
+      "feature3": {
+        "title": "Colorisation des quartiers d’affaires",
+        "desc": "La carte affiche également une colorisation des quartiers d’affaires par différents critères clés, pour visualiser les zones parisiennes les plus intéressantes pour ouvrir un espace de coworking.",
+        "imageAlt": "Fonctionnalité de colorisation des quartiers du projet Worknest"
+      },
+      "feature4": {
+        "title": "Filtres dynamiques",
+        "desc": "Le menu permet de filtrer la carte selon les arrondissements, quartiers d’affaires et critères comme le prix au m², la densité des transports ou des restaurants. Les filtres sont cumulables et la carte se met à jour en temps réel. Il est possible de masquer ce menu pour une meilleure visibilité.",
+        "imageAlt": "Fonctionnalité de filtres dynamiques du projet Worknest"
+      },
+      "feature5": {
+        "title": "Légende dynamique",
+        "desc": "Une légende contextuelle en bas de la carte s’adapte automatiquement aux filtres sélectionnés, expliquant les couleurs, indices et aides visuelles pour faciliter la compréhension des données spécifiques aux espaces de coworking parisiens.",
+        "imageAlt": "Fonctionnalité de légende dynamique du projet Worknest"
+      },
+      "feature6": {
+        "title": "Détails d’une zone géographique",
+        "desc": "En cliquant sur un quartier d’affaires parisien, l’utilisateur peut consulter les données clés liées aux espaces de coworking selon les filtres appliqués : indice global, nombre de restaurants, densité des transports, prix moyen au m², etc. Ces informations évoluent en temps réel.",
+        "imageAlt": "Fonctionnalité détails de zone du projet Worknest"
+      }
     }
   },
   "presentation": {
     "fullname": "Rayan Ainouche",
-    "position": "Développeur Full-stack",
+    "position": "Développeur Fullstack",
     "location": "Paris, Île-de-france",
     "phone": "07 61 54 34 37",
     "profile": {
       "title": "Profil.",
-      "description": "Développeur Full Stack passionné, fort de deux années d'expérience, je suis à la recherche d’une nouvelle opportunité d’alternance dans le développement web pour Octobre 2024, dans le cadre de mon cursus d'ingénieur à l'ESIEE Paris, spécialisé en informatique, design, architecture et développement, pour une durée de trois ans."
+      "description": "Développeur web passionné, et fort de trois années d'expérience, je suis à la recherche d’une nouvelle opportunité d’alternance dans le développement Fullstack pour Septembre 2025, dans le cadre de mon cursus d'ingénieur à l'ESIEE Paris, spécialisé en informatique, design, architecture et développement, pour une durée de deux ans."
     },
     "experience": {
       "nav-label": "Expériences",
       "capgemini": {
         "title": "Capgemini",
-        "position": "Développeur Full-stack",
-        "years": "2022 - 2024",
+        "position": "Développeur Fullstack",
+        "years": "Sept. 2022 - Août 2024",
         "aeroport-paris": {
           "title": "Aéroports de Paris",
           "date": "Mar. 2024 - Juil. 2024",
@@ -153,8 +216,19 @@
           "achievement3": "Manipulation et configuration du CMS Directus.",
           "achievement4": "Développement et maintenance de l’API en Node.js (Fastify).",
           "achievement5": "Démonstration des livrables au client.",
-          "achievement6": "Organisation suivant la méthodologie AGILES.",
+          "achievement6": "Organisation suivant la méthodologie AGILE.",
           "achievement7": "Apprentissage de React.js et JavaScript en une semaine."
+        }
+      },
+      "genius": {
+        "title": "Genius Gambler",
+        "position": "Développeur Fullstack",
+        "years": "Sept. 2024 - Août 2025",
+        "achievements": {
+          "achievement1": "Implémentation complète du front-end du back-office en Flutter Web",
+          "achievement2": "Développement du back-end en Java Spring Boot & Firebase",
+          "achievement3": "Contribution à l’identification, au suivi et au reporting des anomalies",
+          "achievement4": "Analyse des fonctionnalités et de l’architecture de l’application mobile, avec suggestions d’optimisation"
         }
       }
     },
@@ -164,7 +238,7 @@
         "title": "ESIEE Paris",
         "diploma": "Ingénieur logiciel",
         "years": "2024 - 2027",
-        "desc": "Je vais rejoindre ESIEE Paris pour une période de trois ans, où je vais me spécialiser dans le génie logiciel, la conception architecturale et la programmation. ESIEE Paris est reconnue comme l'une des meilleures écoles d'ingénieurs en informatique en France, offrant une formation de pointe dans ces domaines cruciaux de l'informatique."
+        "desc": "Je poursuis actuellement mes études à ESIEE Paris, où je me spécialise dans le génie logiciel, la conception architecturale et la programmation. J'ai terminé la première année de mon programme et je continue de bénéficier d'une formation de pointe dans ces domaines cruciaux de l'informatique. ESIEE Paris est reconnue comme l'une des meilleures écoles d'ingénieurs en informatique en France."
       },
       "iut": {
         "title": "IUT de Paris - Rives de Seine",
@@ -191,7 +265,6 @@
     },
     "languages": {
       "title": "Langues",
-      "fr": "Français : courant",
       "en": "Anglais : Avancé (C1)",
       "es": "Espagnol : intermédiaire (B1)"
     },

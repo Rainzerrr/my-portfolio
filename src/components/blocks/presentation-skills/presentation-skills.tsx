@@ -15,10 +15,8 @@ const PresentationSkills = () => {
     { icon: "ts", label: "TypeScript" },
     { icon: "react", label: "React.js" },
     { icon: "next-js", label: "Next.js" },
-    { icon: "angular", label: "Angular" },
     { icon: "node_js", label: "Node.js" },
     { icon: "java", label: "Java" },
-    { icon: "php", label: "PHP" },
     { icon: "mysql", label: "MySQL" },
     { icon: "mongodb", label: "MongoDB" },
     { icon: "git", label: "Git" },
@@ -33,7 +31,6 @@ const PresentationSkills = () => {
     "presentation.skills.soft-skill6",
   ];
   const languagesKeys = [
-    "presentation.languages.fr",
     "presentation.languages.en",
     "presentation.languages.es",
   ];

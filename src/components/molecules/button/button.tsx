@@ -15,6 +15,7 @@ interface ButtonProps {
   shape: "circle" | "rounded" | "square-rounded";
   size: "S" | "M" | "L" | "XL";
   fullWidth?: boolean;
+  disabled?: boolean;
   onClick?: () => void;
 }
 
@@ -29,6 +30,7 @@ const Button: FC<ButtonProps> = ({
   shape,
   theme,
   isGhost,
+  disabled,
   size = "M",
   fullWidth,
   onClick = () => null,
@@ -48,6 +50,7 @@ const Button: FC<ButtonProps> = ({
         `button-${size}`,
         `button-${theme}`,
         `button-${shape}`,
+        disabled && "button--disabled",
         fullWidth && `button--full_width`,
         isGhost && `button-ghost`,
         className

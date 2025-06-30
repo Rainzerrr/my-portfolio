@@ -144,11 +144,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
               </div>
               <div className="project-details__infos__buttons">
                 <Button
-                  label="project-details.buttons.deployed"
+                  label={
+                    deployedUrl
+                      ? "project-details.buttons.deployed"
+                      : "project-details.buttons.unavailable"
+                  }
                   rightIcon="laptop"
                   theme="primary"
                   shape="rounded"
                   size="L"
+                  disabled={!deployedUrl}
                   fullWidth
                   onClick={() => deployedUrl && push(deployedUrl)}
                 />

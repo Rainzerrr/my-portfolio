@@ -12,6 +12,7 @@ const HomepageIntro = () => {
   const { push } = useRouter();
   const { isOnDesktop } = useWidth();
   const t = useTranslations();
+
   return (
     <div className="homepage__intro">
       <div className="homepage__intro__text">

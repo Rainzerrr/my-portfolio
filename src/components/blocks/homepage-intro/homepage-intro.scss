@@ -7,11 +7,6 @@
   gap: 36px;
   z-index: 3px;
 }
-.test {
-  border: 2px solid red;
-  font: var(--font-bold-h5);
-  color: black;
-}
 .homepage__intro__text {
   display: flex;
   flex-direction: column;
@@ -110,6 +105,10 @@
   .homepage__intro__desc {
     font: var(--font-regular-L);
     max-width: 550px;
+  }
+
+  .homepage__intro__buttons {
+    height: 128px;
   }
 }
 

@@ -3,12 +3,10 @@
 .homepage__background__light {
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 98.3vw;
   height: 86px;
   z-index: 1px;
   top: 132px;
-
-  // filter: blur(32px);
 
   opacity: 0;
   animation: startBackground 0.8s ease-in-out 1s forwards;

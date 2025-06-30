@@ -82,7 +82,7 @@ const Header: FC<HeaderProps> = ({ navItems }) => {
     } else {
       htmlElement.classList.add("light");
     }
-  });
+  }, []);
 
   return (
     <div className="header">

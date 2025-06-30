@@ -22,7 +22,7 @@ const MainProjects = () => {
       </p>
       <div className="homepage__featured-projects__list">
         <ProjectCard
-          {...data.projectDetails[4]}
+          {...data.projectDetails[2]}
           button={{
             shape: "rounded",
             size: "M",
@@ -30,11 +30,11 @@ const MainProjects = () => {
             rightIcon: "arrow-right",
             label: "projects.card.redirect-button",
           }}
-          redirectUrl={`/project-details/${data.projectDetails[4].title}`}
+          redirectUrl={`/project-details/${data.projectDetails[2].title}`}
           variant="emphasized"
           onClick={() => {
             const projectData = findProjectDetailsData(
-              data.projectDetails[4].title
+              data.projectDetails[2].title
             );
             if (projectData !== undefined) {
               openProjectDetails(projectData);
@@ -63,8 +63,8 @@ const MainProjects = () => {
         />
 
         <ProjectCard
-          {...data.projectDetails[1]}
-          redirectUrl={`/project-details/${data.projectDetails[1].title}`}
+          {...data.projectDetails[4]}
+          redirectUrl={`/project-details/${data.projectDetails[4].title}`}
           button={{
             shape: "circle",
             size: "M",
@@ -74,7 +74,7 @@ const MainProjects = () => {
           variant="default"
           onClick={() => {
             const projectData = findProjectDetailsData(
-              data.projectDetails[1].title
+              data.projectDetails[4].title
             );
             if (projectData !== undefined) {
               openProjectDetails(projectData);

@@ -113,13 +113,43 @@
     },
     "vibe": {
       "details": "Plateforme de diffusion de vidéos en direct",
-      "description": "VIBE est une plateforme de streaming vidéo qui permet aux utilisateurs de diffuser des vidéos en direct tout en interagissant en temps réel avec leur audience. Ce projet a été développé dans le cadre de notre projet annuel de dernière année de BUT Informatique, visant à acquérir des compétences dans la manipulation de flux vidéo en direct.",
+      "description": "VIBE est une plateforme de streaming vidéo permettant aux utilisateurs de diffuser leurs vidéos en direct tout en interagissant en temps réel avec leur audience. Conçu dans le cadre de notre projet de fin d'année en BUT Informatique, ce projet nous a permis d'acquérir des compétences techniques concrètes liées à la diffusion de flux vidéo en direct.",
       "imageAlt": "Image de présentation du projet VIBE",
       "time": "9 mois",
       "feature1": {
         "title": "Introduction",
-        "desc": "Le projet VIBE est le fruit de la passion partagée par notre équipe pour les plateformes de streaming. Nous avons souhaité créer une application pratique et fonctionnelle pour les créateurs de contenu vidéo. Ce projet nous a permis de mettre en œuvre diverses compétences techniques tout en collaborant pour produire un produit final cohérent et abouti. En intégrant des fonctionnalités modernes comme la diffusion en direct, la gestion des comptes utilisateurs, et des interfaces intuitives, VIBE se positionne comme une plateforme puissante et polyvalente pour la diffusion de contenu en direct.",
+        "desc": "Le projet VIBE est né de notre passion commune pour les plateformes de streaming. Nous avons souhaité concevoir une application pratique et fonctionnelle à destination des créateurs de contenu. Ce projet nous a permis de mobiliser de nombreuses compétences techniques tout en collaborant efficacement pour aboutir à un produit cohérent et complet. Grâce à des fonctionnalités modernes comme la diffusion en direct, la gestion des comptes utilisateurs et une interface intuitive, VIBE se positionne comme une solution puissante et polyvalente pour le streaming en temps réel.",
         "imageAlt": "Image de présentation du projet VIBE"
+      },
+      "feature2": {
+        "title": "Page d’accueil",
+        "desc": "La page d’accueil met en avant les streams suivis, les contenus en vedette sous forme de carrousels, ainsi que les catégories de live les plus populaires. Elle permet aussi de visualiser l’activité des amis pour ne rien manquer.",
+        "imageAlt": "Aperçu de la page d'accueil de VIBE"
+      },
+      "feature3": {
+        "title": "Comptes et profils",
+        "desc": "Les utilisateurs peuvent créer un compte, se connecter, personnaliser leur profil (photo, description, identifiant), et même supprimer leur compte. L’accès à un espace personnel permet une gestion complète de leur présence sur la plateforme.",
+        "imageAlt": "Interface de gestion du profil utilisateur"
+      },
+      "feature4": {
+        "title": "Dashboard de stream",
+        "desc": "Un tableau de bord dédié permet aux streamers de configurer leurs lives : titre, catégorie, type de contenu et miniature personnalisée, à la manière de plateformes professionnelles comme YouTube.",
+        "imageAlt": "Dashboard de configuration des lives"
+      },
+      "feature5": {
+        "title": "Page de live",
+        "desc": "Lorsqu’un stream est lancé via OBS, la page de live affiche le contenu en direct avec le nombre de spectateurs, un chat interactif, des options d’abonnement, ainsi qu’un système de dons sécurisé via Stripe. Une fois le stream terminé, la page passe automatiquement en mode hors ligne.",
+        "imageAlt": "Aperçu d'une diffusion en direct sur VIBE"
+      },
+      "feature6": {
+        "title": "Modération et communauté",
+        "desc": "Les streamers peuvent modérer leur communauté en bannissant des utilisateurs via le chat. Les bannissements sont répertoriés avec des options de déban, empêchant les utilisateurs concernés d’accéder aux lives.",
+        "imageAlt": "Fonctionnalités de gestion de la communauté"
+      },
+      "feature7": {
+        "title": "Système d’amis et messagerie",
+        "desc": "Un système de gestion des amis permet l’envoi de demandes, l’affichage des contacts et l’échange de messages via un chat en temps réel, avec date et sauvegarde de l’historique.",
+        "imageAlt": "Chat et gestion des amis sur la plateforme"
       }
     },
     "g3d": {

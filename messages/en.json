@@ -111,13 +111,43 @@
     },
     "vibe": {
       "details": "Live video streaming platform",
-      "description": "VIBE is a video streaming platform that allows users to broadcast live videos while interacting in real-time with their audience. This project was developed as part of our annual project in the final year of our IT degree, aiming to acquire skills in handling live video streams.",
+      "description": "VIBE is a video streaming platform that allows users to broadcast live videos while interacting with their audience in real time. Developed as part of our final year project in the Computer Science Bachelor's program, this project enabled us to acquire practical skills in handling live video streams.",
       "imageAlt": "Presentation image of the VIBE project",
       "time": "9 months",
       "feature1": {
         "title": "Introduction",
-        "desc": "The VIBE project is the result of our team's shared passion for streaming platforms. We aimed to create a practical and functional application for video content creators. This project allowed us to implement various technical skills while collaborating to produce a cohesive and polished final product. By integrating modern features like live streaming, user account management, and intuitive interfaces, VIBE positions itself as a powerful and versatile platform for live content broadcasting.",
+        "desc": "The VIBE project was born from our shared passion for streaming platforms. We aimed to create a practical and functional application for content creators. This project allowed us to develop a wide range of technical skills while working together to deliver a cohesive and polished product. With modern features such as live streaming, user account management, and an intuitive interface, VIBE stands out as a powerful and versatile solution for real-time content broadcasting.",
         "imageAlt": "Presentation image of the VIBE project"
+      },
+      "feature2": {
+        "title": "Homepage",
+        "desc": "The homepage highlights followed streams, featured content in carousels, and the most popular streaming categories. Users can also view their friends’ activity in real time.",
+        "imageAlt": "Overview of the VIBE homepage"
+      },
+      "feature3": {
+        "title": "User Accounts and Profiles",
+        "desc": "Users can register, log in, and fully manage their profiles—editing their photo, bio, and username—or delete their account permanently. A personal dashboard gives full control over their profile.",
+        "imageAlt": "User profile management interface"
+      },
+      "feature4": {
+        "title": "Streaming Dashboard",
+        "desc": "A dedicated dashboard allows streamers to configure their streams: title, category, type of content, and custom thumbnails—similar to professional platforms like YouTube.",
+        "imageAlt": "Live stream setup dashboard"
+      },
+      "feature5": {
+        "title": "Live Page",
+        "desc": "When a stream is launched via OBS, viewers can access it from the homepage or via a direct URL. The live page includes the video stream, viewer count, live chat, subscribe button, and a donation system connected to Stripe. Once the stream ends, the page automatically switches to offline mode.",
+        "imageAlt": "Live broadcast preview on VIBE"
+      },
+      "feature6": {
+        "title": "Community Management",
+        "desc": "Streamers can moderate their community by banning users from the chat. Banned users are listed with ban dates and an option to unban them. Banned users are blocked from viewing the streamer's content.",
+        "imageAlt": "Community management features"
+      },
+      "feature7": {
+        "title": "Friends and Chat System",
+        "desc": "A friend system lets users send and accept friend requests. Friends appear in a list and can exchange messages through a real-time chat with timestamps and message history.",
+        "imageAlt": "Friend and chat management on the platform"
       }
     },
     "g3d": {

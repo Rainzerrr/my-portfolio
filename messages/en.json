@@ -211,6 +211,42 @@
         "desc": "By clicking on a Paris business district, users can view key data related to coworking spaces based on applied filters: overall index, number of restaurants, transport density, average price per m², etc. This information updates in real time.",
         "imageAlt": "Zone details feature of the Worknest project"
       }
+    },
+    "splendor": {
+      "details": "Strategic board game for 2 to 4 players",
+      "description": "Splendor is a strategic board game for 2 to 4 players. Each player takes on the role of a Renaissance merchant seeking to accumulate prestige points by purchasing cards representing resources and artisans. The game combines resource management, strategy, and anticipation within a rich and immersive universe. This project, developed in Java 23, offers a playable command-line version as well as a graphical interface built with the Zen 6 library, providing two distinct and complementary gaming experiences.",
+      "imageAlt": "Presentation image of the Splendor game",
+      "time": "2 months",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "This project was carried out in pairs as part of the Java Programming course during my engineering studies at ESIEE Paris. The goal was to develop Splendor in three progressive stages. The first step was to create a simplified version playable only by two players, using a command-line interface. Then, we integrated the full game rules to allow up to four players, still via the terminal. Finally, the last phase focused on implementing a graphical interface with Zen 6, allowing the user to choose between graphic mode and text mode. This progression helped us organize our code with a clear and modular architecture, inspired by the MVC design pattern.",
+        "imageAlt": "Introduction image of the Splendor project"
+      },
+      "feature2": {
+        "title": "Simplified Command-Line Version",
+        "desc": "The simplified version of the game is played exclusively by two human players. It offers a basic gameplay mode in which players compete using only cards to earn prestige points. This version does not include nobles or the possibility to reserve cards, meaning the gold tokens (jokers) are absent. The game is played entirely in the command line, with a simple and clear textual display. Each card costs three tokens of its color and provides one prestige point. Eight cards are available for each color.",
+        "imageAlt": "Image of the simplified command-line version"
+      },
+      "feature3": {
+        "title": "Simplified Graphical Version",
+        "desc": "In this version, the game follows the same rules as the simplified command-line version but offers a clean graphical interface created with the Zen 6 library. Players can interact with the game via visual elements, enhancing the user experience. The choice between graphical interface and command-line interface is left to the user at startup, allowing them to select their preference.",
+        "imageAlt": "Simplified graphical interface of the Splendor game"
+      },
+      "feature4": {
+        "title": "Complete Command-Line Version",
+        "desc": "After completing the simplified version, the complete version offers an enriched experience allowing two, three, or four human players to play. This version includes all official game rules, including nobles, the ability to reserve cards, and the use of gold tokens as jokers. The game still uses a command-line interface with textual display, but complexity is increased by the variety of cards spread over three levels (40 cards at the first level, 30 at the second, and 20 at the third), as well as by managing all possible actions during the game.",
+        "imageAlt": "Complete command-line version of the Splendor game"
+      },
+      "feature5": {
+        "title": "Complete Graphical Version",
+        "desc": "The final stage consists of implementing a complete graphical interface that encompasses all the rules and features of the full command-line version. The interface is built with Zen 6 and offers an intuitive visual display, allowing two to four players to play. Particular attention is given to code separation following the MVC design pattern: the game board state, display, and player actions are clearly decoupled. The user can choose to play with this graphical interface or the command-line version.",
+        "imageAlt": "Complete graphical interface of the Splendor game"
+      },
+      "feature6": {
+        "title": "Scoreboard Display",
+        "desc": "At the end of each game, regardless of the mode chosen, a scoreboard is displayed showing the players' final scores. This ranking highlights the prestige points accumulated and clearly identifies the winner. It adapts to the different game versions, whether simplified or complete, command-line or graphical, to ensure a consistent and satisfying experience for the players.",
+        "imageAlt": "Final scoreboard display of the Splendor game"
+      }
     }
   },
   "presentation": {

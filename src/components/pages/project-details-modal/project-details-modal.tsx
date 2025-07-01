@@ -32,7 +32,6 @@ const ProjectDetailsModal: FC<ProjectDetailsModalProps> = (props) => {
   };
   return (
     <>
-      {" "}
       <PortfolioPage>
         <Modal setIsOpen={setIsModalOpen}>
           <div className="project-details-modal">

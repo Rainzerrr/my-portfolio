@@ -213,6 +213,42 @@
         "desc": "En cliquant sur un quartier d’affaires parisien, l’utilisateur peut consulter les données clés liées aux espaces de coworking selon les filtres appliqués : indice global, nombre de restaurants, densité des transports, prix moyen au m², etc. Ces informations évoluent en temps réel.",
         "imageAlt": "Fonctionnalité détails de zone du projet Worknest"
       }
+    },
+    "splendor": {
+      "details": "Jeu de société stratégique pour 2 à 4 joueurs",
+      "description": "Splendor est un jeu de société stratégique qui se joue de 2 à 4 joueurs. Chaque joueur incarne un marchand de la Renaissance, cherchant à accumuler des points de prestige en achetant des cartes représentant des ressources et des artisans. Le jeu mêle gestion de ressources, stratégie et anticipation dans un univers riche et immersif. Ce projet, développé en Java 23, propose une version jouable en ligne de commande ainsi qu’une interface graphique réalisée avec la bibliothèque Zen 6, offrant ainsi deux expériences de jeu distinctes et complémentaires.",
+      "imageAlt": "Image de présentation du jeu Splendor",
+      "time": "2 mois",
+      "feature1": {
+        "title": "Introduction",
+        "desc": "Ce projet a été réalisé en binôme dans le cadre de la matière Programmation Java, durant mon cursus d’ingénieur à l’ESIEE Paris. L’objectif était de développer Splendor en trois étapes progressives. La première consistait à créer une version simplifiée, jouable uniquement à deux joueurs et utilisant une interface en ligne de commande. Ensuite, nous avons intégré toutes les règles complètes du jeu pour permettre jusqu’à quatre joueurs, toujours via le terminal. Enfin, la dernière phase a porté sur l’implémentation d’une interface graphique avec Zen 6, permettant à l’utilisateur de choisir entre mode graphique et mode texte. Cette progression nous a permis d’organiser notre code selon une architecture claire et modulaire, inspirée du design pattern MVC.",
+        "imageAlt": "Image d'introduction du projet Splendor"
+      },
+      "feature2": {
+        "title": "Version simplifiée en ligne de commande",
+        "desc": "La version simplifiée du jeu se joue exclusivement à deux joueurs humains. Elle propose un mode de jeu basique dans lequel les joueurs s’affrontent en utilisant uniquement les cartes pour acquérir des points de prestige. Cette version ne comporte pas les nobles ni la possibilité de réserver des cartes, ce qui signifie que les jetons or, dits jokers, sont absents. Le jeu se déroule intégralement en ligne de commande, avec un affichage textuel simple et clair. Chaque carte coûte trois jetons de sa couleur et rapporte un point de prestige. Huit cartes sont disponibles pour chacune des couleurs.",
+        "imageAlt": "Image de la version simplifiée en ligne de commande"
+      },
+      "feature3": {
+        "title": "Version simplifiée graphique",
+        "desc": "Dans cette version, le jeu reprend les mêmes règles que la version simplifiée en ligne de commande, mais propose une interface graphique épurée, réalisée à l’aide de la bibliothèque Zen 6. Les joueurs peuvent ainsi interagir avec le jeu via des éléments visuels, ce qui améliore l’expérience utilisateur. Le choix entre l’interface graphique et l’interface en ligne de commande est laissé à l’utilisateur au démarrage, lui permettant de sélectionner sa préférence.",
+        "imageAlt": "Interface graphique simplifiée du jeu Splendor"
+      },
+      "feature4": {
+        "title": "Version complète en ligne de commande",
+        "desc": "Une fois la version simplifiée terminée, la version complète offre une expérience enrichie permettant de jouer à deux, trois ou quatre joueurs humains. Cette version intègre toutes les règles officielles du jeu, y compris la présence des nobles, la possibilité de réserver des cartes, et l’utilisation des jetons or en tant que jokers. Le jeu utilise toujours une interface en ligne de commande avec un affichage textuel, mais la complexité est accrue par la diversité des cartes réparties en trois niveaux (40 cartes au premier niveau, 30 au deuxième et 20 au troisième), ainsi que par la gestion complète des actions possibles durant la partie.",
+        "imageAlt": "Version complète en ligne de commande du jeu Splendor"
+      },
+      "feature5": {
+        "title": "Version complète graphique",
+        "desc": "La dernière étape consiste à mettre en place une interface graphique complète qui reprend toutes les règles et fonctionnalités de la version complète en ligne de commande. L’interface est construite avec Zen 6 et offre un affichage visuel intuitif, tout en permettant de jouer de deux à quatre joueurs. Une attention particulière est portée à la séparation du code selon le principe du design pattern MVC : l’état du plateau de jeu, l’affichage et la gestion des actions des joueurs sont clairement découplés. L’utilisateur peut choisir entre jouer avec cette interface graphique ou avec la version en ligne de commande.",
+        "imageAlt": "Interface graphique complète du jeu Splendor"
+      },
+      "feature6": {
+        "title": "Affichage du classement",
+        "desc": "À la fin de chaque partie, quel que soit le mode choisi, un classement est affiché pour présenter les scores finaux des joueurs. Ce classement met en avant les points de prestige accumulés et permet d’identifier facilement le gagnant de la partie. Il s’adapte aux différentes versions du jeu, qu’elles soient simplifiées ou complètes, en ligne de commande ou graphiques, afin de garantir une expérience cohérente et satisfaisante pour les joueurs.",
+        "imageAlt": "Affichage du classement final du jeu Splendor"
+      }
     }
   },
   "presentation": {

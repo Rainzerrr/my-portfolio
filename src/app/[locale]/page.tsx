@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: `https://mon-eportfolio.vercel.app`,
+    canonical: `https://rayan-ainouche.dev`,
   },
 };
 

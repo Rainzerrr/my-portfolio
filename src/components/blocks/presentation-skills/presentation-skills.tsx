@@ -15,6 +15,7 @@ const PresentationSkills = () => {
     { icon: "ts", label: "TypeScript" },
     { icon: "react", label: "React.js" },
     { icon: "next-js", label: "Next.js" },
+    { icon: "angular", label: "Angular" },
     { icon: "node_js", label: "Node.js" },
     { icon: "java", label: "Java" },
     { icon: "mysql", label: "MySQL" },
